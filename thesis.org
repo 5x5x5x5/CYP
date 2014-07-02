@@ -17,8 +17,48 @@ Cythochrome P450 Inhibitor Classification with Statistical Learning
 ** Early indication of drug-drug interaction risk in this case
 * Review of PubChem Assay 1851
 **
+* Reproducible research
+* Feature generation and molecular descriptors
+* Machine Learning algorithms
+** kappa Nearest Neighbor
+** Support Vector Machines
+** Random Forests
+** Bayesian methods
+** Neural networks
+*** Simply a nonlinear modeling techniques
+*** multilayered
+*** leads to Deep Learning
+* Statistical comparison of model performance
+** Confusion Matrix
+*** True/False Positives/Negatives 
+** Accuracy 
+** AUROC Area under Reciever Operating Characteristic Curve
+* Data Analysis considerations
+** Balance number of positives and negatives
+** Split dataset into training and test set before looking at it.
+** Cross-Validation
+* Tools for statistical learning
+** Molecular Operating Environment
+*** Commercial
+*** Well accepted by industry
+*** integrated
+** SciPy ecosystem
+*** open source
+*** Python programming language
+*** heavy use of numpy arrays to vectorize operations for speed
+*** packages = pandas -> scikit-learn -> matplotlib or ggplot
+*** Ipython notebooks as an Integrated Computing Environment
+*** Interactive shell executed in a browser
+*** .ipynb saved as JSON format for sharing 
 
-
+Methods
+* Dataset preparation
+** Downloaded two files from pubchem
+*** Bioassy
+**** 17143 SID compounds
+**** .csv with data from all five isozymes assay and results
+*** Structure as SMILES
+** Merged on SID column using pandas
 
 
 To finalize
@@ -34,3 +74,4 @@ To finalize
 ** Used RDKit to render SMILES
 ** Found extra dataset refered to by Cheng
 ** Recreated Hill plot from bioassay data
+** Remove some compounds from dataset that don't belong there (inorganics, etc)
