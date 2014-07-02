@@ -1,7 +1,36 @@
 THESIS -*- mode: org -*-
 #+STARTUP: showall
 
-*Cythochrome P450 Inhibitor Classification with Statistical Learning
+Cythochrome P450 Inhibitor Classification with Statistical Learning
 
-*
+* Cythochrome P450 superfamily overview
+** Importance of Cytochrome P450 in humans
+** Importance oc Cytochrome P450 in pharmaceutical R&D
+** Computational models of CYPs for research
+** Computational models use by regulatory agencies
+* Background of machine learning and their applications to various areas
+** Modeling
+* The business case for computational modeling
+** Pharma companies seek to control research cost and improve efficiency, ref Nature review
+** Current methods not taking account complex networks of leading to unintended effects or failure to note redundancy
+** 
+** Early indication of drug-drug interaction risk in this case
+* Review of PubChem Assay 1851
+**
 
+
+
+
+To finalize
+* Abstract
+* Table of Contents
+* Table of Figures
+* Acknowledgements
+* Glossary
+* References
+* Appendix
+
+* Thing I could have done better
+** Used RDKit to render SMILES
+** Found extra dataset refered to by Cheng
+** Recreated Hill plot from bioassay data
