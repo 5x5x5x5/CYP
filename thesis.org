@@ -59,6 +59,59 @@ Methods
 **** .csv with data from all five isozymes assay and results
 *** Structure as SMILES
 ** Merged on SID column using pandas
+** MOE descriptor calculation
+*** washed conformatio
+*** energy minimization?
+*** 2-D descriptors generated
+**** categorical
+**** nominal
+**** continuous
+** Saved as .csv
+** Split into five datasets with pandas
+*** SID
+*** Activity Score for that isozyme
+*** 186 MOE 2-D descriptors
+** Wrote script to balance the number of actives and inactives for each dataset
+*** in each case the number of inactives was greater than the number of actives
+** Wrote script to randomly split the balanced datasets
+*** 80% training and 20% to be held back as test set
+*** split not based on Activity categorization
+*** random number generator seed set to ensure reproducible reults
+*** balance of active/inactive checked to see if they were still acceptably balanced
+** balanced and split datasets saved to figshare.com
+*** all subsequent analyses use the same splits for comparability
+*** freely, openly and permanantly available
+
+* Modeling in MOE
+** PLS regression
+*** Quantitave
+*** Poor predictive accuracy as demonstrated by previous attempts in Dr. Zheng's lab
+** Binary QSAR
+*** Bayesian method
+*** Load training data and use MOE built in menu-driven method
+*** ActivityScore selected as response variable 
+*** Binary classification threshold set to 39
+*** Smoothing parameter left at default 0.25
+*** Varied number of principle components
+**** 2, 5, 10, 15, 20, 30 and 44
+**** MOE automatically erforms PCAon high dimensional datasets
+**** each PC captures a portion of the total variance inherent in the dataset
+**** each PC is orthogonal to and uncorrelated from the others
+**** inclusion of more PCs means more of the variance is being accounted for in classification decision
+**** at the cost of interpretability
+*** MOE models written to .fit files 
+*** model report saved to .txt file
+*** test set loaded 
+*** washed structure appended
+*** All models evaluated and prediction probabilities appended to database file
+**** predicted probabilities greater than or equal to .50 counted as active inhibitor predictions
+*** MS Excel spreadsheet used to classify prediction probabilites as true/false active/inactive
+**** confusion matrices tabulated and accuracy scores calculated in spreadsheet
+
+
+** All confusion matrices and accuracy score collected in a spreadsheet
+
+
 
 
 To finalize
