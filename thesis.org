@@ -34,6 +34,8 @@ Cythochrome P450 Inhibitor Classification with Statistical Learning
 ** Confusion Matrix
 *** True/False Positives/Negatives 
 ** Accuracy 
+*** Predicted / Total
+*** (TP + TN) / (TP + FP + TN + FN)
 ** AUROC Area under Reciever Operating Characteristic Curve
 * Data Analysis considerations
 ** Balance number of positives and negatives
@@ -51,7 +53,7 @@ Cythochrome P450 Inhibitor Classification with Statistical Learning
 *** packages = pandas -> scikit-learn -> matplotlib or ggplot
 *** Ipython notebooks as an Integrated Computing Environment
 *** Interactive shell executed in a browser
-*** .ipynb saved as JSON format for sharing 
+*** .ipynb saved in JSON format for sharing 
 
 Methods
 * Dataset preparation
