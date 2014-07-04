@@ -154,7 +154,7 @@ To finalize
 * References
 * Appendix
 
-* Thing I could have done better
+* Things I could have done better
 ** Used RDKit to render SMILES
 ** Found extra dataset refered to by Cheng
 ** Recreated Hill plot from bioassay data
