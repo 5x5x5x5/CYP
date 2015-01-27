@@ -1,0 +1,5 @@
+In summary, I have demonstrated several methods for building models for binary classification for QSAR of cytochrome P450 isozymes. They all do pretty well and are significantly better than randomly guessing.
+
+There are many more machine learning methods to try, of particular interest are neural networks and more Bayesian methods. The data and code for model comparison for this study is available online, so there are no artificial barriers to benchmarking further results.
+
+Ensembles of models frequently outperform any single model, so before building a tool for decision making in drug development, it is recommended to combine results from all models developed.

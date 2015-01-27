@@ -1,0 +1,387 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.10.22)  27 JAN 2015 15:14
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**CYP.tex
+(./CYP.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 4 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (./CYP.aux)
+\openout1 = `CYP.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 18.
+
+[1
+
+] (./chapters/abstract.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+) [1
+
+] (./CYP.toc)
+\tf@toc=\write3
+\openout3 = `CYP.toc'.
+
+ [2
+
+] (./CYP.lof)
+\tf@lof=\write4
+\openout4 = `CYP.lof'.
+
+ [3
+
+] (./CYP.lot)
+\tf@lot=\write5
+\openout5 = `CYP.lot'.
+
+
+[4
+
+] [5
+
+]
+Chapter 1.
+(./chapters/chapter1.tex [6
+
+]
+! Argument of \@citex has an extra }.
+<inserted text> 
+                \par 
+l.9 ...e decades for a variety of reasons. {\cite}
+                                                   Integrated computational ...
+
+? 
+Runaway argument?
+! Paragraph ended before \@citex was complete.
+<to be read again> 
+                   \par 
+l.9 ...e decades for a variety of reasons. {\cite}
+                                                   Integrated computational ...
+
+? 
+
+LaTeX Warning: Citation `Hansch1964' on page 7 undefined on input line 11.
+
+[7] [8]
+
+LaTeX Warning: Citation `Nelson2004' on page 9 undefined on input line 24.
+
+
+LaTeX Warning: Citation `Guengerich2008' on page 9 undefined on input line 24.
+
+
+LaTeX Warning: Citation `Zanger2008' on page 9 undefined on input line 24.
+
+[9] [10]
+
+LaTeX Warning: Citation `Vasanthanathan2012' on page 11 undefined on input line
+ 50.
+
+
+LaTeX Warning: Citation `Novotarskyi2012' on page 11 undefined on input line 50
+.
+
+
+LaTeX Warning: Citation `Cheng2012' on page 11 undefined on input line 50.
+
+[11] [12]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+ [13]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 85.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
+
+Overfull \hbox (1.33621pt too wide) in paragraph at lines 86--87
+[]\OT1/cmr/m/n/12 multivariate anal-y-sis for cor-re-lat-ing molec-u-lar de-scr
+ip-tors with ob-served
+ []
+
+
+Overfull \hbox (43.06587pt too wide) in paragraph at lines 88--89
+\OT1/cmr/m/n/12 mod-els to in-clude data pre-pro-cess-ing and sta-tis-ti-cal ev
+al-u-a-tion. [[]] 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+[14]
+Overfull \hbox (44.02327pt too wide) in paragraph at lines 92--93
+\OT1/cmr/m/n/12 cal mod-els as well as an ef-fec-tive train-ing and val-i-da-ti
+on strategy.[[]] 
+ []
+
+[15]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+
+
+! LaTeX Error: File `' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112    \includegraphics[width=1\textwidth]{}
+                                              
+? 
+[16] [17]
+Overfull \hbox (87.20616pt too wide) in paragraph at lines 152--153
+\OT1/cmr/m/n/12 box al-go-rithms', bias es-ti-ma-tion and the 'no free lunch th
+eorem'.[[]] 
+ []
+
+[18]
+
+LaTeX Warning: Citation `Prlic2012' on page 19 undefined on input line 167.
+
+[19]) [20]
+Chapter 2.
+(./chapters/chapter2.tex [21
+
+]
+Overfull \hbox (31.05905pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/12 com-pounds that in-ter-fere with lu-ciferase en-zy-matic ac-tiv
+-ity. [[]] 
+ []
+
+
+Overfull \hbox (10.98427pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/n/12 were re-moved from the dataset, leav-ing 16,359 com-pounds. [[]
+] 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+[22]
+Overfull \hbox (0.48761pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/n/12 chem-i-cal space re-vealed that the ma-jor-ity of com-pounds ha
+d molec-u-lar weight
+ []
+
+
+Overfull \hbox (4.84778pt too wide) in paragraph at lines 22--22
+[]\OT1/cmr/bx/n/17.28 Feature gen-er-a-tion and molec-u-lar de-scrip-
+ []
+
+[23] [24]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [25]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+ [26]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [27]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+ [28]
+
+! LaTeX Error: File `' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92    \includegraphics[width=1\textwidth]{}
+                                             
+? 
+[29] [30]
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ≠ in font cmr12!
+ [31]) [32]
+Chapter 3.
+(./chapters/chapter3.tex [33
+
+] [34]
+
+! LaTeX Error: File `' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23    \includegraphics[width=1\textwidth]{}
+                                             
+? 
+
+LaTeX Warning: Citation `Labute2001' on page 35 undefined on input line 29.
+
+
+LaTeX Warning: Citation `Vedani2009' on page 35 undefined on input line 31.
+
+[35] [36] [37] [38]) [39] [40]
+Chapter 4.
+(./chapters/chapter4.tex [41
+
+]
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ≠ in font cmr12!
+ [42]) (./tables.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [43] [44] [45] [46] [47]
+Chapter 5.
+(./chapters/chapter5.tex) [48
+
+] [49]
+Chapter 6.
+(./chapters/conclusion.tex [50
+
+]
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ≠ in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ≠ in font cmr12!
+) [51] (./CYP.bbl [52]
+Underfull \hbox (badness 3396) in paragraph at lines 47--52
+[]\OT1/cmr/m/n/12 Lapins, M., Worachartchee-wan, A., Spjuth, O.,
+ []
+
+[53
+
+]) [54] (./CYP.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 685 strings out of 494986
+ 8462 string characters out of 6180381
+ 87921 words of memory out of 5000000
+ 3910 multiletter control sequences out of 15000+600000
+ 10120 words of font info for 35 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 25i,8n,23p,1643b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on CYP.dvi (55 pages, 108280 bytes).

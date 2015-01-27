@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: CYP.aux
+The style file: apalike.bst
+Database file #1: references.bib
+Warning--I didn't find a database entry for "Hansch1964"
+Warning--I didn't find a database entry for "Nelson2004"
+Warning--I didn't find a database entry for "Guengerich2008"
+Warning--I didn't find a database entry for "Zanger2008"
+Warning--I didn't find a database entry for "Vasanthanathan2012"
+Warning--I didn't find a database entry for "Novotarskyi2012"
+Warning--I didn't find a database entry for "Cheng2012"
+Warning--I didn't find a database entry for "Prlic2012"
+Warning--I didn't find a database entry for "Labute2001"
+Warning--I didn't find a database entry for "Vedani2009"
+Warning--empty journal in Breiman2001
+Warning--empty journal in Zlokarnik2005
+You've used 14 entries,
+            1935 wiz_defined-function locations,
+            595 strings with 6347 characters,
+and the built_in function-call counts, 5885 in all, are:
+= -- 565
+> -- 267
+< -- 6
++ -- 92
+- -- 92
+* -- 545
+:= -- 1039
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 115
+chr.to.int$ -- 14
+cite$ -- 16
+duplicate$ -- 196
+empty$ -- 401
+format.name$ -- 108
+if$ -- 1117
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 15
+newline$ -- 73
+num.names$ -- 42
+pop$ -- 91
+preamble$ -- 1
+purify$ -- 116
+quote$ -- 0
+skip$ -- 146
+stack$ -- 0
+substring$ -- 444
+swap$ -- 12
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 82
+warning$ -- 2
+while$ -- 50
+width$ -- 0
+write$ -- 181
+(There were 12 warnings)

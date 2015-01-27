@@ -1,0 +1,24 @@
+\section*{Assessment of the Quality of the Models}
+
+The success of any QSAR model depends on accuracy of the input data, selection of appropriate descriptors and statistical tools, and most importantly validation of the developed model. Validation is the process by which the reliability and relevance of a procedure are established for a specific purpose. For QSAR models validation must be mainly for robustness, predicition performances and applicability domain (AD) of the models. \cite{Lapins2013}
+
+We used two statistical methods: the overall prediction accuracy and the Area Under the Receiver Operating Characteristic (AUROC) curve. We assessed the predictive ability of the models by performing cross-validation and external predictions.
+
+\subsubsection{Accuracy}
+
+Accuracy is simply the percentage of correctly classified instances and is calculated as
+$$ ACC =\frac{(TP + TN)}{(TP + FP + TN + FN)} $$
+where TP is the number of true positives, TN is the number of true negatives, FP is the number of false positives or over­predictions, and FN is the number of false negatives or missed predictions.\cite{Lapins2013}
+
+Accuracy is not an optimal measure of model performance if the data set is unbalanced (i.e. sizes of the classes are unequal) or if certain errors are to be considered more serious than others (e.g. false negatives compared to false positives).\cite{Lapins2013}
+
+\subsubsection{AUROC}
+In contrast to accuracy, the AUROC is a measure of discriminatory power that is insensitive to changes in class distribution and the costs of making certain errors. A ROC curve is obtained by calculating sensitivity and specificity at various discrimination threshold levels.
+
+Sensitivity is the fraction of true positives among all positively classified instances (the true positive rate) and is calculated as : 
+$$ sensitivity = \frac{TP}{(TP + FN)} $$
+
+Specificity is the true negative rate and is calculated as:
+$$ specificity =\frac{ TN }{(TN + FP)} $$
+
+An increased sensitivity is always accompanied by decrease specificity. A ROC curve is plotted as $sensitivity$ versus $1-specificity$, at varied discrimination cut-offs. An area under the ROC curve (AUROC) close to 1 means that the classifier can perfectly separate the two classes, whereas an area 0.5 indicated that the classifier performs no better than random guessing.\cite{Lapins2013}

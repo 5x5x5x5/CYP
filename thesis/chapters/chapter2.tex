@@ -1,0 +1,124 @@
+\section{Review of PubChem Assay 1851}
+
+PubChem BioAssay 1851 contains data for inhibition of five major CYP isoforms (CYP1A2, CYP2C9, CYP2C19, CYP2D6 and CYP3A4) by 17,143 chemical compounds. \cite{Veith2009}
+
+The assay used low low-fluorescence substrates, which are converted to more-fluorescent metabolites. The progression of the reaction is measured by an increase in fluorescence intensity during CYP metabolism of the substrate. Inhibitors of a particular CYP reduce the rate of metabolism of the substrate and this results in a decreased fluorescence signal. \cite{Zlokarnik2005}
+
+The most recent technology developed for CYP inhibition is based on substrates that release luciferin as the metabolite. This is a coupled assay system in which addition of luciferase and ATP converts the freed luciferin to des-carboxyluciferin with light emission. The format is similar to fluoresence methods, requiring addition-only manipulations and employing luminescence plate readers. \cite{Zlokarnik2005}
+
+This assay requires recombinant sources of CYP enzymes, as the probes are not sufficiently P450 isoform-selective to be used with human liver microsomes. \cite{Zlokarnik2005} A potential source for false positives in these assays can be compounds that interfere with light generation directly, such as compounds that interfere with luciferase enzymatic activity. \cite{Zlokarnik2005}
+
+Inorganic compounds, non-covalent inhibitors and compound mixtures were removed from the dataset, leaving 16,359 compounds. \cite{Lapins2013}
+
+The dataset classified compounds as active or inactive inhibitors for the respective CYP, and the activity cutoff was set to AC50 = 10uM (AC50, “activity concentration 50”, refers to the concentration that is required to elicit half-maximal effect). However, in cases where the dose-response curve for a compound showed poor fit or the inhibition efficacy was below 60\%, the assay results were regarded as inconclusive. Thus not all compounds had activity outcomes for all five CYP isoforms. \cite{Lapins2013}
+
+Compounds were characterized by their Activity Score and are regarded as inhibitors if the activity score ranges between 40 and 100. PubChem Acitivity Score is assigned based on an AC50 values, which is combined with a measure for completeness of a dose-response curve and efficacy of inhibition, where a larger value indicates higher inhibitory activity and/or higher confidence in inhibitory assay result. Compounds with an activity score equal to zero are considered as non-inhibitors while compounds with activity scores above 0 and up to 40 are considered inconclusive. \cite{Lapins2013}
+
+The the tested compounds were all drugs or drug-like compounds. The chemical space revealed that the majority of compounds had molecular weight below 500 daltons and logP below 5. \cite{Lapins2013}
+
+All compounds were obtained as SMILES strings.
+
+
+\section{Feature generation and molecular descriptors}
+
+Data preprocessing - The preliminary steps in data preprocessing typically requires data cleaning as raw data often contain anomalies, errors, or inconsistencies such as missing data, incomplete data, and invalid character values which may cause trouble in data analysis if left untreated. It is more complicated when data are collated from many formats requiring harmonization and elimination of redundancies.\cite{Nantasenamat2009}
+
+There exists a great deal of variability in the range and distribution of each variable in the data set. However, this may pose a problem for algorithms using distance measurements in the learning step. These situations are handled by applying statistical techniques such as min-max normalization or z-score standardiation. 
+
+In min-max normalization, the minimum and maximum value of each variable is adjusted to a uniform range between 0 and 1 according to the following equation: xxxxxx In z-score standardization, essentially the variable of interest is subjected to statistical operation to achieve mean center and unit variance according to the following formula: xxxxxx \cite{Nantasenamat2009}
+
+In situations where the data does not have a Gaussian (normal) distribution, simple mathematical functions can be applied to achieve normality or symmetry in the data distribution. A commonly used approach is to apply logarithmic transformation on the the variable of interest in order to achieve distribution approaching normality. This is typically performed on dependent variables such as the modeled biological/chemical properties of interest whereby IC50 may be transformed to logIC50 or -logIC50. Practically, such mathematical operation is applied to each individual value of a given variable of interest. \cite{Nantasenamat2009}
+
+Feature or variable selection -- Typically data sets often contain redundant or noisy variables which make it more difficult for learning algorithms to discern meaningful patterns from the input data set. ... Such multicollinearity of the variables ... treated ... in order to reduce unnecessary computational resources that are required in model construction. \cite{Nantasenamat2009}
+
+Statistical evaluation In QSAR modeling it is essential to validate the model as well as apply statistical parameters to evaluate its predictive performance. The predictive performance of a data set can be assessed by dividing it into a training set and a testing set. The training set is used for constructing a predictive model whose predictive performance is evaluated on the testing set. Internal performance is typically assessed from the predictive performance of the training set while external performance can be assessed from the predictive performance of the independent test set that is unknown to the training model. A commonly used approachfor internal validation is known as N-fold cross-validation where a data set is partitioned into N number of folds. For example, in a 10-fold cross-validation 1 fold is left out as a testing set while the remaining 9 folds are used as the training set for model construction and then validated with that fold left out. In situations where the number of samples is limited, leave-one-out cross-validation is the preferred approach. Analogously, the number of folds is equal to the number of samples present in the data set. \cite{Nantasenamat2009}
+
+The standard measures of performance used for QSAR models are sensitivity, specificity, positive predictivity, negative predictivity, and concordance. Additional measures such as the Matthews coefficient can be used as a single metric for comparing one model to another while correcting for bias. Because most stat models can be modified to have greater specificity vs sensitivity (or vice versa) by adjusting the training set or applying predictive filters, the Matthews coefficient can be used to determine when the modification is so extreme that it leads to overall degradation of the models’ performance.\cite{Kruhlak2012}
+
+Statistical parameters - Pearson's correlation coefficient (r) is a commonly used parameter to describe the degree of association between two variables of interest. Calculated r values have values between -1 and +1 which indicate direct (positive) and indirect (negative) correlation. For describing the relative predictive performance of a QSAR model, r is used to measure the correlation between experimental (x) and predicted (y) values of interest in order to observe the variability that exists between variables. This is calculated according to the following equation: ...
+
+Root mean squared error (RMS) is another commonly used parameter for assessing the relative error of the QSAR model. RMS is computed according to the following formula: ...
+
+%F-test -- The statistical significance of QSAR models are typically assessed by performing an ANOVA and observing the calculated F values, which is essentially the ratio between the explained and unexplained variance. Comparison between multiple QSAR models can be performed when all models have the same number of degrees of freedom meaning that the same sets of compounds and descriptors are used. Each model yields a calculated F value and the best performing model is identified as those bearing the highest value.\cite{Nantasenamat2009}
+
+Degrees of freedom take into consideration the number of compounds and the number of independent variables that are present in the data set. This can be calculated using the equation n - k - 1 where n = \# of compounds k = \# of descriptors. The higher the value, the more reliable the QSAR model is. \cite{Nantasenamat2009}
+
+Mathematically speaking, an outlier is essentially a data point which has a high standard residual in absolute value when compared to other samples in the data set. A commonly used approach for detecting outliers is performed by calculating the standard residuals of all compounds in the data set of a QSAR model. \cite{Nantasenamat2009}
+
+\section{Machine Learning}
+Developing successful machine learning applications still requires a substantial amount of “black art” that is hard to find in textbooks.\cite{Domingos2012}
+
+Easily the most important factor is the features used. If you have many independent features that correlate well with the class, learning is easy. On the other hand, if the class is a very complex function of the features, you may not be able to learn it.\cite{Domingos2012}
+
+Often raw data is not in a form that is amenable to learning, but you can construct features from it that are. This is typically where most of the effort in a machine learning project goes. It is often one of the most interesting parts, where intuition, creativity and “black art” are as important as the technical stuff.\cite{Domingos2012}
+
+...consider how time-consuming it is to gather data, integrate it, clean it, and preprocess it, and how much trial and error can go into feature design.\cite{Domingos2012}
+
+Also machine learning is not a one-shot process of building a data set and running a learner, but rather an iterative process of running the learner, analyzing results, modifying the data and/or learner, and repeating. Learning is often the quickest part of this, but that’s because we’ve already mastered it pretty well! Feature engineering is more difficult because it is domain-specific, while learners can be largely general-purpose.\cite{Domingos2012}
+
+There is ultimately no replacement for the smarts you put into feature engineering. On the other hand, running a learner with a very large number of features to find out which ones are useful in combination may be too time-consuming, or cause overfitting.\cite{Domingos2012}
+
+As a rule, it pays to try the simplest learners first(e.g. naive Bayes before logistic regression, $\kappa$-nearest neighbor before support vector machines). More sophisticated learners may be seductive, but they are usually harder to use, because there are more tuning parameters and their internals are more opaque.\cite{Domingos2012}
+
+Learners can be divided into two major types: those whose representation has a fixed size, like linear classifiers, and those whose representation can grow with the data, like decision trees. (The latter are sometimes called non-parametric, but this is somewhat ufortuante, since they usually wind up learning many more parameters than parametric ones.) Fixed-size learners can only take advantage of so much data. Variable-sized learners can in principle learn any function given sufficient data, but in practice they may not, because of limitations of the algorithm or computational cost. Also, because of the curse of dimensionality, no existing amount of data may be enough.\cite{Domingos2012}
+
+Creating model ensembles is now standard in machine learning. In the simplest technique, called bagging, we simply generate random variations of the training set by resampling, learn a classifier on each, and combine the results by voting. This works because it greatly reduces variance while only slightly increasing bias. In boosting, training examples have weights, and these are varied so that each new classifier focuses on the examples the previous ones tended to get wrong. In stacking, the outputs of individual classifiers become the inputs of a “higher-level” learner that figures out how best to combine them.\cite{Domingos2012}
+
+Representable does not imply learnable.\cite{Domingos2012}
+
+Correlation does not imply causation.\cite{Domingos2012}
+
+
+\section{Data analysis consideration}
+\begin{description}
+\item Balance number of positives and negatives
+
+\item Split dataset into training and test set before looking at it.
+
+\item Cross-validation
+\end{description}
+
+\begin{description}
+\item Molecular Operating Environment
+\item SciPy ecosystem
+
+\end{description}
+
+
+
+\begin{figure}[h,t]
+  \caption{Supervised Learning Scheme for Clasification}
+  \centering
+   \includegraphics[width=1\textwidth]{}
+\end{figure}
+
+\subsubsection{Modeling in Python}
+The Python programming language is a dynamically-typed, object-oriented interpreted language. Although, its primary strength lies in the ease with which it allows a programmer to rapidly prototype a project, its powerful and mature set of standard libraries make it a great fit for large-scale production-level software engineering projects as well. Python has a very shallow learning curve and excellent online learning resources.
+
+
+\subsubsection{Methods of Correlation of Compound and CYP Descriptors to Activity Data}
+
+\subsubsection{$\kappa$-Nearest Neighbor ($\kappa$NN}
+The kNN algorithm predicts the class of a test set object based on the class membership of its $\kappa$ most similar training set objects. \cite{Lapins2013}
+
+\subsubsection{Random Forest (RF)}
+Random Forest is a classifier that consists of multiple decision trees. A decision tree is made of nodes and branches. At each node the dataset is split based on the value of some attribute that is selected so that the instances of different classes are predominately moved to different branches. 
+
+Classification starts at the root node and is performed by passing the instances along the tree to leaf nodes. \cite{Lapins2013}
+
+To introduce diversity between the trees of a random forest, a small subset of all attributes is randomly selected to take decisions at each node of each tree. The classification decision is performed by considering results of all trees by majority vote. The optimal size of the forest and the number of attributes to consider at each node were found by performing five-fold cross-validation. \cite{Lapins2013}
+
+\subsubsection{Support Vector Machines (SVM)}
+SVM is a machine learning technique for classification or regression that uses linear or non-linear kernel-functions to project the data into a high-dimensional feature space. \cite{Lapins2013}
+
+Correlation is performed in this hyperspace based on the structural risk minimization principle i.e., aiming to increase the generalization ability of a model. \cite{Lapins2013}
+
+They applied the commonly used Gaussian radial basis function kernel optimal gamma (width of the kernel function) and error penalty parameter C were found after performing grid search on five­fold cross validation. \cite{Lapins2013}
+
+\subsubsection{Kinda Bayesian methods in MOE}
+
+
+\subsubsection{Cheng's appraoch using ML in QSAR}
+It is highly desirable to develop computational models that can predict the inhibitive effect of a compound against a specific CYP isoform. In this study inhibitor predicting models were developed for five major CYP isoforms, namely 1A2, 2C9, 2C19, 2D6, and 3A4, using a combined classifier algorithm on a large data set containing more than 24,700 unique compounds, extracted from PubChem. The combined classifiers algorithm is an ensemble of different independent machine learning classifiers including support vector machine, C 4.5 decision tree, $\kappa$-nearest neighbor, and naive Bayes, fused by a back-propagation artificial neural network (BP-ANN). All developed models were validated by 5-fold cross-validation and a diverse validation set composed of about 9000 diverse unique compounds. The range of the area under the receiver operating characteristic curve (AUC) for the validation set was 0.764 to 0.886. The overall performance of combined classifiers fused by BP-ANN was superior to that of three classic fusion techniques (Mean, Maximum, and Multiply). The chemical spaces of data sets were explored by multidimensional scaling plots, and the use of applicability domain improved the prediction accuracies of the models. In addition, some representative substructure fragments differentiating CYP inhibitors and noninhibitors were characterized by substructure fragment analysis. These classification models are applicable for virtual screening of hte five major CYP isoforms inhibitors or can be used as simple filters of potential chemicals in drug discovery.\cite{Cheng2011}
+
+

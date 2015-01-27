@@ -1,0 +1,58 @@
+\documentclass[12pt]{report}
+%\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\pagestyle{plain}
+%\linespread{2}
+\usepackage{setspace}
+%\doublespaceing
+
+
+\author{D.Siegle}
+\title{Cytochrome P450 Inhibitor Classification with Statistical Learning}
+\date{}
+\begin{document}
+
+% generate the title
+\maketitle
+
+\begin{doublespacing}
+\chapter*{Abstract}
+% Self reference and then abstract goes here.
+\input{chapters/abstract}
+\end{doublespacing}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\begin{doublespacing}
+\chapter*{Acknowledgements}
+I want to thank ...
+
+\chapter{Introduction}
+\input{chapters/chapter1}
+
+\chapter{Experimental Details}
+\input{chapters/chapter2}
+
+\chapter{Results: Classification}
+\input{chapters/chapter3}
+
+\chapter{Results: Evaluation}
+\input{chapters/chapter4}
+\input{tables}
+
+\chapter{Discussion}
+\input{chapters/chapter5}
+
+\chapter{Conclusion}
+\input{chapters/conclusion}
+
+\end{doublespacing}
+
+\bibliography{references}{}
+\bibliographystyle{apalike}
+
+\end{document}
