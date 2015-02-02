@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  2 FEB 2015 14:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  2 FEB 2015 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -273,18 +273,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.112    \includegraphics[width=1\textwidth]{}
+l.111    \includegraphics[width=1\textwidth]{}
                                               
 ? 
 [16] [17]
-Overfull \hbox (87.20616pt too wide) in paragraph at lines 152--153
+Overfull \hbox (87.20616pt too wide) in paragraph at lines 151--152
 \OT1/cmr/m/n/12 box al-go-rithms', bias es-ti-ma-tion and the 'no free lunch th
 eorem'.[[]] 
  []
 
 [18]
 
-LaTeX Warning: Citation `Prlic2012' on page 19 undefined on input line 167.
+LaTeX Warning: Citation `Prlic2012' on page 19 undefined on input line 166.
 
 [19]) [20]
 Chapter 2.
@@ -466,7 +466,7 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CYP.pdf (56 pages, 169256 bytes).
+Output written on CYP.pdf (56 pages, 169345 bytes).
 PDF statistics:
  214 PDF objects out of 1000 (max. 8388607)
  147 compressed objects within 2 object streams
