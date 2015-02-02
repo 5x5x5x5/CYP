@@ -1,11 +1,22 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  27 JAN 2015 15:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  2 FEB 2015 14:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**CYP.tex
+**CYP
 (./CYP.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 4 languages loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 .
+     \documentclass[12pt]{report}
+? 
+Missing character: There is no . in font nullfont!
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -18,12 +29,17 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \c@subsubsection=\count83
 \c@paragraph=\count84
 \c@subparagraph=\count85
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--303
+[]
+ []
+
 \c@figure=\count86
 \c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -61,18 +77,18 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 ) (./CYP.aux)
 \openout1 = `CYP.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -136,13 +152,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 18.
+(Font)              <14.4> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 18.
+(Font)              <7> on input line 19.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./chapters/abstract.tex
+] (./chapters/abstract.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -167,7 +183,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@lot=\write5
 \openout5 = `CYP.lot'.
 
- [4
+
+[4
 
 ] [5
 
@@ -176,21 +193,11 @@ Chapter 1.
 (./chapters/chapter1.tex [6
 
 ]
-! Argument of \@citex has an extra }.
-<inserted text> 
-                \par 
-l.9 ...e decades for a variety of reasons. {\cite}
-                                                   Integrated computational ...
+Overfull \hbox (44.14967pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/12 been pro-posed as one way to con-trol costs in pharam-ceu-ti-ca
+l R&D. [[]]
+ []
 
-? 
-Runaway argument?
-! Paragraph ended before \@citex was complete.
-<to be read again> 
-                   \par 
-l.9 ...e decades for a variety of reasons. {\cite}
-                                                   Integrated computational ...
-
-? 
 
 LaTeX Warning: Citation `Hansch1964' on page 7 undefined on input line 11.
 
@@ -447,11 +454,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  1641 strings out of 494985
  23245 string characters out of 6180355
- 108315 words of memory out of 5000000
+ 108305 words of memory out of 5000000
  4811 multiletter control sequences out of 15000+600000
  10120 words of font info for 35 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 37i,8n,23p,1643b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,23p,1639b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
@@ -459,10 +466,10 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CYP.pdf (55 pages, 169044 bytes).
+Output written on CYP.pdf (56 pages, 169256 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
+ 214 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

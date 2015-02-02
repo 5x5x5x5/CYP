@@ -3,12 +3,12 @@
 \contentsline {section}{\numberline {1.2}Background}{6}
 \contentsline {section}{\numberline {1.3}Review of Literature}{9}
 \contentsline {subsection}{\numberline {1.3.1}Cytochrome P450 Superfamily}{9}
-\contentsline {subsection}{\numberline {1.3.2}Rationale for early compound profiling \textit {in silico}}{11}
+\contentsline {subsection}{\numberline {1.3.2}Rationale for early compound profiling \textit {in silico}}{10}
 \contentsline {subsection}{\numberline {1.3.3}QSAR}{13}
 \contentsline {subsubsection}{Molecular Descriptors}{15}
 \contentsline {subsection}{\numberline {1.3.4}Machine Learning}{17}
 \contentsline {subsection}{\numberline {1.3.5}Stat Learning}{18}
-\contentsline {subsection}{\numberline {1.3.6}Reproducibility}{19}
+\contentsline {subsection}{\numberline {1.3.6}Reproducibility}{18}
 \contentsline {subsection}{\numberline {1.3.7}Project Plan}{20}
 \contentsline {chapter}{\numberline {2}Experimental Details}{21}
 \contentsline {section}{\numberline {2.1}Review of PubChem Assay 1851}{21}

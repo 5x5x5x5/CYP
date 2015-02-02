@@ -6,7 +6,7 @@ The goal of pharmaceutical sciences is to identify and market safe and efficacio
 
 The Cytochrome P450 superfamily is large and varied. Different isozymes metabolize different substrates. Even within and between individuals pharmacokinetic and pharmacodynamic variability can be high for reasons not entirely characterized. Designing assays for each isozyme and SNP variant and running them against every compound of interest as a general strategy is cost prohibitive. This project was designed to test the predictive power of computational methods for potential cytochrome P450 inhibition based on chemical structure.
 
-There has been an upward trend in drug development costs for thee decades for a variety of reasons. {\cite} Integrated computational approaches have been proposed as one way to control costs in pharamceutical R\&D. \cite{Visser2014} The foundational skills demonstrated in this thesis are needed to pursue a systems approach to drug development that the industry has recently turned toward as a way to boost R\&D productivity.\cite{Visser2014,Berg2014} It is also part of the larger project of \textit{in silico} drug-development, in which we can reduce \textit{in vivo} and clinical drug testing and increase the number of effecive treatments for patients.
+There has been an upward trend in drug development costs for thee decades for a variety of reasons. Integrated computational approaches have been proposed as one way to control costs in pharamceutical R\&D. \cite{Visser2014} The foundational skills demonstrated in this thesis are needed to pursue a systems approach to drug development that the industry has recently turned toward as a way to boost R\&D productivity.\cite{Visser2014,Berg2014} It is also part of the larger project of \textit{in silico} drug-development, in which we can reduce \textit{in vivo} and clinical drug testing and increase the number of effecive treatments for patients.
 
 There is a tradition of associating compound structure with bioactivity that goes back at least to Hansch\cite{Hansch1964} and has progressed under the moniker of Quantitative Structure Activity Relationship (QSAR). QSAR started with direct measures of chemical compounds and then derived features and used them to then build expert systems or statistical models that tried to predict biological activity. At the same time the field of machine learning emerged using computation in an analogous and more general way -- to associate features with results, inputs with outputs. Machine learning can be thought of as using algorithms to figure out how to perform important tasks by generalizing from examples. These algorithms are of course usually laborious, which necessitates their execution by computer.
 
@@ -31,7 +31,7 @@ There is the considerable substrate overlap between enzymes of this superfamily.
 
 \subsection{Rationale for early compound profiling \textit{in silico}}
 
-Drug discovery is a multi-parameter optimization process in which compounds are optimized for interaction with the desired target and minimal off-target activities, while imparting drug-like properties on the candidate compounds.\cite{Zlokarnik2005}
+Drug discovery is a multi-parameter optimization process in which compounds are optimized for interaction with their target while minimizing off-target activities, while at the same time imparting additional drug-like properties on those compounds.\cite{Zlokarnik2005}
 
 %Project teams often pursue a parallel optimization approach in which multiple scaffolds are explored along multiple axes, including potency, selectivity, physicochemical properties and absorption, distribution, metabolism, excretion and toxicity (ADME­Tox) parameters(1-6)\cite{Zlokarnik2005}
 
@@ -39,7 +39,7 @@ Drug discovery is a multi-parameter optimization process in which compounds are 
 
 During the last decade, techniques for high-throughput \textit{in vitro} screening of CYP inhibition were developed and implemented on a broad scale in drug discovery pipelines of pharmaceutical companies and research institutions. Much open data has accumulated from the latter through academic research initiatives (e.g. PubChem Bioassays AID 410 and 1851)
 
-The collected data has enabled development of structure-activity relationship models for \textit{in silico} prediction of CYP inhibition by a much larger pool of researchers than those ho designed the assay.
+The collected data has enabled development of structure-activity relationship models for \textit{in silico} prediction of CYP inhibition by a much larger pool of researchers than those who designed the assay.
 
 %Recent progress in computational methods for prediction of CYP-compound interactions need to be mentioned. 
 
@@ -66,11 +66,11 @@ The United States is about to become the last country to accept QSAR in the drug
 
 \subsection{QSAR}
 
-Quantitative structure-activity realtionship (QSAR) modeling pertains to the construction of predictive models of biological activities as a function of structural and molecular information of a compound library.\cite{Nantasenamat2009}
+Quantitative structure-activity realtionship (QSAR) modeling is generally accepted as the construction of predictive models of biological activities as a function of structural and molecular information of a compound or compound library.\cite{Nantasenamat2009}
 
 QSAR models describe the correlation between molecular features and activity at a given end point of interest. QSAR models are typically defined as those that use statistical methods to analyze the mathematical correlations between molecular features and activity, while SAR models are those that are constructed by using human expert knowledge (“expert rule-based”).
 
-A QSAR model defines the mathematical relationships between descriptors and biological activities of know molecules, whereas receptor binding-based efficacy prediction usually utilizes binding site characterization and molecular docking analysis to study molecular interactions between a drug and targets/receptors to predict drug efficacy based on known mechanisms of action and drug chemistry. \cite{Kruhlak2012}
+A QSAR model defines the mathematical relationships between descriptors and biological activities of know molecules. This differs from receptor binding-based efficacy prediction by taking into account binding site characteristics as well as molecular docking analysis. In contrast, these methods attempt to predict drug efficacy based on known mechanisms of action and medicinal chemistry by individually studying molecular interactions between a drug and targets/ receptors. \cite{Kruhlak2012}
 
 Applied QSAR has typically been used for drug discovery and development and has gained wide appliciablility for correlating molecular information with not only biological activities but also with other physiochemical properties, which has therefore been termed quantitative structure-property relationship (QSPR). Typical molecular parameters account for electronic properties, hydrophobicity, steric effects, and topology. These parameters can be determined empirically through experimentation or theoretically via computational chemistry. \cite{Nantasenamat2009}
 
@@ -90,7 +90,6 @@ Intermediate steps are also crucial for sucessful development of such QSAR model
 Because of the complex nature of toxicity, safety prediction is much more challenging than efficacy prediction. Toxicity mechanisms may be unknown or poorly characterized, and similar pathways and targets may be associated with different toxicities and adverse events. Toxicity prediction must also consider a number of complex interactions and the ability to find the unexpected. Toxicities could result from on-target effects due to incomplete knowledge or inadequate target validation, from off-target effects mediated via unknown molecules and mechanisms, or by the contribution of a patients’ genetic ackground and comorbidities. Nevertheless, QSAR models have been developed with some success by both industry and regulatory agencies.\cite{Kruhlak2012}
 
 The successful development of a QSAR model for safety prediction requires a sufficient amount of high-quality data, the appropriate selection of descriptors, the availability of one or more suitable statistical or mathematical models as well as an effective training and validation strategy.\cite{Kruhlak2012}
-
 
 %Data understanding is equivalent or can be achieved through exploratory data analysis which often starts with simple observation of the data matrix particularly the variables (also known as attributes or fields), its corresponding data types, and the data samples (also called records). As applied to the QSAR discipline, variables represent molecular descriptors; data samples represent each unique compound; data types refer to the characteristics or the kinds of data the particular value is represented as, which is essentially qualitative or quantitative in nature. Qualitative data types are interpreted as categorical labels while quantitative data types are amenable to arithmetic operations.\cite{Nantasenamat2009}
 
