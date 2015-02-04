@@ -3,3 +3,26 @@
 
 \subsection{Cheng's results compared to mine}
 It is highly desirable to develop computational models that can predict the inhibitive effect of a compound against a specific CYP isoform. In this Cheng's study inhibitor predicting models were developed for five major CYP isoforms, namely 1A2, 2C9, 2C19, 2D6, and 3A4, using a combined classifier algorithm on a large data set containing more than 24,700 unique compounds, extracted from PubChem. The combined classifiers algorithm is an ensemble of different independent machine learning classifiers including support vector machine, C 4.5 decision tree, $/kappa$-nearest neighbor, and naive Bayes, joined by a back-propagation artificial neural network (BP-ANN). Those models were validated by 5-fold cross-validation with a diverse validation set composed of about 9000 diverse unique compounds. The range of the AUROC for the validation set was 0.764 to 0.886. The overall performance of combined classifiers fused by BP-ANN was superior to that of three classic fusion techniques (Mean, Maximum, and Multiply). Cheng et al. claim these classification models are applicable for virtual screening of the five major CYP isoforms inhibitors or can be used as simple filters of potential chemicals in drug discovery.\cite{Cheng2011}
+
+\section{Machine Learning}
+Developing successful machine learning applications still requires a substantial amount of “black art” that is hard to find in textbooks.\cite{Domingos2012}
+
+Easily the most important factor is the features used. If you have many independent features that correlate well with the class, learning is easy. On the other hand, if the class is a very complex function of the features, you may not be able to learn it.\cite{Domingos2012}
+
+Often raw data is not in a form that is amenable to learning, but you can construct features from it that are. This is typically where most of the effort in a machine learning project goes. It is often one of the most interesting parts, where intuition, creativity and “black art” are as important as the technical stuff.\cite{Domingos2012}
+
+...consider how time-consuming it is to gather data, integrate it, clean it, and preprocess it, and how much trial and error can go into feature design.\cite{Domingos2012}
+
+Also machine learning is not a one-shot process of building a data set and running a learner, but rather an iterative process of running the learner, analyzing results, modifying the data and/or learner, and repeating. Learning is often the quickest part of this, but that’s because we’ve already mastered it pretty well! Feature engineering is more difficult because it is domain-specific, while learners can be largely general-purpose.\cite{Domingos2012}
+
+There is ultimately no replacement for the smarts you put into feature engineering. On the other hand, running a learner with a very large number of features to find out which ones are useful in combination may be too time-consuming, or cause overfitting.\cite{Domingos2012}
+
+As a rule, it pays to try the simplest learners first(e.g. naive Bayes before logistic regression, $\kappa$-nearest neighbor before support vector machines). More sophisticated learners may be seductive, but they are usually harder to use, because there are more tuning parameters and their internals are more opaque.\cite{Domingos2012}
+
+Learners can be divided into two major types: those whose representation has a fixed size, like linear classifiers, and those whose representation can grow with the data, like decision trees. (The latter are sometimes called non-parametric, but this is somewhat ufortuante, since they usually wind up learning many more parameters than parametric ones.) Fixed-size learners can only take advantage of so much data. Variable-sized learners can in principle learn any function given sufficient data, but in practice they may not, because of limitations of the algorithm or computational cost. Also, because of the curse of dimensionality, no existing amount of data may be enough.\cite{Domingos2012}
+
+Creating model ensembles is now standard in machine learning. In the simplest technique, called bagging, we simply generate random variations of the training set by resampling, learn a classifier on each, and combine the results by voting. This works because it greatly reduces variance while only slightly increasing bias. In boosting, training examples have weights, and these are varied so that each new classifier focuses on the examples the previous ones tended to get wrong. In stacking, the outputs of individual classifiers become the inputs of a “higher-level” learner that figures out how best to combine them.\cite{Domingos2012}
+
+Representable does not imply learnable.\cite{Domingos2012}
+
+Correlation does not imply causation.\cite{Domingos2012}
