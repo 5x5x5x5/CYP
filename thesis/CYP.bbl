@@ -33,6 +33,12 @@ Domingos, P. (2012).
 \newblock {A few useful things to know about machine learning}.
 \newblock {\em Communications of the ACM}, 55(10):78.
 
+\bibitem[Hansch and Fujita, 1964]{Hansch1964}
+Hansch, C. and Fujita, T. (1964).
+\newblock {Analysis. A Method for the Correlation of Biological Activity and
+  Chemical Structure}.
+\newblock {\em Journal of American Chemical Society}, 86:1616--1626.
+
 \bibitem[James et~al., 2013]{James2013}
 James, G., Witten, D., Hastie, T., and Tibshirani, R. (2013).
 \newblock {\em {An Introduction to Statistical Learning}}.
@@ -55,6 +61,11 @@ Nantasenamat, C. (2009).
 \newblock {A practical overview of quantitative structure-activity
   relationship}.
 \newblock {\em EXCLI J}, 8:74--88.
+
+\bibitem[Prlić and Lapp, 2012]{Prlic2012}
+Prlić, A. and Lapp, H. (2012).
+\newblock The plos computational biology software section.
+\newblock {\em PLoS Comput Biol}, 8(11):e1002799.
 
 \bibitem[Singh et~al., 2011]{Singh2011}
 Singh, D., Kashyap, A., Pandey, R.~V., and Saini, K.~S. (2011).
