@@ -1,27 +1,25 @@
-\section{Aims}
-The aim of this project is to quantify the risk of off target effects for the candidate molecules after building machine learning models that make binary classification of compounds based on their structure, as inhibitors or non-inhibitors of Cytochrome P450.
 
 \section{Background}
-The goal of pharmaceutical sciences is to identify and market safe and efficacious drugs. Toxicity is a major source of attrition in drug development. Inhibition of enzymes in the cytochrome P450 superfamily is a major source of toxicity in human and animal models, because of their role in first pass metabolism. If a compound inhibts cytochrome P450 it is likely to lead to toxic effects when first pass metabolism fails to clear or alters the pharmacokinetics of other therapies. For drug development, it would be useful to know whether a compound of interest inhibits cytochrome P450s as early as possible.
+The goal of pharmaceutical sciences is to identify and market safe and efficacious drugs. Toxicity is a large contributor to drug candidate attrition in drug development. Inhibition of enzymes in the cytochrome P450 superfamily major source of toxicity in human and animal models because of their role in first pass metabolism. If a compound inhibts cytochrome P450 it is likely to lead to toxic effects when first pass metabolism fails to clear or alters the pharmacokinetics of other therapies. For drug development, it would be useful to know whether a compound of interest inhibits cytochrome P450s as early as possible.
 
-The Cytochrome P450 superfamily is large and varied. Different isozymes metabolize different substrates. Even within and between individuals pharmacokinetic and pharmacodynamic variability can be high for reasons not entirely characterized. Designing assays for each isozyme and SNP variant and running them against every compound of interest as a general strategy is cost prohibitive. This project was designed to test the predictive power of computational methods for potential cytochrome P450 inhibition based on chemical structure.
+The Cytochrome P450 superfamily is large and varied. Different isozymes metabolize different substrates. Even within and between individuals pharmacokinetic and pharmacodynamic variability can be high for reasons not entirely characterized. Designing assays for each isozyme and SNP variant and running them against every compound of interest as a general strategy is cost prohibitive. This project was designed to test the predictive power of computational methods for potential cytochrome P450 inhibition based simply on knowledge of chemical structure.
 
-There has been an upward trend in drug development costs for thee decades for a variety of reasons. Integrated computational approaches have been proposed as one way to control costs in pharamceutical R\&D. \cite{Visser2014} The foundational skills demonstrated in this thesis are needed to pursue a systems approach to drug development that the industry has recently turned toward as a way to boost R\&D productivity.\cite{Visser2014,Berg2014} It is also part of the larger project of \textit{in silico} drug-development, in which we can reduce \textit{in vivo} and clinical drug testing and increase the number of effecive treatments for patients.
+There has been an upward trend in drug development costs for three decades for a variety of reasons. Integrated computational approaches have been proposed as one way to control costs in pharamceutical R\&D. \cite{Visser2014} The foundational skills demonstrated in this thesis are needed to pursue a systems approach to drug development that the industry has recently turned toward as a way to boost R\&D productivity.\cite{Visser2014,Berg2014} It is also part of the larger project of \textit{in silico} drug-development, attempting to reduce reliance on exploratory \textit{in vivo} and clinical drug testing and increase the number of effecive treatments for patients and the amount of time to develop them.
 
 There is a tradition of associating compound structure with bioactivity that goes back at least to Hansch\cite{Hansch1964} and has progressed under the moniker of Quantitative Structure Activity Relationship (QSAR). QSAR started with direct measures of chemical compounds and then derived features and used them to then build expert systems or statistical models that tried to predict biological activity. At the same time the field of machine learning emerged using computation in an analogous and more general way -- to associate features with results, inputs with outputs. Machine learning can be thought of as using algorithms to figure out how to perform important tasks by generalizing from examples. These algorithms are of course usually laborious, which necessitates their execution by computer.
 
-Statistical learning builds upon the peer prediction of machine learning. Statistical learning also allows prediction but focuses more on models and methods that can be used by scientists and engineers.\cite{James2013} Further extension of the statistical learning discipline to the pharmaceutical sciences can lead to important contributions to systems pharmacology. Or rather statitical learning methods are an important precursor to the needs of systems biology and systems pharmacology modeling.
+Statistical machine learning builds upon the peer prediction of machine learning. Statistical learning also allows prediction but focuses more on models and methods that can be used by scientists and engineers.\cite{James2013} Further extension of the statistical learning discipline to the pharmaceutical sciences can lead to important contributions to systems pharmacology. Or rather statitical learning methods are an important precursor to the needs of systems biology and systems pharmacology modeling.
 
 This project compares different techniques for Cytochrome P450 inhibition prediction in the framework of statistical learning. 
 
-Reproducibility is a key focus of this investigation. As much as possible, the code and data used in this study is publicly available and source controlled. Reproducibility as a practice is a habit, and a good one to get into. An attempt was made to make the materials and methods for this project reproducible in a completely automated way, but I have fallen short of this goal due to my own technical shortcomings and the necessary inclusion of proprietary software for crucial descriptor generation.
+Reproducibility is one of the main principles of the scientific method. As much as possible, the code and data used in this study is publicly available and source controlled. Reproducibility as a practice is a habit, and a good one to get into. An attempt was made to make the materials and methods for this project reproducible in a completely automated way. 
 
 \section{Review of Literature}
 \subsection{Cytochrome P450 Superfamily}
 
-One of the largest and most functionally diverse protein superfamilies is the cytochrome P450 family of hemoproteins. From bacteria to humans, the functional breadth of cytochrome P450 activity far ranging. At the latest count there were significantly more than 2000 identified cytochrome P450 genomic and cDNA sequences that have been divided into a total of 265 different families.\cite{Danielson2002} Cytochromes P450 appear in every kingdom from bacteria to higher eukaryotes. Multiple cytochrome P450 genes can be expressed simultaneously as different isozymes and the number of genes per species is highly variable with a tendency for higher eukaryotes to possess more. It is the central role that these ubiquitous proteins play as phase I enzymes in human drug metabolism that makes them so important to the pharmaceutical industry.
+One of the largest and most functionally diverse protein superfamilies is the cytochrome P450 family of hemoproteins. From bacteria to humans, the functional breadth of cytochrome P450 activity is far ranging. At the latest count there were significantly more than 2000 identified cytochrome P450 genomic and cDNA sequences that have been divided into a total of 265 different families.\cite{Danielson2002} Cytochromes P450 appear in every kingdom from bacteria to higher eukaryotes. Multiple cytochrome P450 genes can be expressed simultaneously as different isozymes and the number of genes per species is highly variable with a tendency for higher eukaryotes to possess more. It is the central role that these ubiquitous proteins play as phase I enzymes in human drug metabolism that makes them so important to the pharmaceutical industry.
  
-The cytochromes P450 (CYPs) constitute the major enzyme family capable of catalyzing the oxidative biotransformation of most drugs and other lipophilic xenobiotics and are therefore of particular relevance for clinical pharmacology.\cite{Nelson2004, Guengerich2008, Zanger2008} The CYP families are classified based on pairwise amino acid sequence identity among individual members. Families CYP 1-3 are involved in phase I metabolism of human drugs and xenobiotic compounds, whereas other CYP families (CYP 4, 11, 17, 17 and 21) are involved in the metabolism of endogenous compounds such as fatty acids, steroids, eicosanoids, bile acids and fat soluble vitamins\cite{Singh2011}
+The cytochromes P450 (CYPs) constitute the major enzyme family capable of catalyzing the oxidative biotransformation of most drugs and other lipophilic xenobiotics and are therefore of particular relevance for clinical pharmacology. The CYP families are classified based on pairwise amino acid sequence identity among individual members. Families CYP 1-3 are involved in phase I metabolism of human drugs and xenobiotic compounds, whereas other CYP families (CYP 4, 11, 17, 17 and 21) are involved in the metabolism of endogenous compounds such as fatty acids, steroids, eicosanoids, bile acids and fat soluble vitamins\cite{Singh2011}
 
 The CYP enzymes that are involved in the oxidative metabolism of drugs play a major part in the activation and elimination of therapeutic drug molecules. CYP inhibition leads to decreased elimination and/or changed metabolic pathways of their substrates, which is the major cause of adverse drug-drug interactions.\cite{Lapins2013} Adverse side effects of drug-drug interactions is an important consideration, especially during the research phase of drug discovery.\cite{Cheng2011}
 
@@ -43,67 +41,64 @@ The collected data has enabled development of structure-activity relationship mo
 
 %Recent progress in computational methods for prediction of CYP-compound interactions need to be mentioned. 
 
-\textit{In silico} screening has been very appealing as, with the steady increase in computing power, screening cost could in this manner become negligible. Virtual compounds could be screened for CYP liabilities reducing the numbers of compounds of questionable utility that a team would otherwise synthesize, providing additional savings.\cite{Zlokarnik2005}
+\textit{In silico} screening has been very appealing as, with the steady increase in computing power, screening cost could in this manner become negligible. The hope is that virtual compounds could be screened for CYP liabilities inorder to realize th savings from reducing the number of candidates of questionable utility that a team would otherwise synthesize.\cite{Zlokarnik2005}
 
 %As a major advance, the crystal structures of several human CYP isozymes have been solved. These structures provide more accurate geometries of the enzymes’ active sites and should lead to better representations than previous homology models that were based on crystal structures of soluble bacterial enzymes.\cite{Zlokarnik2005}
-
-Pubchem Bioassy 1851 has been the basis for several attempts to advance \textit{in silico} screening development. Recently, Vasanthanathan et al. and Novotarskyi et al. and more, recently developed large-scale single target models for the CYP1A2 isoform, and Cheng created single target QSAR models for all five CYP isoforms.\cite{Vasanthanathan2012, Novotarskyi2012, Cheng2012} And Lapins et al. pursured a proteochemometric method for all five isozymes by also taking into account each isozymes protein sequence. \cite{Lapins2013} These models showed good predictive performances.
 
 % but share the disadvantage that they are not implemented as publicly available services.\cite{Lapins2013}
 
 %Another deficiency of these models (except Cheng) is the use of molecular descriptors that are calculated by commercial software packages, which does not allow implementation of the models in free, open source software.\cite{Lapins2013}
 
-%Abstract
-The ability to predict clinical safety based on chemical structures is becoming an increasingly important part of regulatory decisionmaking. QSAR models are currently used by in industry and by regulators to evaluate safety concerns and possible nonclinical effects of a drug when adequate safety data are absent or equivocal.\cite{Kruhlak2012}
+The ability to predict clinical safety based on chemical structures is becoming an increasingly important part of regulatory decisionmaking. QSAR models are currently used by in industry and by regulators to evaluate safety concerns and possible nonclinical effects of a drug when adequate safety data is absent or inconclusive.\cite{Kruhlak2012}
 
 QSAR models and their value in informing regulatory decision making will likely increase with the standardization of analytical approaches, more complete and reliable data collection methods, and a better understanding of toxicity mechanisms and the role of disease, and individual susceptibility to adverse clinical events.\cite{Kruhlak2012}
 
 Many high-throughput technologies are now available to detect P450 inhibitors. High-throughput screening data can be used to guide medicinal chemists away from these interactions in an early stage. In certain cases it might also identify the inhibition issue by targeted modification of the CYP interacting functionality. To be generally useful, P450 inhibition screens need to be calibrated against standard methods and preferably also tested with a large set of drugs, for which human drug-drug interaction outcome is known. \cite{Zlokarnik2005} This should decrease the number of withdrawls of novel drugs from the market due to inhibition of major P450 isozymes.
 
+Pubchem Bioassy AID1851 has been the basis for several attempts to advance \textit{in silico} screening development. Recently, Vasanthanathan et al. and Novotarskyi et al. and more, recently developed large-scale single target models for the CYP1A2 isoform, and Cheng created single target QSAR models for all five CYP isoforms.\cite{Vasanthanathan2012, Novotarskyi2012, Cheng2012} And Lapins et al. pursured a proteochemometric method for all five isozymes by also taking into account each isozymes protein sequence. \cite{Lapins2013} These models showed good predictive performances.
+
 
 The United States is about to become the last country to accept QSAR in the drug approval process. The drafting of International Committee on Harmonization (ICH) M7 guideline can be viewed as setting a precedent for possible future, broader regulatory applications of QSAR modeling. ICH M7, will for the first time specify that -- under very specific conditions -- the results of QSAR computational toxicology predicitions will be considered sufficient for genotoxic contaminants of pharmaceuticals under consideration and eliminate the need for laboratory testing. \cite{Kruhlak2012}
 
 
-\subsection{QSAR}
+\subsection{Quantitative Structure-Activity Relationship}
 
 Quantitative structure-activity realtionship (QSAR) modeling is generally accepted as the construction of predictive models of biological activities as a function of structural and molecular information of a compound or compound library.\cite{Nantasenamat2009}
 
 QSAR models describe the correlation between molecular features and activity at a given end point of interest. QSAR models are typically defined as those that use statistical methods to analyze the mathematical correlations between molecular features and activity, while SAR models are those that are constructed by using human expert knowledge (“expert rule-based”).
 
-A QSAR model defines the mathematical relationships between descriptors and biological activities of know molecules. This differs from receptor binding-based efficacy prediction by taking into account binding site characteristics as well as molecular docking analysis. In contrast, these methods attempt to predict drug efficacy based on known mechanisms of action and medicinal chemistry by individually studying molecular interactions between a drug and targets/ receptors. \cite{Kruhlak2012}
+QSAR models can make it possible to predict the biological activities of a given compound as a function of its molecular structure. It follows from the 'similarity principle' that new and untested compounds possessing similar molecular features as compounds used in the development of QSAR models are assumed to possess similar activities and properties. Several successful models have been published over the years which encompass a wide span of biological and physicochemical properties.
 
-Applied QSAR has typically been used for drug discovery and development and has gained wide appliciablility for correlating molecular information with not only biological activities but also with other physiochemical properties, which has therefore been termed quantitative structure-property relationship (QSPR). Typical molecular parameters account for electronic properties, hydrophobicity, steric effects, and topology. These parameters can be determined empirically through experimentation or theoretically via computational chemistry. \cite{Nantasenamat2009}
+A QSAR model defines the mathematical relationships between descriptors and biological activities of know molecules. This differs from receptor binding-based efficacy prediction by taking into account binding site characteristics as well as molecular docking analysis. In contrast, these methods attempt to predict drug efficacy based on known mechanisms of action and medicinal chemistry by individually studying molecular interactions between a drug and targets/receptors. \cite{Kruhlak2012}
+
+Applied QSAR has typically been used for drug discovery and development and was mainly used to correlate molecular information with not only biological activities but also with other physiochemical properties. The later approach has been termed quantitative structure-property relationship (QSPR). Derived molecular parameters account for hydrophobicity, topology, electronic properties, and steric effects. These characteristics of compounds can either be determined empirically through experimentation or theoretically via computational chemistry as needed. \cite{Nantasenamat2009} These parameters derived from compound structure are refered to as molecular descriptors.
 
 %A given compilation of data sets is then subjected to data pre­processing and data modeling through the use of statistical and/or machine learning techniques.\cite{Nantasenamat2009}
 
 %Drug discovery has often evolved from serendipitous and fortuitous findings, for example, the discovery of penicillin by Alexander Fleming in 1928 triggered the antibiotic revolution... If not by chance, such discoveries may be achieved through random systematic experimentation or chemical intuition where combinatorial libraries are synthesized and then screened for potent activities. A potentially more lucrative approach is to rationally design drugs using computer­aided tools via molecular modeling, simulation, and virtual screening for the purpose of identifying promising candidates prior to synthesis.\cite{Nantasenamat2009}
 
-QSAR makes it possible to predict the biological activities of a given compound as a function of its molecular structure. It follows from the 'similarity principle' that new and untested compounds possessing similar molecular features as compounds used in the development of QSAR models are assumed to possess similar activities and properties. Several successful models have been published over the years which encompass a wide span of biological and physicochemical properties.
-
-The construction of QSAR models typically follows two main steps:
-\begin{itemize}
-\item description of molecular structure and
-\item  multivariate analysis for correlating molecular descriptors with observed activities. 
-\end{itemize}
-Intermediate steps are also crucial for sucessful development of such QSAR models to include data preprocessing and statistical evaluation. \cite{Nantasenamat2009}
-
-Because of the complex nature of toxicity, safety prediction is much more challenging than efficacy prediction. Toxicity mechanisms may be unknown or poorly characterized, and similar pathways and targets may be associated with different toxicities and adverse events. Toxicity prediction must also consider a number of complex interactions and the ability to find the unexpected. Toxicities could result from on-target effects due to incomplete knowledge or inadequate target validation, from off-target effects mediated via unknown molecules and mechanisms, or by the contribution of a patients’ genetic ackground and comorbidities. Nevertheless, QSAR models have been developed with some success by both industry and regulatory agencies.\cite{Kruhlak2012}
-
-The successful development of a QSAR model for safety prediction requires a sufficient amount of high-quality data, the appropriate selection of descriptors, the availability of one or more suitable statistical or mathematical models as well as an effective training and validation strategy.\cite{Kruhlak2012}
-
 %Data understanding is equivalent or can be achieved through exploratory data analysis which often starts with simple observation of the data matrix particularly the variables (also known as attributes or fields), its corresponding data types, and the data samples (also called records). As applied to the QSAR discipline, variables represent molecular descriptors; data samples represent each unique compound; data types refer to the characteristics or the kinds of data the particular value is represented as, which is essentially qualitative or quantitative in nature. Qualitative data types are interpreted as categorical labels while quantitative data types are amenable to arithmetic operations.\cite{Nantasenamat2009}
 
 \subsubsection{Molecular Descriptors}
-Molecular descriptors can be thought of as essential information of a molecule in terms of its physiochemical properties such as constitutional, electronic, geometrical, hydrophobic, lipophilicity, solubility, steric, quantum chemical, and topological descriptors. From a practical viewpoint, molecular descriptors are chemical information that is encoded within the molecular structures. \cite{Nantasenamat2009}
+Molecular descriptors can be thought of as the mathematical representation of essential information of a molecule in terms of its own physiochemical properties. Depending on the needs of the analysis, proerties considered can be electronic, geometric, hydrophobic, constitutional, lipophilic, steric, solubility, quantum chemical, or topological. From a practical viewpoint, molecular descriptors are chemical information that is encoded within the molecular structures. \cite{Nantasenamat2009}
 
 %The activities and properties that can be modeled by QSAR/QSPR are dependent variables of the QSAR model. These dependent variables are assumed to be influenced by the independent variables which are the molecular descriptors. A variety of biological and chemical properties have been modeled using the QSAR approach, such parameters are summarized as: Biological Properties Bioconcentration, biodegradation, carcinogenicity, drug metabolism and clearance, inhibitor constant, mutagenicity, permeability across blood brain barrier or skin, pharmacokinetics, receptor binding. Chemical Properties boiling point, chromatographic retention time, dielectric constant, diffusion coefficient, dissociation constant, melting point, reactivity, solubility, stability, thermodynamic properties, viscosity. \cite{Nantasenamat2009}
 
-Molecular features can be experimentally measured or calculated values. They can be in the form of simple physiochemical properties such as logP or logarithmic acid dissociation constant (pKa), substructure fragments, or mathematical descriptors. Mathematical descriptors are chemical structural features represented in numerical form, and range from simple atom counts to the product of complex equations describing electron distribution across a molecule.\cite{Kruhlak2012}
+Molecular features can be either experimentally measured or calculated values. They can be in the form of simple physiochemical properties such as logP or logarithmic acid dissociation constant (pKa), numerical representaions of substructure fragments, or purely mathematical. Mathematical descriptors are chemical structural features represented in numerical form, and range from simple atom counts to the product of complex equations describing electron distribution across a molecule.\cite{Kruhlak2012}
 
-The predictors used in QSAR modeling are typically less precise than the “lock and key” relationships that underpin computer-aided drug design. The basic assumptions in QSAR modeling are that similar molecules exhibit similar biological activity and that the physiochemical properties and/or structural properties of a molecule can be encoded as molecular descriptors to predict the biological activity of structurally related compounds.
+Molecular descriptors as predictors used in QSAR modeling are typically less precise than the “lock and key” relationships that underpin the docking approach to computer-aided drug design. The basic assumptions in QSAR modeling are that similar molecules exhibit similar biological activity and that the physiochemical properties and/or structural properties of a molecule can be encoded as molecular descriptors to predict the biological activity of structurally related compounds.
 
+\subsection{Modeling}
 Models can be described as global or local. Global models incorporate chemicals with a range of molecular features acting across the spectrum of chemical pathways, whereas local models are highly focused on a single chemical class and end point. Although local models generally have much higher accuracy, their narrow domain of applicability renders them impractical in most regulatory environments where predictions need to be made for structural classes covering active pharmaceutical ingredients to metabolites, degradants, reagents, and synthetic intermediates. \cite{Kruhlak2012}
 
+The construction of QSAR models typically follows two main steps:
+\begin{itemize}
+\item Description of molecular structure and derivation of descriptors
+\item Multivariate analysis correlating molecular descriptors with observed activities. 
+\end{itemize}
+Additional intermediate steps that are also crucial for sucessful development of such QSAR models include data preprocessing and statistical evaluation. \cite{Nantasenamat2009}
+
+A typical QSAR workflow involves chemical structure management, descriptor calculation, and statistical analyses that are treated as separate steps and often performed by non-integrated software packages. This can lead to low throughput and even the lack of possibility of performing predictions for new compounds and updating the models when new data become available, depending on the workflow.
 
 \begin{figure}[h,t]
   \caption{Typical QSAR Workflow}
@@ -111,8 +106,9 @@ Models can be described as global or local. Global models incorporate chemicals 
    \includegraphics[width=1\textwidth]{}
 \end{figure}
 
-A typical QSAR workflow involves chemical structure management, descriptor calculation, and statistical analyses that are treated as separate steps and often performed by non-integrated software packages. This can lead to low throughput and even the lack of possibility of performing predictions for new compounds and updating the models when new data become available, depending on the workflow.
+Because of the complex nature of toxicity, safety prediction is considered more challenging than efficacy prediction. Toxicity mechanisms may be unknown or poorly characterized in higher organisms, and similar pathways and targets may be associated with different toxicities and adverse events. Toxicity prediction must also encompass a number of complex interactions and remain alert to the possibility of finding the unexpected. For instance, toxicities could result from on-target effects due to incomplete knowledge or inadequate target validation, or from off-target effects mediated via unknown molecules and mechanisms, or even from genetic variation or comorbidities in any of the previously mentioned pathways. Nevertheless, QSAR models have been developed with some success by both industry and regulatory agencies.\cite{Kruhlak2012}
 
+According to Kruhlak, et al., the successful development of a QSAR model for safety prediction requires a sufficient amount of high-quality data, the appropriate selection of descriptors, the availability of one or more suitable statistical or mathematical models and an effective training and validation strategy.
 %Creating structure-activity models for one CYP isozyme at a time may be a suboptimal approach since the inhibition profiles of CYPs largely overlap. A more general technique is proteochemometrics (PCM, a modelling technology that 'Sweden' introduced to study similarities and differences in molecular interaction mechanisms of groups of related proteins.\cite{Lapins2013}
 
 %PCM creates unified models for multiple proteins interacting with multiple ligands by correlating the interaction data to descriptors of both sets of interacting entities.\cite{Lapins2013}
@@ -135,20 +131,23 @@ Machine Learning algorithms figure out how to perform important tasks by general
 
 \end{itemize}
 
-Most textbooks are organized by representation, but other components are equally important.\cite{Domingos2012}
+Most textbooks are organized by representation, but the other components -- evaluation and optimization -- are equally important.\cite{Domingos2012}
 
-The fundamental goal of machine learning is to generalize beyond the examples in the training set -- no matter how much data we have, it is unlikely that we will see those exact examples again at test time.\cite{Domingos2012}
+The current state of machine learning is fundamentally a subset of optimization and has found its biggest successes in fields where there are far more variables than parameters. The ultimate goal of machine learning in this case is to generalize beyond examples in the training set, because no matter how much data we have, it is unlikely that we will see those exact examples again at test time.\cite{Domingos2012} 
 
 %Everyone knows about overfitting, but it comes in many forms that are not immediately obvious. One way to understand overfitting is by decomposing generalization error into bias and variance.\cite{Domingos2012}
 
 
-\subsection{Stat Learning}
+\subsection{Statisitcal Learning}
 
-Statistics is the applied science that constructs and studies techniques for data analysis (Jan de Leeuw) In short, statistical learning refers to a set of approaches for estimating a function that describes a dataset as a precursor for prediction or inference.\cite{James2013}
+A concise definition of statistics is as the applied science that constructs and studies techniques for data analysis (Jan de Leeuw) Statistical learning refers to a set of approaches for estimating a function that describes a dataset as a precursor for prediction or inference.\cite{James2013} Statistical machine learning constructs that function by generalizing from examples, i.e. data.
 
-'There are two cultures in the use of statistical modeling to reach conclusions from data. One assumes that the data are genereated by a given stochastic data model. The other uses algorithmic models and treats the data mechanisms as unknown' \cite{Breiman2001} And he also claims that the statistical community had traditionally prefered the first view.
+Leo Breiman wrote a landmark paper that documented the beginnings of this approach. He said 'There are two cultures in the use of statistical modeling to reach conclusions from data. One assumes that the data are genereated by a given stochastic data model. The other uses algorithmic models and treats the data mechanisms as unknown' \cite{Breiman2001} He also claims that the statistical community had traditionally prefered the first view. 
 
-This is a wider view than traditionally encountered in most applied science education where simple hypothesis testing reins supreme. Opening up the field of data analysis brings a host of new considerations along with the 'curse of dimensionality' such as 'degrees of freedom of the analyst', 'black box algorithms', bias estimation and the 'no free lunch theorem'.\cite{Boulesteix2014}
+This is a wider view than traditionally encountered in most applied science education where simple hypothesis testing predominates. Opening up the field of data analysis like this brings opportunity for exploration along with new concerns, such as the 'curse of dimensionality', 'degrees of freedom of the analyst', 'black box algorithms', difficulty of bias estimation and the 'no free lunch theorem'.\cite{Boulesteix2014}
+
+In the context of QSAR then, with enough prior knowledge, machine learning may be a practical approach to fill in the gaps of clinical knowledge for any relevant CYP isozyme queried against any known compound of interest so long as the structure is known.
+
 
 \subsection{Reproducibility}
 
@@ -156,13 +155,13 @@ Science conducted in an open fashion confers the following benefits
 
 \begin{itemize}
 
-\item Reproducibility of experiments alows other researchers to use the exact methods to calculate the relations between biological data.
+\item Reproducibility of experiments allows other researchers to use the exact methods to calculate the relations between biological data.
 
-\item Faster development of disease models and therapeutic treatments due to the reuse of existing knowledge. Project can build upon existing results or extend the research in directions unanticipated by the original team. Results can be subject to new analysis. A second look at compounds with interesting side effects.
+\item Faster development of disease models and therapeutic treatments due to the reuse of existing knowledge. Projects can be built upon existing results more easily or extend the research in directions unanticipated by the original team. First-pass results can be subject to new analysis, and a second look at compounds with interesting side effects can lead to serendipidous discoverys
 
 \item Increased quality as a result of having more researchers studying the same topic to provide a layer of assurance that errors will not propagate.
 
-\item Long-term availability of data and code if these resources are not tied to businesses or patents, then they can be posted to multiple repositories to ensure that they are available in the future.
+\item Long-term availability of data and code. If these resources are not tied to businesses or patents, then they can be posted to multiple repositories to ensure that they are available in the future.
 \cite{Prlic2012}
 
 \end{itemize}
@@ -177,9 +176,22 @@ Large -omics data collections can be expensive to generate and also to manage. E
 
 New research findings, supporting data and methods should, therefore, be made publicly available for independent verification and replication in order not to delay medical advances.
 
+\section{Aims}
+The aim of this project is to quantify the risk of off target effects for the candidate molecules after building statistical machine learning models that make binary classification of compounds based on their structure, as inhibitors or non-inhibitors of Cytochrome P450.
 
-\subsection{Project Plan}
-This project compares a well accepted, commercial method of binary classification with a variety of open source implementaions of common machine learning algorithms.
+This project also compares a well accepted, commercial method of binary classification with a variety of open source implementaions of common machine learning algorithms acording to the following plan.
+
+\begin{itemize}
+
+\item Build Binary QSAR models in the Molecular Operating Environment (MOE).
+
+\item Develop and implement comparable methods in open source software.
+
+\item Evaluate and compare results from all models.
+
+\item Perform this analysis as reproducible research.
+
+\end{itemize}
 
 %\subsubsection{Function of Cytochrome P450 in humans}
 %\subsubsection{Importanceof Cytochrome P450 in pharmaceutical R\&D}

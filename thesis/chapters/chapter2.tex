@@ -6,13 +6,13 @@ The assay used low low-fluorescence substrates, which are converted to more-fluo
 
 The most recent technology developed for CYP inhibition is based on substrates that release luciferin as the metabolite. This is a coupled assay system in which addition of luciferase and ATP converts the freed luciferin to des-carboxyluciferin with light emission. The format is similar to fluoresence methods, requiring addition-only manipulations and employing luminescence plate readers. \cite{Zlokarnik2005}
 
-This assay requires recombinant sources of CYP enzymes, as the probes are not sufficiently P450 isoform-selective to be used with human liver microsomes. \cite{Zlokarnik2005} A potential source for false positives in these assays can be compounds that interfere with light generation directly, such as compounds that interfere with luciferase enzymatic activity. \cite{Zlokarnik2005}
+This assay required recombinant sources of CYP enzymes, because the probes are not sufficiently P450 isoform-selective to be used with those derived from human liver microsomes. Another potential source for false positives in these assays can be compounds that interfere with light generation directly, such as compounds that interfere with luciferase enzymatic activity. \cite{Zlokarnik2005}
 
-Inorganic compounds, non-covalent inhibitors and compound mixtures were removed from the dataset, leaving 16,359 compounds. \cite{Lapins2013}
+%Inorganic compounds, non-covalent inhibitors and compound mixtures were removed from the dataset, leaving 16,359 compounds. \cite{Lapins2013}
 
-The dataset classified compounds as active or inactive inhibitors for the respective CYP, and the activity cutoff was set to AC50 = 10uM (AC50, “activity concentration 50”, refers to the concentration that is required to elicit half-maximal effect). However, in cases where the dose-response curve for a compound showed poor fit or the inhibition efficacy was below 60\%, the assay results were regarded as inconclusive. Thus not all compounds had activity outcomes for all five CYP isoforms. \cite{Lapins2013}
+In the dataset, compounds are classified as active or inactive inhibitors for each CYP with an activity cutoff set to AC50 = 10uM (AC50, “activity concentration 50”, refers to the concentration that is required to elicit half-maximal effect). However, in cases where the dose-response curve for a compound showed poor fit or the inhibition efficacy was below 60\%, the assay results were regarded as inconclusive.\cite{Lapins2013}
 
-Compounds were characterized by their Activity Score and are regarded as inhibitors if the activity score ranges between 40 and 100. PubChem Acitivity Score is assigned based on an AC50 values, which is combined with a measure for completeness of a dose-response curve and efficacy of inhibition, where a larger value indicates higher inhibitory activity and/or higher confidence in inhibitory assay result. Compounds with an activity score equal to zero are considered as non-inhibitors while compounds with activity scores above 0 and up to 40 are considered inconclusive. \cite{Lapins2013}
+Compounds were characterized by their Activity Score and regarded as inhibitors if their activity score ranged between 40 and 100. PubChem Acitivity Score is assigned based on an AC50 values, which was combined with a confidence measure. Combining measures for completeness of a dose-response curve and efficacy of inhibition, resulted in the Activity Score, where a larger value indicates higher inhibitory activity and/or higher confidence in inhibitory assay result. Compounds with an activity score equal to zero are considered as non-inhibitors while compounds with activity scores above 0 and up to 40 are considered inconclusive. \cite{Lapins2013}
 
 The the tested compounds were all drugs or drug-like compounds. The chemical space revealed that the majority of compounds had molecular weight below 500 daltons and logP below 5. \cite{Lapins2013}
 
@@ -71,7 +71,7 @@ Mathematically speaking, an outlier is essentially a data point which has a high
 \end{figure}
 
 \subsubsection{Modeling in Python}
-The Python programming language is a dynamically-typed, object-oriented interpreted language. Although, its primary strength lies in the ease with which it allows a programmer to rapidly prototype a project, its powerful and mature set of standard libraries make it a great fit for large-scale production-level software engineering projects as well. Python has a very shallow learning curve and excellent online learning resources.
+The Python programming language is a dynamically-typed, object-oriented interpreted language. Its primary strength lies in the ease with which it allows a programmer to rapidly prototype a project, although it also has a powerful and mature set of standard libraries that can facilitate large-scale production-level software engineering projects as well. Python has a very shallow learning curve and excellent online learning resources.
 
 
 \subsubsection{Methods of Correlation of Compound and CYP Descriptors to Activity Data}
@@ -93,10 +93,6 @@ Correlation is performed in this hyperspace based on the structural risk minimiz
 
 They applied the commonly used Gaussian radial basis function kernel optimal gamma (width of the kernel function) and error penalty parameter C were found after performing grid search on five­fold cross validation. \cite{Lapins2013}
 
-\subsubsection{Kinda Bayesian methods in MOE}
-
-
-\subsubsection{Cheng's appraoch using ML in QSAR}
-It is highly desirable to develop computational models that can predict the inhibitive effect of a compound against a specific CYP isoform. In this study inhibitor predicting models were developed for five major CYP isoforms, namely 1A2, 2C9, 2C19, 2D6, and 3A4, using a combined classifier algorithm on a large data set containing more than 24,700 unique compounds, extracted from PubChem. The combined classifiers algorithm is an ensemble of different independent machine learning classifiers including support vector machine, C 4.5 decision tree, $\kappa$-nearest neighbor, and naive Bayes, fused by a back-propagation artificial neural network (BP-ANN). All developed models were validated by 5-fold cross-validation and a diverse validation set composed of about 9000 diverse unique compounds. The range of the area under the receiver operating characteristic curve (AUC) for the validation set was 0.764 to 0.886. The overall performance of combined classifiers fused by BP-ANN was superior to that of three classic fusion techniques (Mean, Maximum, and Multiply). The chemical spaces of data sets were explored by multidimensional scaling plots, and the use of applicability domain improved the prediction accuracies of the models. In addition, some representative substructure fragments differentiating CYP inhibitors and noninhibitors were characterized by substructure fragment analysis. These classification models are applicable for virtual screening of hte five major CYP isoforms inhibitors or can be used as simple filters of potential chemicals in drug discovery.\cite{Cheng2011}
+\subsubsection{Binary QSAR in MOE}
 
 
