@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  5 FEB 2015 17:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  6 FEB 2015 10:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -328,6 +328,41 @@ Chapter 4.
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
  [40]) (./tables.tex
+<../img/2c19_moe_model_accuracy.png, id=142, 527.0892pt x 235.1184pt>
+File: ../img/2c19_moe_model_accuracy.png Graphic file (type png)
+
+<use ../img/2c19_moe_model_accuracy.png>
+Package pdftex.def Info: ../img/2c19_moe_model_accuracy.png used on input line 
+39.
+(pdftex.def)             Requested size: 390.0pt x 173.9741pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 39--40
+[][] 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 42--72
+[]$[]$ $[]$ 
+ []
+
+[41]
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 77--107
+[]$[]$ $[]$ 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 112--142
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 147--177
+[]$[]$ $[]$ 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -337,30 +372,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [41] [42] [43] [44] [45]
+) [42 <../img/2c19_moe_model_accuracy.png>] [43] [44]
 Chapter 5.
-(./chapters/chapter5.tex [46
+(./chapters/chapter5.tex [45
 
 ]
 Missing character: There is no ‚ in font cmr12!
@@ -381,47 +395,47 @@ Missing character: There is no ô in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [47] [48]
+ [46] [47]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-) [49]
+) [48]
 Chapter 6.
-(./chapters/conclusion.tex [50
+(./chapters/conclusion.tex [49
 
 ]
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
-) [51] (./CYP.bbl [52]
+) [50] (./CYP.bbl [51]
 Underfull \hbox (badness 3396) in paragraph at lines 53--58
 []\OT1/cmr/m/n/12 Lapins, M., Worachartchee-wan, A., Spjuth, O.,
  []
 
-[53
+[52
 
 ]
 Missing character: There is no ƒ in font cmr12!
 Missing character: There is no á in font cmr12!
 Missing character: There is no ƒ in font cmr12!
 Missing character: There is no á in font cmr12!
-) [54] (./CYP.aux)
+) [53] (./CYP.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1637 strings out of 494985
- 23193 string characters out of 6180355
- 108353 words of memory out of 5000000
- 4807 multiletter control sequences out of 15000+600000
+ 1643 strings out of 494985
+ 23382 string characters out of 6180355
+ 101353 words of memory out of 5000000
+ 4811 multiletter control sequences out of 15000+600000
  10120 words of font info for 35 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 37i,10n,23p,1405b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,23p,1405b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
@@ -429,10 +443,10 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CYP.pdf (56 pages, 169415 bytes).
+Output written on CYP.pdf (55 pages, 274398 bytes).
 PDF statistics:
  214 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
+ 146 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

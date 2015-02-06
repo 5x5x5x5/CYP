@@ -32,7 +32,7 @@
 \contentsline {chapter}{\numberline {4}Results: Evaluation}{39}
 \contentsline {subsubsection}{Accuracy}{40}
 \contentsline {subsubsection}{AUROC}{40}
-\contentsline {chapter}{\numberline {5}Discussion}{46}
-\contentsline {subsection}{\numberline {5.0.1}Cheng's results compared to mine}{46}
-\contentsline {section}{\numberline {5.1}Machine Learning}{47}
-\contentsline {chapter}{\numberline {6}Conclusion}{50}
+\contentsline {chapter}{\numberline {5}Discussion}{45}
+\contentsline {subsection}{\numberline {5.0.1}Cheng's results compared to mine}{45}
+\contentsline {section}{\numberline {5.1}Machine Learning}{46}
+\contentsline {chapter}{\numberline {6}Conclusion}{49}
