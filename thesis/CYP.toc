@@ -32,10 +32,11 @@
 \contentsline {subsubsection}{Accuracy}{41}
 \contentsline {subsubsection}{AUROC}{41}
 \contentsline {section}{\numberline {4.1}2C19 MOE models}{42}
-\contentsline {section}{\numberline {4.2}1A2 MOE Models}{44}
-\contentsline {section}{\numberline {4.3}2D6 MOE Models}{45}
-\contentsline {section}{\numberline {4.4}3A4 MOE Models}{47}
-\contentsline {section}{\numberline {4.5}Comparison of Methods}{49}
+\contentsline {section}{\numberline {4.2}2C9 MOE Models}{44}
+\contentsline {section}{\numberline {4.3}1A2 MOE Models}{45}
+\contentsline {section}{\numberline {4.4}2D6 MOE Models}{46}
+\contentsline {section}{\numberline {4.5}3A4 MOE Models}{48}
+\contentsline {section}{\numberline {4.6}Comparison of Methods}{49}
 \contentsline {chapter}{\numberline {5}Discussion}{53}
 \contentsline {subsection}{\numberline {5.0.1}Cheng's results compared to mine}{53}
 \contentsline {section}{\numberline {5.1}Machine Learning}{54}

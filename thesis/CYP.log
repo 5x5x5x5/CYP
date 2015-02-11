@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  9 FEB 2015 10:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  10 FEB 2015 21:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -333,65 +333,82 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 52--82
 []$[]$ $[]$ 
  []
 
-<../img/1a2_moe_model_accuracy.png, id=157, 527.0892pt x 235.1184pt>
-File: ../img/1a2_moe_model_accuracy.png Graphic file (type png)
+<../img/2c9_moe_model_accuracy.png, id=157, 527.0892pt x 235.1184pt>
+File: ../img/2c9_moe_model_accuracy.png Graphic file (type png)
 
-<use ../img/1a2_moe_model_accuracy.png>
-Package pdftex.def Info: ../img/1a2_moe_model_accuracy.png used on input line 8
+<use ../img/2c9_moe_model_accuracy.png>
+Package pdftex.def Info: ../img/2c9_moe_model_accuracy.png used on input line 8
 6.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
- [44 <../img/1a2_moe_model_accuracy.png>]
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 97--127
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 95--125
 []$[]$ $[]$ 
  []
 
+[44 <../img/2c9_moe_model_accuracy.png>]
+<../img/1a2_moe_model_accuracy.png, id=162, 527.0892pt x 235.1184pt>
+File: ../img/1a2_moe_model_accuracy.png Graphic file (type png)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<use ../img/1a2_moe_model_accuracy.png>
+Package pdftex.def Info: ../img/1a2_moe_model_accuracy.png used on input line 1
+29.
+(pdftex.def)             Requested size: 390.0pt x 173.9741pt.
+ [45 <../img/1a2_moe_model_accuracy.png>]
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 140--170
+[]$[]$ $[]$ 
+ []
 
-<../img/2d6_moe_model_accuracy.png, id=162, 527.0892pt x 235.1184pt>
+<../img/2d6_moe_model_accuracy.png, id=167, 527.0892pt x 235.1184pt>
 File: ../img/2d6_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/2d6_moe_model_accuracy.png>
 Package pdftex.def Info: ../img/2d6_moe_model_accuracy.png used on input line 1
-31.
+74.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[45] [46 <../img/2d6_moe_model_accuracy.png>]
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 143--173
+[46] [47 <../img/2d6_moe_model_accuracy.png>]
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 186--216
 []$[]$ $[]$ 
  []
 
-<../img/3a4_moe_model_accuracy.png, id=170, 527.0892pt x 235.1184pt>
+<../img/3a4_moe_model_accuracy.png, id=176, 527.0892pt x 235.1184pt>
 File: ../img/3a4_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/3a4_moe_model_accuracy.png>
-Package pdftex.def Info: ../img/3a4_moe_model_accuracy.png used on input line 1
-77.
+Package pdftex.def Info: ../img/3a4_moe_model_accuracy.png used on input line 2
+20.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
-
+ [48 <../img/3a4_moe_model_accuracy.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[47] [48 <../img/3a4_moe_model_accuracy.png>]
-<../img/method_comparison_training_set.png, id=180, 527.0892pt x 235.1184pt>
+<../img/method_comparison_training_set.png, id=182, 527.0892pt x 235.1184pt>
 File: ../img/method_comparison_training_set.png Graphic file (type png)
 
 <use ../img/method_comparison_training_set.png>
 Package pdftex.def Info: ../img/method_comparison_training_set.png used on inpu
-t line 202.
+t line 245.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
- [49 <../img/method_comparison_training_set.png>] [50]
-<../img/method_comparison_test_set.png, id=188, 527.0892pt x 235.1184pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[49] [50 <../img/method_comparison_training_set.png>]
+<../img/method_comparison_test_set.png, id=190, 527.0892pt x 235.1184pt>
 File: ../img/method_comparison_test_set.png Graphic file (type png)
 
 <use ../img/method_comparison_test_set.png>
 Package pdftex.def Info: ../img/method_comparison_test_set.png used on input li
-ne 232.
+ne 270.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
- [51 <../img/method_comparison_test_set.png>]) [52]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[51]) [52 <../img/method_comparison_test_set.png>]
 Chapter 5.
 (./chapters/chapter5.tex [53
 
@@ -449,10 +466,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1679 strings out of 494985
- 24667 string characters out of 6180355
- 83353 words of memory out of 5000000
- 4840 multiletter control sequences out of 15000+600000
+ 1684 strings out of 494985
+ 24844 string characters out of 6180355
+ 85353 words of memory out of 5000000
+ 4844 multiletter control sequences out of 15000+600000
  10120 words of font info for 35 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  37i,10n,23p,1405b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -463,10 +480,10 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CYP.pdf (63 pages, 844053 bytes).
+Output written on CYP.pdf (63 pages, 946440 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
+ 253 PDF objects out of 1000 (max. 8388607)
  163 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
