@@ -1,6 +1,6 @@
 \section{Methods}
 \subsubsection{Dataset preparation}
-The data from Pubchem Assay 1851 is available for download from the NIH website. The interface changes from time to time, but I downloaded two files which comprised the entire dataset for the experiment. A structures file contained the structural information encoded in SMILES format for each tested compound with corresponding structure ID and compound ID as assigned by whoever. Another file, also organized by SID and CID, contained all of the luminescent responses from the high-throughput screen and the fitted parameters that are summarized by an activity score. 
+
 
 Both files were downloaded as comma separated value (.csv) files and merged together based on the SID column using functions from Python's pandas library.
 

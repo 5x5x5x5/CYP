@@ -1,16 +1,13 @@
 \section{Review of PubChem Assay 1851}
+  
 
-
-Pubchem Bioassy AID1851 has been the basis for several attempts to advance \textit{in silico} screening development. Recently, Vasanthanathan et al. and Novotarskyi et al. and more, recently developed large-scale single target models for the CYP1A2 isoform, and Cheng created single target QSAR models for all five CYP isoforms.\cite{Vasanthanathan2012, Novotarskyi2012, Cheng2012} And Lapins et al. pursured a proteochemometric method for all five isozymes by also taking into account each isozymes protein sequence. \cite{Lapins2013} These models showed good predictive performances.
-
-
-PubChem BioAssay 1851 contains data for inhibition of five major CYP isoforms (CYP1A2, CYP2C9, CYP2C19, CYP2D6 and CYP3A4) by 17,143 chemical compounds. \cite{Veith2009}
+PubChem BioAssay 1851 contains data for inhibition of five major CYP isoforms (CYP1A2, CYP2C9, CYP2C19, CYP2D6 and CYP3A4) by 17,143 chemical compounds. \cite{Veith2009} The the tested compounds were all drugs or drug-like compounds. The chemical space revealed that the majority of compounds had molecular weight below 500 daltons and logP below 5. \cite{Lapins2013}
 
 The assay used low low-fluorescence substrates, which are converted to more-fluorescent metabolites. The progression of the reaction is measured by an increase in fluorescence intensity during CYP metabolism of the substrate. Inhibitors of a particular CYP reduce the rate of metabolism of the substrate and this results in a decreased fluorescence signal. \cite{Zlokarnik2005}
 
 The most recent technology developed for CYP inhibition is based on substrates that release luciferin as the metabolite. This is a coupled assay system in which addition of luciferase and ATP converts the freed luciferin to des-carboxyluciferin with light emission. The format is similar to fluoresence methods, requiring addition-only manipulations and employing luminescence plate readers. \cite{Zlokarnik2005}
 
-This assay required recombinant sources of CYP enzymes, because the probes are not sufficiently P450 isoform-selective to be used with those derived from human liver microsomes. Another potential source for false positives in these assays can be compounds that interfere with light generation directly, such as compounds that interfere with luciferase enzymatic activity. \cite{Zlokarnik2005}
+The assay obtained lumiescence readings at a range of compound concentrations.Fi Here I need a paragraph describing the Hill equation and its suitability for curve fitting
 
 %Inorganic compounds, non-covalent inhibitors and compound mixtures were removed from the dataset, leaving 16,359 compounds. \cite{Lapins2013}
 
@@ -18,12 +15,15 @@ In the dataset, compounds are classified as active or inactive inhibitors for ea
 
 Compounds were characterized by their Activity Score and regarded as inhibitors if their activity score ranged between 40 and 100. PubChem Acitivity Score is assigned based on an AC50 values, which was combined with a confidence measure. Combining measures for completeness of a dose-response curve and efficacy of inhibition, resulted in the Activity Score, where a larger value indicates higher inhibitory activity and/or higher confidence in inhibitory assay result. Compounds with an activity score equal to zero are considered as non-inhibitors while compounds with activity scores above 0 and up to 40 are considered inconclusive. \cite{Lapins2013}
 
-The the tested compounds were all drugs or drug-like compounds. The chemical space revealed that the majority of compounds had molecular weight below 500 daltons and logP below 5. \cite{Lapins2013}
+The data from Pubchem Assay 1851 is available for download from the NIH website. The interface changes from time to time, but I downloaded two files which comprised the entire dataset for the experiment. The first file, a structures file, contained the structural information encoded in the simplified molecular-input line-entry system (SMILES) format for each tested compound with corresponding Structure ID (SID) and Compound ID (CID) as assigned by NCBI. Another file, also organized by SID and CID, contained all of the luminescent responses from the high-throughput screen and the fitted parameters that are summarized by the activity score. 
 
-All compounds were obtained as SMILES strings.
+\begin{figure}[!htp]
+  \caption{dataset preparation}
+  \centering
+\includegraphic
 
 \subsection{results}
-The results of this large-scale screening against five CYP isoforms identified that the majority of compounds in a typical chemical library cross-inhibited several isoforms, while only a small fraction of the compounds did not inhibit any of the isoforms. \cite{Veith2009}
+The results of this large-scale screening against five CYP isoforms identified that the majority of compounds in a typical chemical library cross-inhibited several isoforms, while only a small fraction of the compounds did not inhibit any of the isoforms. \cite{Veith2009}x
 
 
 \begin{figure}[!htp]
