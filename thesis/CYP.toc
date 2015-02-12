@@ -10,34 +10,37 @@
 \contentsline {section}{\numberline {1.3}Aims}{21}
 \contentsline {chapter}{\numberline {2}Experimental Details}{22}
 \contentsline {section}{\numberline {2.1}Review of PubChem Assay 1851}{22}
-\contentsline {subsection}{\numberline {2.1.1}results}{24}
-\contentsline {section}{\numberline {2.2}Feature generation and molecular descriptors}{26}
-\contentsline {section}{\numberline {2.3}Data analysis consideration}{29}
-\contentsline {subsubsection}{Modeling in Python}{29}
-\contentsline {subsubsection}{Methods of Correlation of Compound and CYP Descriptors to Activity Data}{29}
-\contentsline {subsubsection}{$\kappa $-Nearest Neighbor ($\kappa $NN}{29}
-\contentsline {subsubsection}{Random Forest (RF)}{30}
-\contentsline {subsubsection}{Support Vector Machines (SVM)}{30}
-\contentsline {subsubsection}{Binary QSAR in MOE}{31}
-\contentsline {chapter}{\numberline {3}Materials and Methods}{32}
-\contentsline {section}{\numberline {3.1}Methods}{32}
-\contentsline {subsubsection}{Dataset preparation}{32}
-\contentsline {subsubsection}{Modeling in the Molecular Operating Environment}{34}
-\contentsline {subsubsection}{Modeling in Python}{36}
-\contentsline {subsubsection}{Toy Problem - $\kappa $NN on first 2 PCs}{36}
-\contentsline {subsubsection}{$\kappa $-NN utilizing on the full seet of 2-D descriptors}{37}
-\contentsline {subsubsection}{Random Forest classification utilizing the full set of 2-D descriptors}{38}
-\contentsline {subsubsection}{Support Vector Machine classification utilizing the full set of 2-D descriptors}{38}
-\contentsline {chapter}{\numberline {4}Results}{40}
-\contentsline {subsubsection}{Accuracy}{41}
-\contentsline {subsubsection}{AUROC}{41}
-\contentsline {section}{\numberline {4.1}2C19 MOE models}{42}
-\contentsline {section}{\numberline {4.2}2C9 MOE Models}{44}
-\contentsline {section}{\numberline {4.3}1A2 MOE Models}{45}
-\contentsline {section}{\numberline {4.4}2D6 MOE Models}{46}
-\contentsline {section}{\numberline {4.5}3A4 MOE Models}{48}
-\contentsline {section}{\numberline {4.6}Comparison of Methods}{49}
-\contentsline {chapter}{\numberline {5}Discussion}{53}
-\contentsline {subsection}{\numberline {5.0.1}Cheng's results compared to mine}{53}
-\contentsline {section}{\numberline {5.1}Machine Learning}{54}
-\contentsline {chapter}{\numberline {6}Conclusion}{57}
+\contentsline {section}{\numberline {2.2}Data set preparation}{25}
+\contentsline {subsection}{\numberline {2.2.1}Molecular descriptor generation}{26}
+\contentsline {section}{\numberline {2.3}Feature selection}{27}
+\contentsline {section}{\numberline {2.4}Modeling}{28}
+\contentsline {subsection}{\numberline {2.4.1}Methods of Correlation of Descriptors to Activity Data}{29}
+\contentsline {subsubsection}{Binary QSAR in the Molecular Operating Environment}{29}
+\contentsline {subsubsection}{Modeling in Python}{30}
+\contentsline {subsubsection}{$\kappa $-Nearest Neighbor ($\kappa $NN}{30}
+\contentsline {subsubsection}{Random Forest (RF)}{31}
+\contentsline {subsubsection}{Support Vector Machines (SVM)}{31}
+\contentsline {section}{\numberline {2.5}Model Evaluation and Validation}{32}
+\contentsline {subsubsection}{Accuracy}{34}
+\contentsline {subsubsection}{AUROC}{34}
+\contentsline {subsubsection}{Binary QSAR after PLS of descriptors}{35}
+\contentsline {subsubsection}{$\kappa $-NN utilizing on the full set of 2-D descriptors}{36}
+\contentsline {subsubsection}{Random Forest classification utilizing the full set of 2-D descriptors}{36}
+\contentsline {subsubsection}{Support Vector Machine classification utilizing the full set of 2-D descriptors}{37}
+\contentsline {chapter}{\numberline {3}Results}{38}
+\contentsline {section}{\numberline {3.1}Methods}{38}
+\contentsline {subsubsection}{Dataset preparation}{38}
+\contentsline {subsubsection}{Modeling in Python}{38}
+\contentsline {subsubsection}{Toy Problem - $\kappa $NN on first 2 PCs}{38}
+\contentsline {section}{\numberline {3.2}2C19 MOE models}{40}
+\contentsline {section}{\numberline {3.3}2C9 MOE Models}{42}
+\contentsline {section}{\numberline {3.4}1A2 MOE Models}{42}
+\contentsline {section}{\numberline {3.5}2D6 MOE Models}{44}
+\contentsline {section}{\numberline {3.6}3A4 MOE Models}{46}
+\contentsline {section}{\numberline {3.7}Comparison of Methods}{47}
+\contentsline {chapter}{\numberline {4}Discussion}{51}
+\contentsline {subsection}{\numberline {4.0.1}Other attempts at modelling Assay 1851}{51}
+\contentsline {subsection}{\numberline {4.0.2}Cheng's results compared to mine}{52}
+\contentsline {subsection}{\numberline {4.0.3}Potential sources fo error}{53}
+\contentsline {section}{\numberline {4.1}Machine Learning}{53}
+\contentsline {chapter}{\numberline {5}Conclusion}{56}

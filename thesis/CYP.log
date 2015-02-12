@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  10 FEB 2015 21:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  11 FEB 2015 22:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -247,55 +247,22 @@ Overfull \hbox (2.33298pt too wide) in paragraph at lines 153--155
 [20]) [21]
 Chapter 2.
 (./chapters/chapter2.tex
+<../img/Supervised_Workflow.png, id=83, 496.9767pt x 487.8225pt>
+File: ../img/Supervised_Workflow.png Graphic file (type png)
 
-LaTeX Warning: Citation `Vasanthanathan2012' on page 22 undefined on input line
- 4.
+<use ../img/Supervised_Workflow.png>
+Package pdftex.def Info: ../img/Supervised_Workflow.png used on input line 5.
+(pdftex.def)             Requested size: 390.0pt x 382.81496pt.
+ [22
 
-
-LaTeX Warning: Citation `Novotarskyi2012' on page 22 undefined on input line 4.
-
-
-
-LaTeX Warning: Citation `Cheng2012' on page 22 undefined on input line 4.
-
-[22
-
-]
+] [23 <../img/Supervised_Workflow.png>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [23]
-Overfull \hbox (0.48761pt too wide) in paragraph at lines 21--22
-\OT1/cmr/m/n/12 chem-i-cal space re-vealed that the ma-jor-ity of com-pounds ha
-d molec-u-lar weight
- []
-
-<../img/Supervised_Workflow.png, id=90, 496.9767pt x 487.8225pt>
-File: ../img/Supervised_Workflow.png Graphic file (type png)
-
-<use ../img/Supervised_Workflow.png>
-Package pdftex.def Info: ../img/Supervised_Workflow.png used on input line 32.
-(pdftex.def)             Requested size: 390.0pt x 382.81496pt.
-
-Overfull \hbox (4.84778pt too wide) in paragraph at lines 36--36
-[]\OT1/cmr/bx/n/17.28 Feature gen-er-a-tion and molec-u-lar de-scrip-
- []
-
-[24] [25 <../img/Supervised_Workflow.png>] [26] [27]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
- [28] [29]
-Missing character: There is no ¬ in font cmr12!
-Missing character: There is no ≠ in font cmr12!
- [30]) [31]
-Chapter 3.
-(./chapters/chapter3.tex [32
-
-] [33]
+[24]
 
 ! LaTeX Error: File `' not found.
 
@@ -303,21 +270,61 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23    \includegraphics[width=1\textwidth]{}
+l.38    \includegraphics[width=1\textwidth]{}
+                                             
+? 
+[25]
+
+! LaTeX Error: File `' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52    \includegraphics[width=1\textwidth]{}
+                                             
+? 
+[26] [27] [28]
+
+! LaTeX Error: File `' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93    \includegraphics[width=1\textwidth]{}
                                              
 ? 
 
-LaTeX Warning: Citation `Labute2001' on page 34 undefined on input line 29.
+LaTeX Warning: Citation `Labute2001' on page 29 undefined on input line 99.
 
-[34] [35] [36] [37]) [38] [39]
-Chapter 4.
-(./chapters/chapter4.tex [40
-
-]
+[29] [30]
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
- [41]) (./tables.tex
-<../img/2c19_moe_model_accuracy.png, id=148, 527.0892pt x 235.1184pt>
+ [31] [32]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [33]
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ≠ in font cmr12!
+ [34]
+
+! LaTeX Error: File `' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.171    \includegraphics[width=1\textwidth]{}
+                                              
+? 
+[35] [36]) [37]
+Chapter 3.
+(./chapters/chapter3.tex [38
+
+] [39]) (./tables.tex
+<../img/2c19_moe_model_accuracy.png, id=144, 527.0892pt x 235.1184pt>
 File: ../img/2c19_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/2c19_moe_model_accuracy.png>
@@ -328,12 +335,13 @@ Package pdftex.def Info: ../img/2c19_moe_model_accuracy.png used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[42] [43 <../img/2c19_moe_model_accuracy.png>]
+[40]
 Overfull \hbox (2.61108pt too wide) in paragraph at lines 52--82
 []$[]$ $[]$ 
  []
 
-<../img/2c9_moe_model_accuracy.png, id=157, 527.0892pt x 235.1184pt>
+[41 <../img/2c19_moe_model_accuracy.png>]
+<../img/2c9_moe_model_accuracy.png, id=154, 527.0892pt x 235.1184pt>
 File: ../img/2c9_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/2c9_moe_model_accuracy.png>
@@ -345,20 +353,27 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 95--125
 []$[]$ $[]$ 
  []
 
-[44 <../img/2c9_moe_model_accuracy.png>]
-<../img/1a2_moe_model_accuracy.png, id=162, 527.0892pt x 235.1184pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../img/1a2_moe_model_accuracy.png, id=155, 527.0892pt x 235.1184pt>
 File: ../img/1a2_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/1a2_moe_model_accuracy.png>
 Package pdftex.def Info: ../img/1a2_moe_model_accuracy.png used on input line 1
 29.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
- [45 <../img/1a2_moe_model_accuracy.png>]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[42 <../img/2c9_moe_model_accuracy.png>] [43 <../img/1a2_moe_model_accuracy.png
+>]
 Overfull \hbox (2.61108pt too wide) in paragraph at lines 140--170
 []$[]$ $[]$ 
  []
 
-<../img/2d6_moe_model_accuracy.png, id=167, 527.0892pt x 235.1184pt>
+<../img/2d6_moe_model_accuracy.png, id=164, 527.0892pt x 235.1184pt>
 File: ../img/2d6_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/2d6_moe_model_accuracy.png>
@@ -369,23 +384,21 @@ Package pdftex.def Info: ../img/2d6_moe_model_accuracy.png used on input line 1
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[46] [47 <../img/2d6_moe_model_accuracy.png>]
+[44]
 Overfull \hbox (2.61108pt too wide) in paragraph at lines 186--216
 []$[]$ $[]$ 
  []
 
-<../img/3a4_moe_model_accuracy.png, id=176, 527.0892pt x 235.1184pt>
+[45 <../img/2d6_moe_model_accuracy.png>]
+<../img/3a4_moe_model_accuracy.png, id=172, 527.0892pt x 235.1184pt>
 File: ../img/3a4_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/3a4_moe_model_accuracy.png>
 Package pdftex.def Info: ../img/3a4_moe_model_accuracy.png used on input line 2
 20.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
- [48 <../img/3a4_moe_model_accuracy.png>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../img/method_comparison_training_set.png, id=182, 527.0892pt x 235.1184pt>
+ [46 <../img/3a4_moe_model_accuracy.png>] <../img/method_comparison_training_se
+t.png, id=177, 527.0892pt x 235.1184pt>
 File: ../img/method_comparison_training_set.png Graphic file (type png)
 
 <use ../img/method_comparison_training_set.png>
@@ -396,23 +409,31 @@ t line 245.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[49] [50 <../img/method_comparison_training_set.png>]
-<../img/method_comparison_test_set.png, id=190, 527.0892pt x 235.1184pt>
+[47] [48 <../img/method_comparison_training_set.png>]
+<../img/method_comparison_test_set.png, id=187, 527.0892pt x 235.1184pt>
 File: ../img/method_comparison_test_set.png Graphic file (type png)
 
 <use ../img/method_comparison_test_set.png>
 Package pdftex.def Info: ../img/method_comparison_test_set.png used on input li
 ne 270.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
+ [49 <../img/method_comparison_test_set.png>]) [50]
+Chapter 4.
+(./chapters/chapter5.tex
+
+LaTeX Warning: Citation `Vasanthanathan2012' on page 51 undefined on input line
+ 7.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `Novotarskyi2012' on page 51 undefined on input line 7.
 
-[51]) [52 <../img/method_comparison_test_set.png>]
-Chapter 5.
-(./chapters/chapter5.tex [53
 
-]
+
+LaTeX Warning: Citation `Cheng2012' on page 51 undefined on input line 7.
+
+[51
+
+] [52]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
@@ -425,50 +446,50 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
+ [53]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
  [54]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
- [55]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-) [56]
-Chapter 6.
-(./chapters/conclusion.tex [57
+) [55]
+Chapter 5.
+(./chapters/conclusion.tex [56
 
 ]
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
-) [58] (./CYP.bbl [59]
+) [57] (./CYP.bbl [58]
 Underfull \hbox (badness 3396) in paragraph at lines 53--58
 []\OT1/cmr/m/n/12 Lapins, M., Worachartchee-wan, A., Spjuth, O.,
  []
 
-[60
+[59
 
 ]
 Missing character: There is no ƒ in font cmr12!
 Missing character: There is no á in font cmr12!
 Missing character: There is no ƒ in font cmr12!
 Missing character: There is no á in font cmr12!
-) [61] (./CYP.aux)
+) [60] (./CYP.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1684 strings out of 494985
- 24844 string characters out of 6180355
- 85353 words of memory out of 5000000
+ 1681 strings out of 494985
+ 24792 string characters out of 6180355
+ 86353 words of memory out of 5000000
  4844 multiletter control sequences out of 15000+600000
  10120 words of font info for 35 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -476,14 +497,17 @@ Here is how much of TeX's memory you used:
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CYP.pdf (63 pages, 946440 bytes).
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti12.pfb>
+Output written on CYP.pdf (62 pages, 972100 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 163 compressed objects within 2 object streams
+ 262 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
