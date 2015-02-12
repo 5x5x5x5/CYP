@@ -1,5 +1,6 @@
 
-\section{Background and Challenges to Drug Discovery Productivity}
+\section{Challenges to Drug Discovery Productivity}
+
 The goal of pharmaceutical sciences is to identify and market safe and efficacious drugs. Toxicity is a large contributor to drug candidate attrition in drug development. Inhibition of enzymes in the cytochrome P450 superfamily is a major source of toxicity in human and animal models because of their role in first pass metabolism. If a compound inhibits cytochrome P450 it is likely to lead to toxic effects when first pass metabolism fails to clear other therapeutic compounds or alters their pharmacokinetics. Because the discovery and development of a each new pharamceutical drug requires more than a billion dollars across an average of 12 years, it would be useful to know whether a compound of interest inhibits cytochrome P450s as early as possible.
 
 The Cytochrome P450 superfamily is large and varied. Different isozymes metabolize different substrates. Even within and between individuals pharmacokinetic and pharmacodynamic variability can be high for reasons not entirely characterized. Designing assays for every isozyme and SNP variant and running them against every compound of interest as a general strategy is cost prohibitive. This project was designed to test the predictive power of computational methods for cytochrome P450 inhibition potential based simply on knowledge of chemical structure.
@@ -25,7 +26,7 @@ CYP families are classified based on pairwise amino acid sequence identity among
 There is a considerable substrate overlap between enzymes of this superfamily. Being broadly specific with respect to their substrates, CYPs are therefore susceptible to inhibition by a large variety of chemical compounds. It follows that the CYP enzymes that are involved in the oxidative metabolism of drugs play a major part in the activation and elimination of therapeutic drug molecules. CYP inhibition leading to decreased elimination and/or changed metabolic pathways of other substrates is a major cause of adverse drug-drug interactions. \cite{Lapins2013} So adverse side effects of drug-drug interactions are an important area of inquiry, especially during the research phase of drug discovery.
 
 
-\subsection{Rationale for early compound profiling \textit{in silico}}
+\section{Rationale for early compound profiling \textit{in silico}}
 
 Drug discovery is a multi-parameter optimization process in which compounds are optimized for interaction with their target while minimizing off-target activities. \cite{Zlokarnik2005} Adding drug-like properties to those compounds may minimize the risk of making potent and target-class selective compounds in a chemical space that is biologically inaccessible but at the same time does little to address the complexities of specific drug-drug interactions.
 
@@ -52,7 +53,7 @@ Many high-throughput technologies are now available to detect P450 inhibitors. H
 The United States is about to become the last country to accept QSAR in the drug approval process. The drafting of International Committee on Harmonization (ICH) M7 guideline can be viewed as setting a precedent for possible future, broader regulatory applications of QSAR modeling. ICH M7, will for the first time specify that -- under very specific conditions -- the results of QSAR computational toxicology predicitions will be considered sufficient for genotoxic contaminants of pharmaceuticals under consideration and eliminate the need for laboratory testing. \cite{Kruhlak2012}
 
 
-\subsection{Quantitative Structure-Activity Relationship}
+\section{Quantitative Structure-Activity Relationship}
 
 Quantitative structure-activity realtionship (QSAR) modeling is generally accepted as the construction of predictive models of biological activities as a function of structural and molecular information of a compound or compound library.\cite{Nantasenamat2009}
 
@@ -105,8 +106,7 @@ According to Kruhlak, et al., the successful development of a QSAR model for saf
 
 %In this study they aimed to create a unified PCM model for CYPs suited for drug profiling using free, open­access software and make the model publicly available for predictions.\cite{Lapins2013}
 
-
-\subsection{Statistical Machine Learning}
+\section{Statistical Machine Learning}
 
 Machine learning algorithms figure out how to perform important tasks by generalizing from examples. A concise definition of statistics is as the applied science that constructs and studies techniques for data analysis (Jan de Leeuw) Statistical learning refers to a set of approaches for estimating a function that describes a dataset as a precursor for prediction or inference.\cite{James2013} Statistical machine learning constructs that function by generalizing from examples, i.e. data.
 
@@ -136,9 +136,9 @@ This is a wider view than traditionally encountered in most applied science educ
 
 %Most textbooks are organized by representation, but the other components -- evaluation and optimization -- are equally important.\cite{Domingos2012}
 
+\section{should I mention high throughput or -omics tech as a source of data here}
 
-
-\subsection{Reproducibility}
+\section{Reproducibility}
 
 Science conducted in an open fashion confers the following benefits
 
