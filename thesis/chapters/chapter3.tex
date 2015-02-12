@@ -2,41 +2,7 @@
 \subsubsection{Dataset preparation}
 
 
-Both files were downloaded as comma separated value (.csv) files and merged together based on the SID column using functions from Python's pandas library.
 
-First the merged file was loaded into a database in the Molecular Operating Environment. MOE functionality was used to obtain the washed configuration of compounds by removing the salts and finding an energy-minimized conformation. MOE was then used to calculate descriptors based on the molecular structures. The entire suite of MOE 2-D descriptors was selected for descriptor generation, resulting in 186 additional columns of nominal, ordinal and continuous vales appended to the database. The resulting master file was saved in .csv format.
-
-The dataset was then split by isozyme into 5 separate files that each contained only the SID, the Activity Score, and all 186 of the MOE 2-D descriptors using a script in the Python programming language.
-
-For each isozyme, the number of active inhibitors was far outnumbered by the number of inactive inhibitors. The datafile for each isozyme was subjected to a script that separated the inactives from actives. Then the order of the inactives was randomly shuffled and the column trimmed to the length of the activity column, thereby balancing the number of inactives and actives as required by some of the statistical methods. 
-
-Next a script randomly shuffled the balanced datasets and split them into a training set and a test set. The training set held 80\% of the original values and the test set held 20\% of the original values. The split was not based on activity score. The ratio of active/inactive in each split was inspected to check if they were still acceptably balanced.
-
-For each use of randomness in computation, a seed number was set for the random number generator to ensure reproducible results.  
-
-The balanced and split datasets are saved to Figshare.com for permanent, free and open access. DOI All subsequent analyses use these same splits for comparability.
-
-
-\begin{figure}[h,t]
-  \caption{General Data Analysis Workflow}
-  \centering
-   \includegraphics[width=1\textwidth]{}
-\end{figure}
-
-\subsubsection{Modeling in the Molecular Operating Environment}
-PLS regression is a qunatitavtive method available in the Molecular Operating Environment that has shown poor predictive accuracy with this dataset as demonstrated by previous attempts in Dr. Zheng's lab.
-
-The Binary QSAR approach outlined by Labute \cite{Labute2001} and included in the MOE version, takes a Bayesian and probabilistic approach to classification of activity based on a reduction of the total number of descriptors to principle components.
-
-To carry out this analysis, first load the training data into MOE and used a menu driven interface to initiate the Binary QSAR methods. A threshold value of 39 was selected; all activity values 40 and above will be considered active and all values 39 and below are considered inactive. The smoothing parameter was left at the default value of 0.25. MOE automatically performs principle component analysis on high-dimensional datasets.
-
-For each isozyme a number of models were built, each using a different number of principal components.  Each principal component is orthogonal and uncorrelated to the rest, and each one captures a portion of the total variance inherent in the dataset. The assumption is that inclusion of more principle components leads to more of the variance being accounted for in a classification decision. However, since each principle component is a linear combination of all the variables, the benefits of dimensionality reduction comes at the cost of interpretability.  For comparison, models with 2, 5, 10, 15, 20, 30, and 44 principle components were constructed. 
-
-MOE models were written to .fit files and the model report saved as a .txt file.
-
-The test sets were loaded and the washed structures were appended to the .csv files. All models were evaluated using the menu driven workflow in MOE and the classification probabilities were appended to the database file and saved as a .csv.  
-
-The resulting file was loaded into a MS Excel spreadsheet and the predictions classified as actives or inactives. Predicted probabilities of $\geq$ 0.5 were evaluated as active inhibitor predictions. Confusion matrices were then tabulated for predicted vs actual actives and inactives within the spreadsheet. And from the confusion matrices accuracy scores were calculated - total accuracy, specificity, and accuracy of inactive predictions. These results were saved and the results reported below.
 
 \begin{table}[!htbp]
 \begin{tabular}{|l|l|l|l|l|l|l|}
@@ -71,15 +37,3 @@ The steps in this process script are as follows; the training data is loaded int
 
 Next the test set is loaded into a dataframe, the response variable identified, the descriptors scaled and normed, and subsequently evaluated by the model object. Accuracy in this case is calculated in the script, as well as a confusion matrix. These results are then plotted in the Ipython notebook with the principle components as axes, thpredicted values from the model are calculated for every point and overlayed with the model results.
 
-\subsubsection{$\kappa$-NN utilizing on the full seet of 2-D descriptors}
-The full models follow a similar procedure to the previous workflow, except they omit data reduction by principle component analysis and use the full descriptor set to consruct and evaluate models. 
-
-For each isozyme separately, training data is loaded into a dataframe. The Activity Score is assigned the role of response variable and all 186 are identified as predictor variables. Predictor variables are scaled and normed to mean $0$ and standard deviation of $1$. kNN.fit method is called from the scikit-lean library to train a model, and then reports a the confusion matrix and an accuracy score for the training model by five-fold cross-validation.
-
-\subsubsection{Random Forest classification utilizing the full set of 2-D descriptors}
-For each isozyme separately, training data is loaded into a dataframe. The Activity Score is assigned the role of response variable and all 186 are identified as predictor variables. Predictor variables are scaled and normed to mean $0$ and standard deviation of $1$. RF.fit method is called from the scikit-lean library to train a model, and then reports a the confusion matrix and an accuracy score for the training model by five-fold cross-validation.
-
-\subsubsection{Support Vector Machine classification utilizing the full set of 2-D descriptors}
-For each isozyme separately, training data is loaded into a dataframe. The Activity Score is assigned the role of response variable and all 186 are identified as predictor variables. Predictor variables are scaled and normed to mean $0$ and standard deviation of $1$. SVM.fit method is called from the scikit-lean library to train a model, and then reports a the confusion matrix and an accuracy score for the training model by five-fold cross-validation.
-
-A script was written for each isozyme that performed these three fit methods in series. Code and results are documented in Ipython notebooks that are currently hosted on github.com and freely accessible and downloadable. Presented in this way, they are easily verifyable and extendable. Experimenting with other classification algorithms in scikit-learn simply requires adding new method.fit calls to the model building loop, because of the simple and consistent design of the scikit-learn library.

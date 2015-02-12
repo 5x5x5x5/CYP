@@ -1,3 +1,11 @@
+
+\begin{figure}[!htp]
+  \caption{Supervised Learning Scheme for Clasification}
+  \centering
+  \includegraphics[width=1\textwidth]{../img/Supervised_Workflow.png}
+\end{figure}
+
+
 \section{Review of PubChem Assay 1851}
   
 
@@ -17,51 +25,52 @@ Compounds were characterized by their Activity Score and regarded as inhibitors 
 
 The data from Pubchem Assay 1851 is available for download from the NIH website. The interface changes from time to time, but I downloaded two files which comprised the entire dataset for the experiment. The first file, a structures file, contained the structural information encoded in the simplified molecular-input line-entry system (SMILES) format for each tested compound with corresponding Structure ID (SID) and Compound ID (CID) as assigned by NCBI. Another file, also organized by SID and CID, contained all of the luminescent responses from the high-throughput screen and the fitted parameters that are summarized by the activity score. 
 
-\begin{figure}[!htp]
-  \caption{dataset preparation}
+\section{Data set preparation}
+
+Both data files from Bioassy 1851 were downloaded as comma separated value (.csv) files and merged together based on the SID column using functions from Python's pandas library, which is made for handling, manipulating and reshaping structured data.
+
+The preliminary steps of data preprocessing typically requires data cleaning as raw data often contain anomalies, errors, or inconsistencies such as missing data, incomplete data, and invalid character values which may cause trouble in data analysis if left untreated. It is more complicated when data are collated from many formats that require harmonization and redundancy elimination. \cite{Nantasenamat2009} In this case, minimal preprocessing was required due to the polished nature of the source files.
+
+
+\begin{figure}[h,t]
+  \caption{Data download and preparation}
   \centering
-\includegraphic
-
-\subsection{results}
-The results of this large-scale screening against five CYP isoforms identified that the majority of compounds in a typical chemical library cross-inhibited several isoforms, while only a small fraction of the compounds did not inhibit any of the isoforms. \cite{Veith2009}x
-
-
-\begin{figure}[!htp]
-  \caption{Supervised Learning Scheme for Clasification}
-  \centering
-   \includegraphics[width=1\textwidth]{../img/Supervised_Workflow.png}
+   \includegraphics[width=1\textwidth]{}
 \end{figure}
 
 
-\section{Feature generation and molecular descriptors}
+\subsection{Molecular descriptor generation}
+First the merged file was loaded into a database in the Molecular Operating Environment. MOE functionality was used to obtain the washed configuration of compounds by removing the salts and finding an energy-minimized conformation. MOE was then used to calculate descriptors based on the molecular structures. The entire suite of MOE 2-D descriptors was selected for descriptor generation, resulting in 186 additional columns of nominal, ordinal and continuous vales appended to the database. The resulting master file was saved in .csv format.
 
-Data preprocessing - The preliminary steps in data preprocessing typically requires data cleaning as raw data often contain anomalies, errors, or inconsistencies such as missing data, incomplete data, and invalid character values which may cause trouble in data analysis if left untreated. It is more complicated when data are collated from many formats requiring harmonization and elimination of redundancies.\cite{Nantasenamat2009}
+The dataset was then split by isozyme into 5 separate files that each contained only the SID, the Activity Score, and all 186 of the MOE 2-D descriptors using a script in the Python programming language.
 
-There exists a great deal of variability in the range and distribution of each variable in the data set. However, this may pose a problem for algorithms using distance measurements in the learning step. These situations are handled by applying statistical techniques such as min-max normalization or z-score standardiation. 
+For each isozyme, the number of active inhibitors was far outnumbered by the number of inactive inhibitors. The data file for each isozyme was subjected to a Python script that separated the inactives from actives. Then the order of the inactives was randomly shuffled and the column trimmed to the length of the activity column, thereby balancing the number of inactives and actives as required by some of the statistical methods. 
 
-In min-max normalization, the minimum and maximum value of each variable is adjusted to a uniform range between 0 and 1 according to the following equation: xxxxxx In z-score standardization, essentially the variable of interest is subjected to statistical operation to achieve mean center and unit variance according to the following formula: xxxxxx \cite{Nantasenamat2009}
+\begin{figure}[h,t]
+  \caption{Isozyme data set preparation}
+  \centering
+   \includegraphics[width=1\textwidth]{}
+\end{figure}
+
+Next the script randomly shuffled the balanced datasets and split them into a training set and a test set. The training set held 80\% of the original values and the test set held 20\% of the original values. The split was not based on activity score. The ratio of active/inactive in each split was inspected to check if they were still acceptably balanced.
+
+For each use of randomness in computation, a seed number was set for the random number generator to ensure reproducible results.  
+
+The balanced and split datasets are saved to Figshare.com for permanent, free and open access. (http://dx.doi.org/10.6084/m9.figshare.1181846 and http://dx.doi.org/10.6084/m9.figshare.1066108) All subsequent analyses use these same splits for comparability.
+
+\section{Feature selection}
+
+Typically data sets often contain redundant or noisy variables which make it more difficult for learning algorithms to discern meaningful patterns from the input. Such multicollinearity of the variables can either be used or treated if necessary to reduce computational resources required for model construction. \cite{Nantasenamat2009}
+
+There existed a great deal of variability in the range and distribution of each variable in the data set. However, this may pose a problem for algorithms using distance measurements in the learning step. These situations are handled by applying statistical techniques such as min-max normalization or z-score standardiation. 
+
+In min-max normalization, the minimum and maximum value of each variable is adjusted to a uniform range between 0 and 1 according to the following equation: $ X_{norm} = \frac{X - X_min}{X_max - Xmin}  $ In z-score standardization, essentially the variable of interest is subjected to statistical operation to achieve mean center and unit variance according to the following formula: $ z = \frac{x - \mu}{\sigma}  $ \cite{Nantasenamat2009}
 
 In situations where the data does not have a Gaussian (normal) distribution, simple mathematical functions can be applied to achieve normality or symmetry in the data distribution. A commonly used approach is to apply logarithmic transformation on the the variable of interest in order to achieve distribution approaching normality. This is typically performed on dependent variables such as the modeled biological/chemical properties of interest whereby IC50 may be transformed to logIC50 or -logIC50. Practically, such mathematical operation is applied to each individual value of a given variable of interest. \cite{Nantasenamat2009}
 
-Feature or variable selection -- Typically data sets often contain redundant or noisy variables which make it more difficult for learning algorithms to discern meaningful patterns from the input data set. ... Such multicollinearity of the variables ... treated ... in order to reduce unnecessary computational resources that are required in model construction. \cite{Nantasenamat2009}
-
-Statistical evaluation In QSAR modeling it is essential to validate the model as well as apply statistical parameters to evaluate its predictive performance. The predictive performance of a data set can be assessed by dividing it into a training set and a testing set. The training set is used for constructing a predictive model whose predictive performance is evaluated on the testing set. Internal performance is typically assessed from the predictive performance of the training set while external performance can be assessed from the predictive performance of the independent test set that is unknown to the training model. A commonly used approachfor internal validation is known as N-fold cross-validation where a data set is partitioned into N number of folds. For example, in a 10-fold cross-validation 1 fold is left out as a testing set while the remaining 9 folds are used as the training set for model construction and then validated with that fold left out. In situations where the number of samples is limited, leave-one-out cross-validation is the preferred approach. Analogously, the number of folds is equal to the number of samples present in the data set. \cite{Nantasenamat2009}
-
-Some standard measures of performance used for QSAR models are sensitivity, specificity, positive predictivity, negative predictivity, and concordance. Additional measures such as the Matthews coefficient can be used as a single metric for comparing one model to another while correcting for bias. Because most stat models can be modified to have greater specificity vs sensitivity (or vice versa) by adjusting the training set or applying predictive filters, the Matthews coefficient can be used to determine when the modification is so extreme that it leads to overall degradation of the models’ performance.\cite{Kruhlak2012}
-
-%Statistical parameters - Pearson's correlation coefficient (r) is a commonly used parameter to describe the degree of association between two variables of interest. Calculated r values have values between -1 and +1 which indicate direct (positive) and indirect (negative) correlation. For describing the relative predictive performance of a QSAR model, r is used to measure the correlation between experimental (x) and predicted (y) values of interest in order to observe the variability that exists between variables. This is calculated according to the following equation: ...
-
-%Root mean squared error (RMS) is another commonly used parameter for assessing the relative error of the QSAR model. RMS is computed according to the following formula: ...
-
-%F-test -- The statistical significance of QSAR models are typically assessed by performing an ANOVA and observing the calculated F values, which is essentially the ratio between the explained and unexplained variance. Comparison between multiple QSAR models can be performed when all models have the same number of degrees of freedom meaning that the same sets of compounds and descriptors are used. Each model yields a calculated F value and the best performing model is identified as those bearing the highest value.\cite{Nantasenamat2009}
-
-Degrees of freedom take into consideration the number of compounds and the number of independent variables that are present in the data set. This can be calculated using the equation n - k - 1 where n = \# of compounds k = \# of descriptors. The higher the value, the more reliable the QSAR model is. \cite{Nantasenamat2009}
-
-Mathematically speaking, an outlier is essentially a data point which has a high standard residual in absolute value when compared to other samples in the data set. A commonly used approach for detecting outliers is performed by calculating the standard residuals of all compounds in the data set of a QSAR model. \cite{Nantasenamat2009}
 
 
-
-\section{Data analysis consideration}
+\section{Modeling}
 \begin{description}
 \item Balance number of positives and negatives
 
@@ -76,12 +85,27 @@ Mathematically speaking, an outlier is essentially a data point which has a high
 
 \end{description}
 
+\subsection{Methods of Correlation of Descriptors to Activity Data}
+
+\begin{figure}[h,t]
+  \caption{Supervised Classification Model Training and Validation Workflow}
+  \centering
+   \includegraphics[width=1\textwidth]{}
+\end{figure}
+
+\subsubsection{Binary QSAR in the Molecular Operating Environment}
+PLS regression is a qunatitavtive method available in the Molecular Operating Environment that has shown poor predictive accuracy with this dataset as demonstrated by previous attempts in Dr. Zheng's lab.
+
+The Binary QSAR approach outlined by Labute \cite{Labute2001} and included in the MOE version, takes a Bayesian and probabilistic approach to classification of activity after reducing all the descriptors to their principal components.
+
+To carry out this analysis, first load the training data into MOE and used a menu driven interface to initiate the Binary QSAR methods. A threshold value of 39 was selected; all activity values 40 and above will be considered active and all values 39 and below are considered inactive. The smoothing parameter was left at the default value of 0.25. MOE automatically performs principal component analysis on high-dimensional datasets.
+
+For each isozyme a number of models were built, each using a different number of principal components.  Each principal component is orthogonal and uncorrelated to the rest, and each one captures a portion of the total variance inherent in the dataset. The assumption is that inclusion of more principal components leads to more of the variance being accounted for in a classification decision. However, since each principal component is a linear combination of all the variables, the benefits of dimensionality reduction comes at the cost of interpretability.  For exploratory purposes, models with 2, 5, 10, 15, 20, 30, and 44 principal components were constructed. 
+
+MOE models were written to .fit files and the model report saved as a .txt file.
 
 \subsubsection{Modeling in Python}
 The Python programming language is a dynamically-typed, object-oriented interpreted language. Its primary strength lies in the ease with which it allows a programmer to rapidly prototype a project, although it also has a powerful and mature set of standard libraries that can facilitate large-scale production-level software engineering projects as well. Python has a very shallow learning curve and excellent online learning resources.
-
-
-\subsubsection{Methods of Correlation of Compound and CYP Descriptors to Activity Data}
 
 \subsubsection{$\kappa$-Nearest Neighbor ($\kappa$NN}
 The kNN algorithm predicts the class of a test set object based on the class membership of its $\kappa$ most similar training set objects. \cite{Lapins2013}
@@ -100,6 +124,68 @@ Correlation is performed in this hyperspace based on the structural risk minimiz
 
 They applied the commonly used Gaussian radial basis function kernel optimal gamma (width of the kernel function) and error penalty parameter C were found after performing grid search on five­fold cross validation. \cite{Lapins2013}
 
-\subsubsection{Binary QSAR in MOE}
 
+\section{Model Evaluation and Validation}
+
+The success of any QSAR model depends on accuracy of the input data, selection of appropriate descriptors and statistical tools, and most importantly validation of the developed model. Validation is the process by which the reliability and relevance of a procedure are established for a specific purpose. For QSAR models validation must be mainly for robustness, predicition performances and applicability domain (AD) of the models. \cite{Lapins2013}
+
+Statistical evaluation In QSAR modeling it is essential to validate the model as well as apply statistical parameters to evaluate its predictive performance. The predictive performance of a data set can be assessed by dividing it into a training set and a testing set. The training set is used for constructing a predictive model whose predictive performance is evaluated on the testing set. Internal performance is typically assessed from the predictive performance of the training set while external performance can be assessed from the predictive performance of the independent test set that is unknown to the training model. A commonly used approachfor internal validation is known as N-fold cross-validation where a data set is partitioned into N number of folds. For example, in a 10-fold cross-validation 1 fold is left out as a testing set while the remaining 9 folds are used as the training set for model construction and then validated with that fold left out. In situations where the number of samples is limited, leave-one-out cross-validation is the preferred approach. Analogously, the number of folds is equal to the number of samples present in the data set. \cite{Nantasenamat2009}
+
+Some standard measures of performance used for QSAR models are sensitivity, specificity, positive predictivity, negative predictivity, and concordance. Additional measures such as the Matthews coefficient can be used as a single metric for comparing one model to another while correcting for bias. Because most stat models can be modified to have greater specificity vs sensitivity (or vice versa) by adjusting the training set or applying predictive filters, the Matthews coefficient can be used to determine when the modification is so extreme that it leads to overall degradation of the models’ performance.\cite{Kruhlak2012}
+
+%Statistical parameters - Pearson's correlation coefficient (r) is a commonly used parameter to describe the degree of association between two variables of interest. Calculated r values have values between -1 and +1 which indicate direct (positive) and indirect (negative) correlation. For describing the relative predictive performance of a QSAR model, r is used to measure the correlation between experimental (x) and predicted (y) values of interest in order to observe the variability that exists between variables. This is calculated according to the following equation: ...
+
+%Root mean squared error (RMS) is another commonly used parameter for assessing the relative error of the QSAR model. RMS is computed according to the following formula: ...
+
+%F-test -- The statistical significance of QSAR models are typically assessed by performing an ANOVA and observing the calculated F values, which is essentially the ratio between the explained and unexplained variance. Comparison between multiple QSAR models can be performed when all models have the same number of degrees of freedom meaning that the same sets of compounds and descriptors are used. Each model yields a calculated F value and the best performing model is identified as those bearing the highest value.\cite{Nantasenamat2009}
+
+Degrees of freedom take into consideration the number of compounds and the number of independent variables that are present in the data set. This can be calculated using the equation n - k - 1 where n = \# of compounds k = \# of descriptors. The higher the value, the more reliable the QSAR model is. \cite{Nantasenamat2009}
+
+Mathematically speaking, an outlier is essentially a data point which has a high standard residual in absolute value when compared to other samples in the data set. A commonly used approach for detecting outliers is performed by calculating the standard residuals of all compounds in the data set of a QSAR model. \cite{Nantasenamat2009}
+
+We used two statistical methods: the overall prediction accuracy and the Area Under the Receiver Operating Characteristic (AUROC) curve. We assessed the predictive ability of the models by performing cross-validation and external predictions.
+
+\subsubsection{Accuracy}
+
+Accuracy is simply the percentage of correctly classified instances and is calculated as
+$$ ACC =\frac{(TP + TN)}{(TP + FP + TN + FN)} $$
+where TP is the number of true positives, TN is the number of true negatives, FP is the number of false positives or over­predictions, and FN is the number of false negatives or missed predictions.\cite{Lapins2013}
+
+Accuracy is not an optimal measure of model performance if the data set is unbalanced (i.e. sizes of the classes are unequal) or if certain errors are to be considered more serious than others (e.g. false negatives compared to false positives).\cite{Lapins2013}
+
+\subsubsection{AUROC}
+In contrast to accuracy, the AUROC is a measure of discriminatory power that is insensitive to changes in class distribution and the costs of making certain errors. A ROC curve is obtained by calculating sensitivity and specificity at various discrimination threshold levels.
+
+Sensitivity is the fraction of true positives among all positively classified instances (the true positive rate) and is calculated as : 
+$$ sensitivity = \frac{TP}{(TP + FN)} $$
+
+Specificity is the true negative rate and is calculated as:
+$$ specificity =\frac{ TN }{(TN + FP)} $$
+
+An increased sensitivity is always accompanied by decrease specificity. A ROC curve is plotted as $sensitivity$ versus $1-specificity$, at varied discrimination cut-offs. An area under the ROC curve (AUROC) close to 1 means that the classifier can perfectly separate the two classes, whereas an area 0.5 indicated that the classifier performs no better than random guessing.\cite{Lapins2013}
+
+
+\begin{figure}[h,t]
+  \caption{General Data Analysis Workflow}
+  \centering
+   \includegraphics[width=1\textwidth]{}
+\end{figure}
+
+\subsubsection{Binary QSAR after PLS of descriptors}
+The test sets were loaded and the washed structures were appended to the .csv files. All models were evaluated using the menu driven workflow in MOE and the classification probabilities were appended to the database file and saved as a .csv.  
+
+The resulting file was loaded into a MS Excel spreadsheet and the predictions classified as actives or inactives. Predicted probabilities of $\geq$ 0.5 were evaluated as active inhibitor predictions. Confusion matrices were then tabulated for predicted vs actual actives and inactives within the spreadsheet. And from the confusion matrices accuracy scores were calculated - total accuracy, specificity, and accuracy of inactive predictions. These results were saved and the results reported below.
+
+\subsubsection{$\kappa$-NN utilizing on the full set of 2-D descriptors}
+The full models follow a similar procedure to the previous workflow, except they omit data reduction by principle component analysis and use the full descriptor set to consruct and evaluate models. 
+
+For each isozyme separately, training data is loaded into a dataframe. The Activity Score is assigned the role of response variable and all 186 are identified as predictor variables. Predictor variables are scaled and normed to mean $0$ and standard deviation of $1$. kNN.fit method is called from the scikit-lean library to train a model, and then reports a the confusion matrix and an accuracy score for the training model by five-fold cross-validation.
+
+\subsubsection{Random Forest classification utilizing the full set of 2-D descriptors}
+For each isozyme separately, training data is loaded into a dataframe. The Activity Score is assigned the role of response variable and all 186 are identified as predictor variables. Predictor variables are scaled and normed to mean $0$ and standard deviation of $1$. RF.fit method is called from the scikit-lean library to train a model, and then reports a the confusion matrix and an accuracy score for the training model by five-fold cross-validation.
+
+\subsubsection{Support Vector Machine classification utilizing the full set of 2-D descriptors}
+For each isozyme separately, training data is loaded into a dataframe. The Activity Score is assigned the role of response variable and all 186 are identified as predictor variables. Predictor variables are scaled and normed to mean $0$ and standard deviation of $1$. SVM.fit method is called from the scikit-lean library to train a model, and then reports a the confusion matrix and an accuracy score for the training model by five-fold cross-validation.
+
+A script was written for each isozyme that performed these three fit methods in series. Code and results are documented in Ipython notebooks that are currently hosted on github.com and freely accessible and downloadable. Presented in this way, they are easily verifyable and extendable. Experimenting with other classification algorithms in scikit-learn simply requires adding new method.fit calls to the model building loop, because of the simple and consistent design of the scikit-learn library.
 
