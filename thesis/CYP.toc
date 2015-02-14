@@ -23,11 +23,11 @@
 \contentsline {subsubsection}{Support Vector Machines (SVM)}{32}
 \contentsline {section}{\numberline {2.5}Model Evaluation and Validation}{33}
 \contentsline {subsubsection}{Confusion Matrix}{34}
-\contentsline {subsubsection}{Accuracy}{34}
+\contentsline {subsubsection}{Accuracy}{35}
 \contentsline {subsubsection}{Binary QSAR after PLS of descriptors}{35}
-\contentsline {subsubsection}{$\kappa $-NN utilizing on the full set of 2-D descriptors}{35}
+\contentsline {subsubsection}{$\kappa $-NN utilizing on the full set of 2-D descriptors}{36}
 \contentsline {subsubsection}{Random Forest classification utilizing the full set of 2-D descriptors}{36}
-\contentsline {subsubsection}{Support Vector Machine classification utilizing the full set of 2-D descriptors}{36}
+\contentsline {subsubsection}{Support Vector Machine classification utilizing the full set of 2-D descriptors}{37}
 \contentsline {chapter}{\numberline {3}Results}{38}
 \contentsline {section}{\numberline {3.1}Methods}{38}
 \contentsline {subsubsection}{Dataset preparation}{38}

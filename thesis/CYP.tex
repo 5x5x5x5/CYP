@@ -9,6 +9,14 @@
 \usepackage{setspace}
 %\doublespaceing
 
+\newcommand\MyBox[2]{
+  \fbox{\lower0.75cm
+    \vbox to 1.7cm{\vfil
+      \hbox to 1.7cm{\hfil\parbox{1.4cm}{#1\\#2}\hfil}
+      \vfil}%
+  }%
+}
+
 
 \author{D.Siegle}
 \title{Cytochrome P450 Inhibitor Classification with Statistical Learning}
