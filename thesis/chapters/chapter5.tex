@@ -1,8 +1,6 @@
 
 %But first I need a simple statement to remind me that I am making progress and that my work is going towards a good end. It makes sense in the context of the program. The more I delved into research the more ambitious my project became. In the course of my graduate career I became a different person in many way, more like I shed the old person in order to survive. I realize that I need a career or job or at least an activity (while basic needs for food shelter and love met elsewhere) that I am grateful for, and I think that means it needs to be challenging and supportive of my growth in the process. I am still a biologist and I think that means I am a student of what works. I think the field of systems biology best represents my view of biology and many fields of inquiry within it are opening due to advances in computing power (size and speed) that enable previously advanced or theoretical mathematics to come to bear on very old problems. Even setting -omics aside, the current state of microscopy and automated image analysis allow for information capture that far exceeds currently utilized analysis methods. I feel like nonparametric/nonlinear/ new machine learning methods are the most fruitful way to proceed. Mathematics is the new microscope. I need to learn tools and techniques and this masters project was a chance to practice and demonstrate them.
 
-QSAR models and their value in informing regulatory decision making will likely increase with the standardization of analytical approaches, more complete and reliable data collection methods, and a better understanding of toxicity mechanisms in the role of disease, and individual susceptibility to adverse clinical events.\cite{Kruhlak2012}
-
 \subsection{Other attempts at modelling Assay 1851}
 Pubchem Bioassy AID1851 has been the basis for several attempts to advance \textit{in silico} screening development. Recently, Vasanthanathan et al. and Novotarskyi et al. and more, recently developed large-scale single target models for the CYP1A2 isoform, and Cheng created single target QSAR models for all five CYP isoforms.\cite{Vasanthanathan2012, Novotarskyi2012, Cheng2012} And Lapins et al. pursured a proteochemometric method for all five isozymes by also taking into account each isozymes protein sequence. \cite{Lapins2013} These models showed good predictive performances.
 
@@ -35,6 +33,12 @@ As a rule, it pays to try the simplest learners first(e.g. naive Bayes before lo
 Learners can be divided into two major types: those whose representation has a fixed size, like linear classifiers, and those whose representation can grow with the data, like decision trees. (The latter are sometimes called non-parametric, but this is somewhat ufortuante, since they usually wind up learning many more parameters than parametric ones.) Fixed-size learners can only take advantage of so much data. Variable-sized learners can in principle learn any function given sufficient data, but in practice they may not, because of limitations of the algorithm or computational cost. Also, because of the curse of dimensionality, no existing amount of data may be enough.\cite{Domingos2012}
 
 Creating model ensembles is now standard in machine learning. In the simplest technique, called bagging, we simply generate random variations of the training set by resampling, learn a classifier on each, and combine the results by voting. This works because it greatly reduces variance while only slightly increasing bias. In boosting, training examples have weights, and these are varied so that each new classifier focuses on the examples the previous ones tended to get wrong. In stacking, the outputs of individual classifiers become the inputs of a “higher-level” learner that figures out how best to combine them.\cite{Domingos2012}
+
+
+
+QSAR models and their value in informing regulatory decision making will likely increase with the standardization of analytical approaches, more complete and reliable data collection methods, and a better understanding of toxicity mechanisms in the role of disease, and individual susceptibility to adverse clinical events.\cite{Kruhlak2012}
+
+
 
 Representable does not imply learnable.\cite{Domingos2012}
 

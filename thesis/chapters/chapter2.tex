@@ -148,22 +148,34 @@ We used two statistical methods: the overall prediction accuracy and the Area Un
 
 \subsubsection{Confusion Matrix}
 
+A confusion matrix (or error matrix or table of confusion) is a representational summary of the performance of a classifier. All data points used in model building are apportioned along one axis according to their actual class value, and along another axis according to the value predicted by that model. For binary classification this results in a square matrix with two 2 columns and 2 rows.
+
 \begin{tabular}{c >{\bfseries}r @{\hspace{0.7em}}c @{\hspace{0.4em}}c @{\hspace{0.7em}}l}
-  \multirow{10}{*}{\parbox{1.1cm}{\bfseries\raggedleft actual\\ value}} & 
-    & \multicolumn{2}{c}{\bfseries Prediction outcome} & \\
+  \multirow{10}{*}{\parbox{1.1cm}{\bfseries\raggedleft Actual\\ Class}}} & 
+    & \multicolumn{2}{c}{\bfseries Prediction Class} & \\
   & & \bfseries p & \bfseries n & \bfseries total \\
-  & p$'$ & \MyBox{True}{Positive} & \MyBox{False}{Negative} & P$'$ \\[2.4em]
-  & n$'$ & \MyBox{False}{Positive} & \MyBox{True}{Negative} & N$'$ \\
+  & p$'$ & \MyBox{True}{Positive}{TP} & \MyBox{False}{Negative}{FN} & P$'$ \\[2.4em]
+  & n$'$ & \MyBox{False}{Positive}{FP} & \MyBox{True}{Negative}{TN} & N$'$ \\
   & total & P & N &
 \end{tabular}
 
+In this study, results that are both actual inhibitors according to assay data and predicted inhibitors according to the model results are deemed True Positives (TP). Similarly, actual noninhibitors that are predicted to be so are called True Negatives (TN). In the case of actual inhibitors predicted to be noninhibitors, these are labelled False Negatives (FN) and are the result of Type I errors. Noninhibitors classified as inhibitors by the model are refered to as False Positives (FP) and are the result of Type II errors.
+
 \subsubsection{Accuracy}
 
-Accuracy is simply the percentage of correctly classified instances and is calculated as
+The accuracy metric provides general information about how many compounds are misclassified. Accuracy is simply the percentage of correctly classified instances over the total number of instances and is calculated as
 $$ ACC =\frac{(TP + TN)}{(TP + FP + TN + FN)} $$
-where TP is the number of true positives, TN is the number of true negatives, FP is the number of false positives or over­predictions, and FN is the number of false negatives or missed predictions.\cite{Lapins2013}
+where TP is the number of true positives, TN is the number of true negatives, FP is the number of false positives or over-predictions, and FN is the number of false negatives or missed predictions.
 
-Accuracy is not an optimal measure of model performance if the data set is unbalanced (i.e. sizes of the classes are unequal) or if certain errors are to be considered more serious than others (e.g. false negatives compared to false positives).\cite{Lapins2013}
+Accuracy is not an optimal measure of model performance if the data set is unbalanced (i.e. sizes of the classes are unequal) or if certain errors are to be considered more serious than others (e.g. false negatives compared to false positives).\cite{Lapins2013} For this reason, all datasets were rebalanced to contain roughly equal numbers of active and inactive inhibitors.
+
+As a futher interogation of results, the true positive rate and the true negative rate are also calculated for all models. The true positive rate is the fraction of true positives out of all actaul inhibitors and it is calculated as follows 
+$$ True Positive Rate = \frac{TP}{(TP + FN)} $$
+The true positive rate is also refered to as sensitivity and in to MOE software it is called Accuracy on Active.
+
+The true negative rate is the fraction of true negatives over the number of actual noninhibitors and is calculated as :
+$$ True Negative Rate =\frac{ TN }{(TN + FP)} $$
+The tru negative rate is also know as the specificity of a classification, and in MOE it is called Accuray on Inactives.
 
 %\subsubsection{AUROC}
 %In contrast to accuracy, the AUROC is a measure of discriminatory power that is insensitive to changes in class distribution and the costs of making certain errors. A ROC curve is obtained by calculating sensitivity and specificity at various discrimination threshold levels.
