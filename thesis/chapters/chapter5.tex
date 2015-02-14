@@ -1,18 +1,23 @@
 
 %But first I need a simple statement to remind me that I am making progress and that my work is going towards a good end. It makes sense in the context of the program. The more I delved into research the more ambitious my project became. In the course of my graduate career I became a different person in many way, more like I shed the old person in order to survive. I realize that I need a career or job or at least an activity (while basic needs for food shelter and love met elsewhere) that I am grateful for, and I think that means it needs to be challenging and supportive of my growth in the process. I am still a biologist and I think that means I am a student of what works. I think the field of systems biology best represents my view of biology and many fields of inquiry within it are opening due to advances in computing power (size and speed) that enable previously advanced or theoretical mathematics to come to bear on very old problems. Even setting -omics aside, the current state of microscopy and automated image analysis allow for information capture that far exceeds currently utilized analysis methods. I feel like nonparametric/nonlinear/ new machine learning methods are the most fruitful way to proceed. Mathematics is the new microscope. I need to learn tools and techniques and this masters project was a chance to practice and demonstrate them.
 
-\subsection{Other attempts at modelling Assay 1851}
-Pubchem Bioassy AID1851 has been the basis for several attempts to advance \textit{in silico} screening development. Recently, Vasanthanathan et al. and Novotarskyi et al. and more, recently developed large-scale single target models for the CYP1A2 isoform, and Cheng created single target QSAR models for all five CYP isoforms.\cite{Vasanthanathan2012, Novotarskyi2012, Cheng2012} And Lapins et al. pursured a proteochemometric method for all five isozymes by also taking into account each isozymes protein sequence. \cite{Lapins2013} These models showed good predictive performances.
 
 
-The results of this large-scale screening against five CYP isoforms identified that the majority of compounds in a typical chemical library cross-inhibited several isoforms, while only a small fraction of the compounds did not inhibit any of the isoforms. \cite{Veith2009}x
+\section{Other attempts at modelling Assay 1851}
+Pubchem Bioassy AID1851 has been the basis for several attempts to advance \textit{in silico} screening development. Recently, Vasanthanathan et al. and Novotarskyi et al. and more, recently developed large-scale single target models for the CYP1A2 isoform, and Cheng created single target QSAR models for all five CYP isoforms.\cite{Vasanthanathan2012, Novotarskyi2012, Cheng2011} And Lapins et al. pursured a proteochemometric method for all five isozymes by also taking into account each isozymes protein sequence. \cite{Lapins2013} These models showed good predictive performances.
+
+
+The results of this large-scale screening against five CYP isoforms identified that the majority of compounds in a typical chemical library cross-inhibited several isoforms, while only a small fraction of the compounds did not inhibit any of the isoforms. \cite{Veith2009}
 
 
 \subsection{Cheng's results compared to mine}
 It is highly desirable to develop computational models that can predict the inhibitive effect of a compound against a specific CYP isoform. In this Cheng's study inhibitor predicting models were developed for five major CYP isoforms, namely 1A2, 2C9, 2C19, 2D6, and 3A4, using a combined classifier algorithm on a large data set containing more than 24,700 unique compounds, extracted from PubChem. The combined classifiers algorithm is an ensemble of different independent machine learning classifiers including support vector machine, C 4.5 decision tree, $/kappa$-nearest neighbor, and naive Bayes, joined by a back-propagation artificial neural network (BP-ANN). Those models were validated by 5-fold cross-validation with a diverse validation set composed of about 9000 diverse unique compounds. The range of the AUROC for the validation set was 0.764 to 0.886. The overall performance of combined classifiers fused by BP-ANN was superior to that of three classic fusion techniques (Mean, Maximum, and Multiply). Cheng et al. claim these classification models are applicable for virtual screening of the five major CYP isoforms inhibitors or can be used as simple filters of potential chemicals in drug discovery.\cite{Cheng2011}
 
-\subsection{Potential sources fo error}
+
+\section{Sources of error}
 This assay required recombinant sources of CYP enzymes, because the probes are not sufficiently P450 isoform-selective to be used with those derived from human liver microsomes. Another potential source for false positives in these assays can be compounds that interfere with light generation directly, such as compounds that interfere with luciferase enzymatic activity. \cite{Zlokarnik2005}
+
+
 
 
 \section{Machine Learning}
@@ -35,14 +40,9 @@ Learners can be divided into two major types: those whose representation has a f
 Creating model ensembles is now standard in machine learning. In the simplest technique, called bagging, we simply generate random variations of the training set by resampling, learn a classifier on each, and combine the results by voting. This works because it greatly reduces variance while only slightly increasing bias. In boosting, training examples have weights, and these are varied so that each new classifier focuses on the examples the previous ones tended to get wrong. In stacking, the outputs of individual classifiers become the inputs of a “higher-level” learner that figures out how best to combine them.\cite{Domingos2012}
 
 
+\section{Interesting Tidbits}
+
+
 
 QSAR models and their value in informing regulatory decision making will likely increase with the standardization of analytical approaches, more complete and reliable data collection methods, and a better understanding of toxicity mechanisms in the role of disease, and individual susceptibility to adverse clinical events.\cite{Kruhlak2012}
 
-
-
-Representable does not imply learnable.\cite{Domingos2012}
-
-Correlation does not imply causation.\cite{Domingos2012}
-
-
-but I have fallen short of this goal due to my own technical shortcomings and the necessary inclusion of proprietary software for crucial descriptor generation.
