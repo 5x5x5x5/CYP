@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  12 FEB 2015 17:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  14 FEB 2015 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -72,37 +72,56 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count89
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen105
+\extrarowheight=\dimen106
+\NC@list=\toks17
+\extratabsurround=\skip43
+\backup@length=\skip44
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen107
+)
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (./CYP.aux)
 \openout1 = `CYP.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count89
-\scratchdimen=\dimen105
-\scratchbox=\box26
-\nofMPsegments=\count90
-\nofMParguments=\count91
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count92
-\MPscratchDim=\dimen106
-\MPnumerator=\count93
-\makeMPintoPDFobject=\count94
-\everyMPtoPDFconversion=\toks16
+\scratchcounter=\count90
+\scratchdimen=\dimen108
+\scratchbox=\box28
+\nofMPsegments=\count91
+\nofMParguments=\count92
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count93
+\MPscratchDim=\dimen109
+\MPnumerator=\count94
+\makeMPintoPDFobject=\count95
+\everyMPtoPDFconversion=\toks19
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -152,9 +171,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 19.
+(Font)              <14.4> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 19.
+(Font)              <7> on input line 30.
 
 [1
 
@@ -312,13 +331,34 @@ LaTeX Warning: Citation `Labute2001' on page 30 undefined on input line 99.
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
  [32] [33]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
- [34]
+Overfull \hbox (4.3268pt too wide) in paragraph at lines 156--156
+ []\OT1/cmr/bx/n/12 actual 
+ []
+
+
+Overfull \hbox (0.53813pt too wide) in paragraph at lines 159--159
+\OT1/cmr/m/n/12 Positive 
+ []
+
+
+Overfull \hbox (4.87697pt too wide) in paragraph at lines 159--159
+\OT1/cmr/m/n/12 Negative 
+ []
+
+
+Overfull \hbox (0.53813pt too wide) in paragraph at lines 160--160
+\OT1/cmr/m/n/12 Positive 
+ []
+
+
+Overfull \hbox (4.87697pt too wide) in paragraph at lines 160--160
+\OT1/cmr/m/n/12 Negative 
+ []
+
+[34]
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
- [35]
+
 
 ! LaTeX Error: File `' not found.
 
@@ -326,15 +366,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.171    \includegraphics[width=1\textwidth]{}
+l.187    \includegraphics[width=1\textwidth]{}
                                               
 ? 
-[36] [37]) [38]
+[35] [36] [37]) [38]
 Chapter 3.
 (./chapters/chapter3.tex [39
 
-] [40]) (./tables.tex [41]
-<../img/2c19_moe_model_accuracy.png, id=151, 527.0892pt x 235.1184pt>
+] [40]) (./tables.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[41] <../img/2c19_moe_model_accuracy.png, id=151, 527.0892pt x 235.1184pt>
 File: ../img/2c19_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/2c19_moe_model_accuracy.png>
@@ -342,27 +385,29 @@ Package pdftex.def Info: ../img/2c19_moe_model_accuracy.png used on input line
 44.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[42]
 Overfull \hbox (2.61108pt too wide) in paragraph at lines 54--84
 []$[]$ $[]$ 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[42 <../img/2c19_moe_model_accuracy.png>]
-<../img/2c9_moe_model_accuracy.png, id=157, 527.0892pt x 235.1184pt>
+[43 <../img/2c19_moe_model_accuracy.png>]
+<../img/2c9_moe_model_accuracy.png, id=160, 527.0892pt x 235.1184pt>
 File: ../img/2c9_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/2c9_moe_model_accuracy.png>
 Package pdftex.def Info: ../img/2c9_moe_model_accuracy.png used on input line 9
 0.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
- [43 <../img/2c9_moe_model_accuracy.png>]
+
 Overfull \hbox (2.61108pt too wide) in paragraph at lines 99--129
 []$[]$ $[]$ 
  []
 
-<../img/1a2_moe_model_accuracy.png, id=162, 527.0892pt x 235.1184pt>
+[44 <../img/2c9_moe_model_accuracy.png>]
+<../img/1a2_moe_model_accuracy.png, id=165, 527.0892pt x 235.1184pt>
 File: ../img/1a2_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/1a2_moe_model_accuracy.png>
@@ -373,13 +418,15 @@ Package pdftex.def Info: ../img/1a2_moe_model_accuracy.png used on input line 1
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[44]
+[45]
 Overfull \hbox (2.61108pt too wide) in paragraph at lines 144--174
 []$[]$ $[]$ 
  []
 
-[45 <../img/1a2_moe_model_accuracy.png>]
-<../img/2d6_moe_model_accuracy.png, id=170, 527.0892pt x 235.1184pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../img/2d6_moe_model_accuracy.png, id=169, 527.0892pt x 235.1184pt>
 File: ../img/2d6_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/2d6_moe_model_accuracy.png>
@@ -387,12 +434,16 @@ Package pdftex.def Info: ../img/2d6_moe_model_accuracy.png used on input line 1
 80.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[46 <../img/1a2_moe_model_accuracy.png>]
 Overfull \hbox (2.61108pt too wide) in paragraph at lines 190--220
 []$[]$ $[]$ 
  []
 
-[46 <../img/2d6_moe_model_accuracy.png>]
-<../img/3a4_moe_model_accuracy.png, id=175, 527.0892pt x 235.1184pt>
+[47 <../img/2d6_moe_model_accuracy.png>]
+<../img/3a4_moe_model_accuracy.png, id=179, 527.0892pt x 235.1184pt>
 File: ../img/3a4_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/3a4_moe_model_accuracy.png>
@@ -403,20 +454,27 @@ Package pdftex.def Info: ../img/3a4_moe_model_accuracy.png used on input line 2
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../img/method_comparison_training_set.png, id=176, 527.0892pt x 235.1184pt>
+[48]
+<../img/method_comparison_training_set.png, id=184, 527.0892pt x 235.1184pt>
 File: ../img/method_comparison_training_set.png Graphic file (type png)
 
 <use ../img/method_comparison_training_set.png>
 Package pdftex.def Info: ../img/method_comparison_training_set.png used on inpu
 t line 250.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
- [47]
+ [49 <../img/3a4_moe_model_accuracy.png> <../img/method_comparison_training_set
+.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[48 <../img/3a4_moe_model_accuracy.png> <../img/method_comparison_training_set.
-png>] [49]
-<../img/method_comparison_test_set.png, id=190, 527.0892pt x 235.1184pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[50]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../img/method_comparison_test_set.png, id=193, 527.0892pt x 235.1184pt>
 File: ../img/method_comparison_test_set.png Graphic file (type png)
 
 <use ../img/method_comparison_test_set.png>
@@ -427,23 +485,23 @@ ne 344.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [50] [51 <../img/method_comparison_test_set.png>]
+) [51] [52 <../img/method_comparison_test_set.png>]
 Chapter 4.
 (./chapters/chapter5.tex
 
-LaTeX Warning: Citation `Vasanthanathan2012' on page 52 undefined on input line
+LaTeX Warning: Citation `Vasanthanathan2012' on page 53 undefined on input line
  7.
 
 
-LaTeX Warning: Citation `Novotarskyi2012' on page 52 undefined on input line 7.
+LaTeX Warning: Citation `Novotarskyi2012' on page 53 undefined on input line 7.
 
 
 
-LaTeX Warning: Citation `Cheng2012' on page 52 undefined on input line 7.
+LaTeX Warning: Citation `Cheng2012' on page 53 undefined on input line 7.
 
-[52
+[53
 
-] [53]
+] [54]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
@@ -456,54 +514,54 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [54]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
  [55]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [56]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-) [56]
+) [57]
 Chapter 5.
-(./chapters/conclusion.tex [57
+(./chapters/conclusion.tex [58
 
 ]
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
-) [58] (./CYP.bbl [59]
+) [59] (./CYP.bbl [60]
 Underfull \hbox (badness 3396) in paragraph at lines 53--58
 []\OT1/cmr/m/n/12 Lapins, M., Worachartchee-wan, A., Spjuth, O.,
  []
 
-[60
+[61
 
 ]
 Missing character: There is no ƒ in font cmr12!
 Missing character: There is no á in font cmr12!
 Missing character: There is no ƒ in font cmr12!
 Missing character: There is no á in font cmr12!
-) [61] (./CYP.aux)
+) [62] (./CYP.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1681 strings out of 494985
- 24793 string characters out of 6180355
- 82353 words of memory out of 5000000
- 4844 multiletter control sequences out of 15000+600000
+ 1797 strings out of 494985
+ 26398 string characters out of 6180355
+ 84664 words of memory out of 5000000
+ 4949 multiletter control sequences out of 15000+600000
  10120 words of font info for 35 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 37i,10n,23p,1405b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,23p,1405b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
@@ -514,10 +572,10 @@ s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmti12.pfb>
-Output written on CYP.pdf (63 pages, 970749 bytes).
+Output written on CYP.pdf (64 pages, 967349 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
+ 268 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
