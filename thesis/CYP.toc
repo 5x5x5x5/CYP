@@ -22,31 +22,31 @@
 \contentsline {subsubsection}{Random Forest (RF)}{32}
 \contentsline {subsubsection}{Support Vector Machines (SVM)}{32}
 \contentsline {section}{\numberline {2.5}Model Evaluation and Validation}{33}
-\contentsline {subsubsection}{Confusion Matrix}{35}
-\contentsline {subsubsection}{Accuracy}{35}
-\contentsline {subsubsection}{Binary QSAR after PLS of descriptors}{36}
-\contentsline {subsubsection}{$\kappa $-NN utilizing on the full set of 2-D descriptors}{36}
-\contentsline {subsubsection}{Random Forest classification utilizing the full set of 2-D descriptors}{37}
-\contentsline {subsubsection}{Support Vector Machine classification utilizing the full set of 2-D descriptors}{37}
-\contentsline {chapter}{\numberline {3}Results}{39}
-\contentsline {section}{\numberline {3.1}Methods}{39}
-\contentsline {subsubsection}{Dataset preparation}{39}
-\contentsline {subsubsection}{Modeling in Python}{39}
-\contentsline {subsubsection}{Toy Problem - $\kappa $NN on first 2 PCs}{39}
-\contentsline {section}{\numberline {3.2}2C19 MOE models}{42}
-\contentsline {section}{\numberline {3.3}2C9 MOE Models}{43}
-\contentsline {section}{\numberline {3.4}1A2 MOE Models}{45}
-\contentsline {section}{\numberline {3.5}2D6 MOE Models}{46}
-\contentsline {section}{\numberline {3.6}3A4 MOE Models}{48}
-\contentsline {section}{\numberline {3.7}Comparison of Methods}{49}
-\contentsline {subsection}{\numberline {3.7.1}1A2}{50}
-\contentsline {subsection}{\numberline {3.7.2}2C9}{50}
-\contentsline {subsection}{\numberline {3.7.3}2C19}{51}
-\contentsline {subsection}{\numberline {3.7.4}2D6}{51}
-\contentsline {subsection}{\numberline {3.7.5}3A4}{51}
-\contentsline {chapter}{\numberline {4}Discussion}{53}
-\contentsline {subsection}{\numberline {4.0.6}Other attempts at modelling Assay 1851}{53}
-\contentsline {subsection}{\numberline {4.0.7}Cheng's results compared to mine}{54}
-\contentsline {subsection}{\numberline {4.0.8}Potential sources fo error}{55}
-\contentsline {section}{\numberline {4.1}Machine Learning}{55}
-\contentsline {chapter}{\numberline {5}Conclusion}{58}
+\contentsline {subsubsection}{Confusion Matrix}{34}
+\contentsline {subsubsection}{Accuracy}{34}
+\contentsline {subsubsection}{Binary QSAR after PLS of descriptors}{35}
+\contentsline {subsubsection}{$\kappa $-NN utilizing on the full set of 2-D descriptors}{35}
+\contentsline {subsubsection}{Random Forest classification utilizing the full set of 2-D descriptors}{36}
+\contentsline {subsubsection}{Support Vector Machine classification utilizing the full set of 2-D descriptors}{36}
+\contentsline {chapter}{\numberline {3}Results}{38}
+\contentsline {section}{\numberline {3.1}Methods}{38}
+\contentsline {subsubsection}{Dataset preparation}{38}
+\contentsline {subsubsection}{Modeling in Python}{38}
+\contentsline {subsubsection}{Toy Problem - $\kappa $NN on first 2 PCs}{38}
+\contentsline {section}{\numberline {3.2}2C19 MOE models}{40}
+\contentsline {section}{\numberline {3.3}2C9 MOE Models}{41}
+\contentsline {section}{\numberline {3.4}1A2 MOE Models}{43}
+\contentsline {section}{\numberline {3.5}2D6 MOE Models}{44}
+\contentsline {section}{\numberline {3.6}3A4 MOE Models}{46}
+\contentsline {section}{\numberline {3.7}Comparison of Methods}{47}
+\contentsline {subsection}{\numberline {3.7.1}1A2}{48}
+\contentsline {subsection}{\numberline {3.7.2}2C9}{48}
+\contentsline {subsection}{\numberline {3.7.3}2C19}{48}
+\contentsline {subsection}{\numberline {3.7.4}2D6}{49}
+\contentsline {subsection}{\numberline {3.7.5}3A4}{49}
+\contentsline {chapter}{\numberline {4}Discussion}{51}
+\contentsline {subsection}{\numberline {4.0.6}Other attempts at modelling Assay 1851}{51}
+\contentsline {subsection}{\numberline {4.0.7}Cheng's results compared to mine}{52}
+\contentsline {subsection}{\numberline {4.0.8}Potential sources fo error}{53}
+\contentsline {section}{\numberline {4.1}Machine Learning}{53}
+\contentsline {chapter}{\numberline {5}Conclusion}{56}
