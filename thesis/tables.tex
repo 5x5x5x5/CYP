@@ -37,7 +37,7 @@ PC & Total          & Active          & Inactive   \\ \hline
 %\caption{MOE model results 2C19 Test set}
 \end{table}
 
-Cytochrome P450 isozyme 2C19 models were trained on xxxxx of actives and xxxx of inactives in the training set, and validated against xxxx actives and xxxx inactives in the test set. All models are considered good models when the  total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+Cytochrome P450 isozyme 2C19 models were trained on 4721 actives and 4741 inactives in the training set, and validated against 1193 actives and 1173 inactives in the test set. All models are considered good models when the  total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
 
 
 \begin{figure}[!h]
@@ -84,7 +84,7 @@ PC & Total          & Active          & Inactive\\ \hline
 \caption{2C9 MOE model results}
 \end{table}
 
-Cytochrome P450 isozyme 2C9 models were trained on xxxx of actives and xxxx of inactives in the training set, and validated against xxxx actives and xxxx inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+Cytochrome P450 isozyme 2C9 models were trained on 3266 actives and 3327 inactives in the training set, and validated against 855 actives and 794 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
 
 \begin{figure}[!h]
 \includegraphics[width=1\textwidth]{../img/2c9_moe_model_accuracy.png}
@@ -129,7 +129,7 @@ PC & Total          & Active          & Inactive \\ \hline
 \caption{1A2 MOE model results}
 \end{table}
 
-Cytochrome P450 isozyme 1A2 models were trained on xxxx of actives and xxxx of inactives in the training set, and validated against xxxx actives and xxxx inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+Cytochrome P450 isozyme 1A2 models were trained on 4820 actives and 4780 inactives in the training set, and validated against 529 actives and 580 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
 
 \begin{figure}[!h]
 \includegraphics[width=1\textwidth]{../img/1a2_moe_model_accuracy.png}
@@ -174,7 +174,7 @@ PC & Total          & Active          & Inactive \\ \hline
 \caption{2D6 MOE model results}
 \end{table}
 
-Cytochrome P450 isozyme 2D6 models were trained on xxxx of actives and xxxx of inactives in the training set, and validated against xxxx actives and xxxx inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+Cytochrome P450 isozyme 2D6 models were trained on 2219 of actives and 2214 of inactives in the training set, and validated against 552 actives and 557 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
 
 \begin{figure}[!h]
 \includegraphics[width=1\textwidth]{../img/2d6_moe_model_accuracy.png}
@@ -220,7 +220,7 @@ PC & Total          & Active          & Inactive \\ \hline
 \caption{3A4 MOE model results}
 \end{table}
 
-Cytochrome P450 isozyme 3A4 models were trained on xxxx of actives and xxxx of inactives in the training set, and validated against xxxx actives and xxxx inactives in the test set. All models are considered good models when the  total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+Cytochrome P450 isozyme 3A4 models were trained on 4234 of actives and 4193 of inactives in the training set, and validated against 1033 actives and 1074 inactives in the test set. All models are considered good models when the  total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
 
 \begin{figure}[!h]
 \includegraphics[width=1\textwidth]{../img/3a4_moe_model_accuracy.png}
@@ -245,11 +245,6 @@ A visual scan of figure shows that model accuracy is higher for predicting activ
 %\caption{Comparison of methods for Training Set}
 %\end{table}
 
-
-\begin{figure}[!h]
-\includegraphics[width=1\textwidth]{../img/method_comparison_training_set.png}
-\caption{Inhibitor Classification Method Comparison on the Training Set}
-\end{figure}
 
 \subsection{1A2}
 
@@ -339,6 +334,12 @@ SVD       & 0.755        & 0.714    \\ \hline
 %\end{tabular}
 %\caption{Comparison of Methods for Test Sets}
 %\end{table}
+
+
+\begin{figure}[!h]
+\includegraphics[width=1\textwidth]{../img/method_comparison_training_set.png}
+\caption{Inhibitor Classification Method Comparison on the Training Set}
+\end{figure}
 
 \begin{figure}[!h]
 \includegraphics[width=1\textwidth]{../img/method_comparison_test_set.png}
