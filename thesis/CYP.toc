@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {2.4.1}Methods of Correlation of Descriptors to Activity Data}{30}
 \contentsline {subsubsection}{Binary QSAR in the Molecular Operating Environment}{30}
 \contentsline {subsubsection}{Modeling in Python}{31}
-\contentsline {subsubsection}{$\kappa $-Nearest Neighbor ($\kappa $NN}{31}
+\contentsline {subsubsection}{$\kappa $-Nearest Neighbor ($\kappa $NN}{32}
 \contentsline {subsubsection}{Random Forest (RF)}{32}
 \contentsline {subsubsection}{Support Vector Machines (SVM)}{32}
 \contentsline {section}{\numberline {2.5}Model Evaluation and Validation}{33}
@@ -45,7 +45,6 @@
 \contentsline {chapter}{\numberline {4}Discussion}{52}
 \contentsline {section}{\numberline {4.1}Other attempts at modelling Assay 1851}{52}
 \contentsline {subsection}{\numberline {4.1.1}Cheng's results compared to mine}{53}
-\contentsline {section}{\numberline {4.2}Sources of error}{54}
+\contentsline {section}{\numberline {4.2}Sources of error}{53}
 \contentsline {section}{\numberline {4.3}Machine Learning}{54}
-\contentsline {section}{\numberline {4.4}Interesting Tidbits}{57}
-\contentsline {chapter}{\numberline {5}Conclusion}{58}
+\contentsline {chapter}{\numberline {5}Conclusion}{57}

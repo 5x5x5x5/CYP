@@ -4,10 +4,7 @@
 
 
 \section{Other attempts at modelling Assay 1851}
-Pubchem Bioassy AID1851 has been the basis for several attempts to advance \textit{in silico} screening development. Several research groups have developed large-scale single target models for the single isoforms, \cite{Vasanthanathan2012, Novotarskyi2012} and Cheng et al created single target QSAR models for all five CYP isoforms which are the most comparable to my efforts. \cite{Cheng2011} And Lapins et al. also pursured all five isozymes by a proteochemometric method that also takes into account each isozyme's protein sequence. \cite{Lapins2013} These models all showed good predictive performances according to our standards.
-
-
-The results of this large-scale screening against five CYP isoforms identified that the majority of compounds in a typical chemical library cross-inhibited several isoforms, while only a small fraction of the compounds did not inhibit any of the isoforms. \cite{Veith2009}
+Pubchem Bioassy AID1851 has been the basis for several attempts to advance \textit{in silico} screening development. Several research groups have developed large-scale single target models for the single isoforms, \cite{Vasanthanathan2009, Sridhar2012, Sun2012, Novotarskyi2010} and Cheng et al created single target QSAR models for all five CYP isoforms which are the most comparable to my efforts. \cite{Cheng2011} And Lapins et al. also pursured all five isozymes by a proteochemometric method that also takes into account each isozyme's protein sequence. \cite{Lapins2013} These models all showed good predictive performances according to our standards of a 0.6 accuracy threshold.
 
 
 \subsection{Cheng's results compared to mine}
@@ -17,32 +14,27 @@ It is highly desirable to develop computational models that can predict the inhi
 \section{Sources of error}
 This assay required recombinant sources of CYP enzymes, because the probes are not sufficiently P450 isoform-selective to be used with those derived from human liver microsomes. Another potential source for false positives in these assays can be compounds that interfere with light generation directly, such as compounds that interfere with luciferase enzymatic activity. \cite{Zlokarnik2005}
 
-The phenomenon of uniformly lower accracy aon the inactives versus the actives might be explained by the composition of the inactive class. Both inactive inhibitors as well as compounds of uncertain activity were both included under the label 'inactive' for binary classification purposes. The chosen representation of class inclusion may have less potential for successful discrimination than. To test assumptions about class labels, the number of classes could be increased or the Activity Score threshold could be altered in future models.
+The results of the large-scale screening of Pubchem AID1851 against five CYP isoforms identified that the majority of compounds in a typical chemical library cross-inhibited several isoforms, while only a small fraction of the compounds did not inhibit any of the isoforms. \cite{Veith2009}
+
+The phenomenon of uniformly lower accracy on the inactives versus the actives might be explained by the composition of the inactive class. Both inactive inhibitors as well as compounds of uncertain activity were both included under the label 'inactive' for binary classification purposes. The chosen representation of class inclusion may have less potential for successful discrimination than. To test assumptions about class labels, the number of classes could be increased or the Activity Score threshold could be altered in future models.
 
 
 \section{Machine Learning}
 Developing successful machine learning applications still requires a substantial amount of “black art” that is hard to find in textbooks.\cite{Domingos2012}
 
-Easily the most important factor is the features used. If you have many independent features that correlate well with the class, learning is easy. On the other hand, if the class is a very complex function of the features, you may not be able to learn it.\cite{Domingos2012}
+Unlike in this study, raw data is often not in a form that is amenable to learning, but you can construct features from it that are. Easily the most important factor in a good model is the features used. If there are many independent features that correlate well with the class, learning is easy. However if the class is a very complex function of the features, the time required to train a good model may take to long or be impossible. \cite{Domingos2012} Most of the time and effort in a machine learning project goestypically goes into feature engineering, and it is one area where domain expertise and experience with chemical library design can mean the difference between success and failure.
 
-Often raw data is not in a form that is amenable to learning, but you can construct features from it that are. This is typically where most of the effort in a machine learning project goes. It is often one of the most interesting parts, where intuition, creativity and “black art” are as important as the technical stuff.\cite{Domingos2012}
-
-...consider how time-consuming it is to gather data, integrate it, clean it, and preprocess it, and how much trial and error can go into feature design.\cite{Domingos2012}
-
-Also machine learning is not a one-shot process of building a data set and running a learner, but rather an iterative process of running the learner, analyzing results, modifying the data and/or learner, and repeating. Learning is often the quickest part of this, but that’s because we’ve already mastered it pretty well! Feature engineering is more difficult because it is domain-specific, while learners can be largely general-purpose.\cite{Domingos2012}
+Also machine learning is not a one-shot process of building a data set and running a learner, but rather an iterative process of running the learner, analyzing results, modifying the data and/or learner, and repeating. Learning is often the quickest part of this, but that’s because alot of effort has gone into sharing and codifying that knowledge. Feature engineering is more difficult because it is domain-specific, while learners can be largely general-purpose.\cite{Domingos2012}
 
 There is ultimately no replacement for the smarts you put into feature engineering. On the other hand, running a learner with a very large number of features to find out which ones are useful in combination may be too time-consuming, or cause overfitting.\cite{Domingos2012}
 
 As a rule, it pays to try the simplest learners first(e.g. naive Bayes before logistic regression, $\kappa$-nearest neighbor before support vector machines). More sophisticated learners may be seductive, but they are usually harder to use, because there are more tuning parameters and their internals are more opaque.\cite{Domingos2012}
 
-Learners can be divided into two major types: those whose representation has a fixed size, like linear classifiers, and those whose representation can grow with the data, like decision trees. (The latter are sometimes called non-parametric, but this is somewhat ufortuante, since they usually wind up learning many more parameters than parametric ones.) Fixed-size learners can only take advantage of so much data. Variable-sized learners can in principle learn any function given sufficient data, but in practice they may not, because of limitations of the algorithm or computational cost. Also, because of the curse of dimensionality, no existing amount of data may be enough.\cite{Domingos2012}
-
-Creating model ensembles is now standard in machine learning. In the simplest technique, called bagging, we simply generate random variations of the training set by resampling, learn a classifier on each, and combine the results by voting. This works because it greatly reduces variance while only slightly increasing bias. In boosting, training examples have weights, and these are varied so that each new classifier focuses on the examples the previous ones tended to get wrong. In stacking, the outputs of individual classifiers become the inputs of a “higher-level” learner that figures out how best to combine them.\cite{Domingos2012}
+One way to divide learning algorithms is as follows: those whose representation has a fixed size, like linear classifiers, and those whose representation can grow with the data, like decision trees. Fixed-size learners can only take advantage of so much data. Variable-sized learners can in principle learn any function given sufficient data, but in practice may not, because of limitations of the algorithm or computational cost. Also, because of the curse of dimensionality, no existing amount of data may be enough.\cite{Domingos2012} Each type of learner comes with its own assumptions and, as of yet, none are definitely best at all situations, but some are clearly better than most. \cite{Hand2006,Delgado2014}
 
 
-\section{Interesting Tidbits}
+Perhaps because each type of learner is looking at the data from different angles, combining the results of different learners into an ensemble of models is a technique that has demonstrated its effectiveness at imporving overall accuracy. Creating model ensembles is now standard in machine learning. The statistic community uses techniques, such as bagging, boosting and stacking to resample training data or reweight classifier inputs on previously misclassified data in order to reduce variance while minimizing bias. But in the simplest form of an ensemble of models can be thought of as a 'majority vote', where final class assignment rest at which most of the included models arrived.
 
 
-
-QSAR models and their value in informing regulatory decision making will likely increase with the standardization of analytical approaches, more complete and reliable data collection methods, and a better understanding of toxicity mechanisms in the role of disease, and individual susceptibility to adverse clinical events.\cite{Kruhlak2012}
+Ensembles of models frequently outperform any single model, so a logical next step of this study would be to combine results from all models developed.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  15 FEB 2015 20:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  16 FEB 2015 12:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -192,11 +192,7 @@ Overfull \hbox (2.6946pt too wide) in paragraph at lines 7--7
 Chapter 1.
 (./chapters/chapter1.tex [7
 
-]
-
-LaTeX Warning: Citation `Cohen2004' on page 8 undefined on input line 10.
-
-[8] [9] [10] [11]
+] [8] [9] [10] [11]
 Overfull \hbox (19.6138pt too wide) in paragraph at lines 39--40
 \OT1/cmr/m/n/12 tion-able prospects that a team would oth-er-wise synthesize.[[
 ]]
@@ -300,13 +296,10 @@ Type  H <return>  for immediate help.
 l.93    \includegraphics[width=1\textwidth]{}
                                              
 ? 
-
-LaTeX Warning: Citation `Labute2001' on page 30 undefined on input line 99.
-
-[30] [31]
+[30] [31] [32]
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no ≠ in font cmr12!
- [32] [33]
+ [33] [34]
 
 ! LaTeX Error: Illegal character in array arg.
 
@@ -363,7 +356,7 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 153--161
 [][] 
  []
 
-[34] [35]
+[35]
 
 ! LaTeX Error: File `' not found.
 
@@ -486,13 +479,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 n_test_set.png>]
 Chapter 4.
 (./chapters/chapter5.tex
-
-LaTeX Warning: Citation `Vasanthanathan2012' on page 52 undefined on input line
- 7.
-
-
-LaTeX Warning: Citation `Novotarskyi2012' on page 52 undefined on input line 7.
-
+Overfull \hbox (34.36226pt too wide) in paragraph at lines 7--8
+\OT1/cmr/m/n/12 large-scale sin-gle tar-get mod-els for the sin-gle iso-forms, 
+[[],
+ []
 
 [52
 
@@ -506,71 +496,56 @@ Missing character: There is no ù in font cmr12!
  [54]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
- [55]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
- [56]) [57]
+ [55]) [56]
 Chapter 5.
-(./chapters/conclusion.tex [58
+(./chapters/conclusion.tex) (./CYP.bbl [57
 
 ]
-Missing character: There is no ¬ in font cmr12!
-Missing character: There is no ≠ in font cmr12!
-Missing character: There is no ¬ in font cmr12!
-Missing character: There is no ≠ in font cmr12!
-) [59] (./CYP.bbl [60]
-Underfull \hbox (badness 3396) in paragraph at lines 53--58
+Underfull \hbox (badness 3168) in paragraph at lines 42--46
+[]\OT1/cmr/m/n/12 Fern^^Sandez-Delgado, M., Cer-nadas, E.,
+ []
+
+[58
+
+]
+Underfull \hbox (badness 3396) in paragraph at lines 75--80
 []\OT1/cmr/m/n/12 Lapins, M., Worachartchee-wan, A., Spjuth, O.,
  []
 
-[61
-
-]
 Missing character: There is no ƒ in font cmr12!
 Missing character: There is no á in font cmr12!
 Missing character: There is no ƒ in font cmr12!
 Missing character: There is no á in font cmr12!
-) [62] (./CYP.aux)
 
-LaTeX Warning: There were undefined references.
+Underfull \hbox (badness 1320) in paragraph at lines 109--113
+\OT1/cmr/m/n/12 Isozymes Based on Quan-ti-ta-tive High Through-put Screen-ing D
+ata.
+ []
 
- ) 
+[59]) [60] (./CYP.aux) ) 
 Here is how much of TeX's memory you used:
- 1752 strings out of 494985
- 25839 string characters out of 6180355
- 87985 words of memory out of 5000000
- 4907 multiletter control sequences out of 15000+600000
+ 1758 strings out of 494985
+ 25900 string characters out of 6180355
+ 88155 words of memory out of 5000000
+ 4913 multiletter control sequences out of 15000+600000
  10120 words of font info for 35 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  37i,11n,23p,1405b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti12.pfb>
-Output written on CYP.pdf (63 pages, 970911 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on CYP.pdf (61 pages, 971996 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
+ 259 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

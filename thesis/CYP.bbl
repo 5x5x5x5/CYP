@@ -22,6 +22,11 @@ Cheng, F., Yu, Y., Shen, J., Yang, L., Li, W., Liu, G., Lee, P.~W., and Tang,
   combined classifiers.}
 \newblock {\em Journal of chemical information and modeling}, 51(5):996--1011.
 
+\bibitem[Cohen, 2004]{Cohen2004}
+Cohen, J.~E. (2004).
+\newblock Mathematics is biology's next microscope, only better.
+\newblock {\em PLoS Biol}, 2(12):e439.
+
 \bibitem[Danielson, 2002]{Danielson2002}
 Danielson, P.~B. (2002).
 \newblock {The cytochrome P450 superfamily: biochemistry, evolution and drug
@@ -32,6 +37,17 @@ Danielson, P.~B. (2002).
 Domingos, P. (2012).
 \newblock {A few useful things to know about machine learning}.
 \newblock {\em Communications of the ACM}, 55(10):78.
+
+\bibitem[Fern\'{a}ndez-Delgado et~al., 2014]{Delgado2014}
+Fern\'{a}ndez-Delgado, M., Cernadas, E., Barro, S., and Amorim, D. (2014).
+\newblock Do we need hundreds of classifiers to solve real world classification
+  problems?
+\newblock {\em Journal of Machine Learning Research}, 15:3133--3181.
+
+\bibitem[Hand, 2006]{Hand2006}
+Hand, D.~J. (2006).
+\newblock Classifier technology and the illusion of progress.
+\newblock {\em Statist. Sci.}, 21(1):1--14.
 
 \bibitem[Hansch and Fujita, 1964]{Hansch1964}
 Hansch, C. and Fujita, T. (1964).
@@ -49,6 +65,12 @@ Kruhlak, N.~L., Benz, R.~D., Zhou, H., and Colatsky, T.~J. (2012).
 \newblock {(Q)SAR modeling and safety assessment in regulatory review.}
 \newblock {\em Clinical pharmacology and therapeutics}, 91:529--34.
 
+\bibitem[Labute, 1999]{Labute1999}
+Labute, P. (1999).
+\newblock Binary qsar: A new method for determination of quantitative
+  straucture activity relationships.
+\newblock {\em Pacific Symposium on Biocomputing}, 4:444--455.
+
 \bibitem[Lapins et~al., 2013]{Lapins2013}
 Lapins, M., Worachartcheewan, A., Spjuth, O., Georgiev, V., Prachayasittikul,
   V., Nantasenamat, C., and Wikberg, J. E.~S. (2013).
@@ -62,6 +84,11 @@ Nantasenamat, C. (2009).
   relationship}.
 \newblock {\em EXCLI J}, 8:74--88.
 
+\bibitem[Novotarskyi et~al., 2010]{Novotarskyi2010}
+Novotarskyi, S., Sushko, I., K\"{o}rner, R., Pandey, A., and Tetko, I. (2010).
+\newblock {Classification of CYP450 1A2 inhibitors using PubChem data}.
+\newblock {\em Journal of Cheminformatics}, 2(Suppl 1):P40.
+
 \bibitem[Prlić and Lapp, 2012]{Prlic2012}
 Prlić, A. and Lapp, H. (2012).
 \newblock The plos computational biology software section.
@@ -71,6 +98,25 @@ Prlić, A. and Lapp, H. (2012).
 Singh, D., Kashyap, A., Pandey, R.~V., and Saini, K.~S. (2011).
 \newblock {Novel advances in cytochrome P450 research.}
 \newblock {\em Drug discovery today}, 16(17-18):793--9.
+
+\bibitem[Sridhar et~al., 2012]{Sridhar2012}
+Sridhar, J., Liu, J., Foroozesh, M., and Stevens, C. L.~K. (2012).
+\newblock {Insights on cytochrome p450 enzymes and inhibitors obtained through
+  QSAR studies.}
+\newblock {\em Molecules (Basel, Switzerland)}, 17(8):9283--305.
+
+\bibitem[Sun, 2012]{Sun2012}
+Sun, H. (2012).
+\newblock {Predictive Models for Cytochrome P450 Isozymes Based on Quantitative
+  High Throughput Screening Data}.
+\newblock 51(10):2474--2481.
+
+\bibitem[Vasanthanathan et~al., 2009]{Vasanthanathan2009}
+Vasanthanathan, P., Taboureau, O., Oostenbrink, C., Vermeulen, N. P.~E., Olsen,
+  L., and J\o~rgensen, F.~S. (2009).
+\newblock {Classification of Cytochrome P450 1A2 Inhibitors and Noninhibitors
+  by Machine Learning Techniques ABSTRACT :}.
+\newblock 37(3):658--664.
 
 \bibitem[Veith et~al., 2009]{Veith2009}
 Veith, H., Southall, N., Huang, R., and James, T. (2009).
