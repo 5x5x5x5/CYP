@@ -4,7 +4,7 @@
 
 
 \section{Other attempts at modelling Assay 1851}
-Pubchem Bioassy AID1851 has been the basis for several attempts to advance \textit{in silico} screening development. Recently, Vasanthanathan et al. and Novotarskyi et al. and more, recently developed large-scale single target models for the CYP1A2 isoform, and Cheng created single target QSAR models for all five CYP isoforms.\cite{Vasanthanathan2012, Novotarskyi2012, Cheng2011} And Lapins et al. pursured a proteochemometric method for all five isozymes by also taking into account each isozymes protein sequence. \cite{Lapins2013} These models showed good predictive performances.
+Pubchem Bioassy AID1851 has been the basis for several attempts to advance \textit{in silico} screening development. Several research groups have developed large-scale single target models for the single isoforms, \cite{Vasanthanathan2012, Novotarskyi2012} and Cheng et al created single target QSAR models for all five CYP isoforms which are the most comparable to my efforts. \cite{Cheng2011} And Lapins et al. also pursured all five isozymes by a proteochemometric method that also takes into account each isozyme's protein sequence. \cite{Lapins2013} These models all showed good predictive performances according to our standards.
 
 
 The results of this large-scale screening against five CYP isoforms identified that the majority of compounds in a typical chemical library cross-inhibited several isoforms, while only a small fraction of the compounds did not inhibit any of the isoforms. \cite{Veith2009}
@@ -17,7 +17,7 @@ It is highly desirable to develop computational models that can predict the inhi
 \section{Sources of error}
 This assay required recombinant sources of CYP enzymes, because the probes are not sufficiently P450 isoform-selective to be used with those derived from human liver microsomes. Another potential source for false positives in these assays can be compounds that interfere with light generation directly, such as compounds that interfere with luciferase enzymatic activity. \cite{Zlokarnik2005}
 
-
+The phenomenon of uniformly lower accracy aon the inactives versus the actives might be explained by the composition of the inactive class. Both inactive inhibitors as well as compounds of uncertain activity were both included under the label 'inactive' for binary classification purposes. The chosen representation of class inclusion may have less potential for successful discrimination than. To test assumptions about class labels, the number of classes could be increased or the Activity Score threshold could be altered in future models.
 
 
 \section{Machine Learning}

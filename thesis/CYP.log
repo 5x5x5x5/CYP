@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  14 FEB 2015 14:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.22)  15 FEB 2015 20:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,17 +6,6 @@ entering extended mode
 (./CYP.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 4 languages loaded.
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 .
-     \documentclass[12pt]{report}
-? 
-Missing character: There is no . in font nullfont!
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -29,17 +18,12 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \c@subsubsection=\count83
 \c@paragraph=\count84
 \c@subparagraph=\count85
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--303
-[]
- []
-
 \c@figure=\count86
 \c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -169,7 +153,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-] (./chapters/abstract.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./chapters/abstract.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -244,7 +228,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
 
-<../img/Typical_QSAR_Process.png, id=65, 505.89pt x 234.8775pt>
+<../img/Typical_QSAR_Process.png, id=62, 505.89pt x 234.8775pt>
 File: ../img/Typical_QSAR_Process.png Graphic file (type png)
 
 <use ../img/Typical_QSAR_Process.png>
@@ -268,7 +252,7 @@ Overfull \hbox (2.33298pt too wide) in paragraph at lines 153--155
 [20] [21]) [22]
 Chapter 2.
 (./chapters/chapter2.tex
-<../img/Supervised_Workflow.png, id=86, 496.9767pt x 487.8225pt>
+<../img/Supervised_Workflow.png, id=83, 496.9767pt x 487.8225pt>
 File: ../img/Supervised_Workflow.png Graphic file (type png)
 
 <use ../img/Supervised_Workflow.png>
@@ -395,7 +379,7 @@ Chapter 3.
 (./chapters/chapter3.tex [40
 
 ] [41]) (./tables.tex
-<../img/2c19_moe_model_accuracy.png, id=151, 527.0892pt x 235.1184pt>
+<../img/2c19_moe_model_accuracy.png, id=147, 527.0892pt x 235.1184pt>
 File: ../img/2c19_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/2c19_moe_model_accuracy.png>
@@ -414,20 +398,24 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 54--84
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../img/2c9_moe_model_accuracy.png, id=156, 527.0892pt x 235.1184pt>
+<../img/2c9_moe_model_accuracy.png, id=153, 527.0892pt x 235.1184pt>
 File: ../img/2c9_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/2c9_moe_model_accuracy.png>
 Package pdftex.def Info: ../img/2c9_moe_model_accuracy.png used on input line 9
 0.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
- [43 <../img/2c19_moe_model_accuracy.png>] [44 <../img/2c9_moe_model_accuracy.p
-ng>]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[43 <../img/2c19_moe_model_accuracy.png>]
 Overfull \hbox (2.61108pt too wide) in paragraph at lines 99--129
 []$[]$ $[]$ 
  []
 
-<../img/1a2_moe_model_accuracy.png, id=165, 527.0892pt x 235.1184pt>
+[44 <../img/2c9_moe_model_accuracy.png>]
+<../img/1a2_moe_model_accuracy.png, id=162, 527.0892pt x 235.1184pt>
 File: ../img/1a2_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/1a2_moe_model_accuracy.png>
@@ -438,13 +426,13 @@ Package pdftex.def Info: ../img/1a2_moe_model_accuracy.png used on input line 1
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[45]
+
 Overfull \hbox (2.61108pt too wide) in paragraph at lines 144--174
 []$[]$ $[]$ 
  []
 
-[46 <../img/1a2_moe_model_accuracy.png>]
-<../img/2d6_moe_model_accuracy.png, id=173, 527.0892pt x 235.1184pt>
+[45] [46 <../img/1a2_moe_model_accuracy.png>]
+<../img/2d6_moe_model_accuracy.png, id=170, 527.0892pt x 235.1184pt>
 File: ../img/2d6_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/2d6_moe_model_accuracy.png>
@@ -460,64 +448,62 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 190--220
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [47 <../img/2d6_moe_model_accuracy.png>]
-<../img/3a4_moe_model_accuracy.png, id=179, 527.0892pt x 235.1184pt>
+<../img/3a4_moe_model_accuracy.png, id=175, 527.0892pt x 235.1184pt>
 File: ../img/3a4_moe_model_accuracy.png Graphic file (type png)
 
 <use ../img/3a4_moe_model_accuracy.png>
 Package pdftex.def Info: ../img/3a4_moe_model_accuracy.png used on input line 2
 26.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
+ [48 <../img/3a4_moe_model_accuracy.png>]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../img/method_comparison_training_set.png, id=180, 527.0892pt x 235.1184pt>
+[49]
+<../img/method_comparison_training_set.png, id=185, 527.0892pt x 235.1184pt>
 File: ../img/method_comparison_training_set.png Graphic file (type png)
 
 <use ../img/method_comparison_training_set.png>
 Package pdftex.def Info: ../img/method_comparison_training_set.png used on inpu
-t line 250.
-(pdftex.def)             Requested size: 390.0pt x 173.9741pt.
- [48]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[49 <../img/3a4_moe_model_accuracy.png> <../img/method_comparison_training_set.
-png>] [50]
-<../img/method_comparison_test_set.png, id=193, 527.0892pt x 235.1184pt>
-File: ../img/method_comparison_test_set.png Graphic file (type png)
-
-<use ../img/method_comparison_test_set.png>
-Package pdftex.def Info: ../img/method_comparison_test_set.png used on input li
-ne 344.
+t line 340.
 (pdftex.def)             Requested size: 390.0pt x 173.9741pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [51] [52 <../img/method_comparison_test_set.png>]
+<../img/method_comparison_test_set.png, id=186, 527.0892pt x 235.1184pt>
+File: ../img/method_comparison_test_set.png Graphic file (type png)
+
+<use ../img/method_comparison_test_set.png>
+Package pdftex.def Info: ../img/method_comparison_test_set.png used on input li
+ne 345.
+(pdftex.def)             Requested size: 390.0pt x 173.9741pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [50] [51 <../img/method_comparison_training_set.png> <../img/method_compariso
+n_test_set.png>]
 Chapter 4.
 (./chapters/chapter5.tex
 
-LaTeX Warning: Citation `Vasanthanathan2012' on page 53 undefined on input line
- 5.
+LaTeX Warning: Citation `Vasanthanathan2012' on page 52 undefined on input line
+ 7.
 
 
-LaTeX Warning: Citation `Novotarskyi2012' on page 53 undefined on input line 5.
+LaTeX Warning: Citation `Novotarskyi2012' on page 52 undefined on input line 7.
 
 
+[52
 
-LaTeX Warning: Citation `Cheng2012' on page 53 undefined on input line 5.
-
-[53
-
-] [54]
+] [53]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no œ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no  in font cmr12!
+ [54]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no œ in font cmr12!
@@ -564,10 +550,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1753 strings out of 494985
- 25850 string characters out of 6180355
- 82975 words of memory out of 5000000
- 4908 multiletter control sequences out of 15000+600000
+ 1752 strings out of 494985
+ 25839 string characters out of 6180355
+ 87985 words of memory out of 5000000
+ 4907 multiletter control sequences out of 15000+600000
  10120 words of font info for 35 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  37i,11n,23p,1405b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -581,10 +567,10 @@ s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmti12.pfb>
-Output written on CYP.pdf (64 pages, 970659 bytes).
+Output written on CYP.pdf (63 pages, 970911 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
+ 265 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
