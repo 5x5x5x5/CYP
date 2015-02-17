@@ -1,4 +1,0 @@
-Hello and welcome to my thesis. I'd like to talk to you today about using computers to predict whether or not your nice drug compounds may interfere with the enzymes that people really need in order break down other drugs and foreign substances that are already inside them.
-
-\section{Aims}
-The aim of this project is to quantify the risk of off target effects for the candidate molecules after building machine learning models that make binary classification of compounds based on their structure, as inhibitors or non-inhibitors of Cytochrome P450.
