@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: CYP.aux
+The style file: apalike.bst
+Database file #1: references.bib
+Repeated entry---line 601 of file references.bib
+ : @article{Novotarskyi2010
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 615 of file references.bib
+ : @article{Sun2012
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 626 of file references.bib
+ : @article{Sridhar2012
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 637 of file references.bib
+ : @article{Cheng2011
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 655 of file references.bib
+ : @article{Vasanthanathan2009
+ :                            ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in Breiman2001
+Warning--empty journal in Sun2012
+Warning--empty journal in Vasanthanathan2009
+Warning--empty journal in Zlokarnik2005
+You've used 24 entries,
+            1935 wiz_defined-function locations,
+            646 strings with 7983 characters,
+and the built_in function-call counts, 9988 in all, are:
+= -- 965
+> -- 428
+< -- 12
++ -- 148
+- -- 146
+* -- 919
+:= -- 1752
+add.period$ -- 72
+call.type$ -- 24
+change.case$ -- 192
+chr.to.int$ -- 24
+cite$ -- 28
+duplicate$ -- 336
+empty$ -- 696
+format.name$ -- 176
+if$ -- 1907
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 25
+newline$ -- 123
+num.names$ -- 72
+pop$ -- 146
+preamble$ -- 1
+purify$ -- 193
+quote$ -- 0
+skip$ -- 252
+stack$ -- 0
+substring$ -- 790
+swap$ -- 20
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 142
+warning$ -- 4
+while$ -- 85
+width$ -- 0
+write$ -- 309
+(There were 5 error messages)

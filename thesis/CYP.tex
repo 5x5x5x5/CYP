@@ -1,0 +1,66 @@
+\documentclass[12pt]{report}
+%\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{float}
+\usepackage{multirow}
+
+\pagestyle{plain}
+%\linespread{2}
+\usepackage{setspace}
+%\doublespaceing
+
+\newcommand\MyBox[2]{
+  \fbox{\lower0.75cm
+    \vbox to 1.7cm{\vfil
+      \hbox to 1.7cm{\hfil\parbox{1.4cm}{#1\\#2}\hfil}
+      \vfil}%
+  }%
+}
+
+\author{D.Siegle}
+\title{Cytochrome P450 Inhibitor Classification with Statistical Learning}
+\date{}
+
+\begin{document}
+
+% generate the title
+\maketitle
+
+\begin{doublespacing}
+\chapter*{Abstract}
+% Self reference and then abstract goes here.
+\input{chapters/abstract}
+\end{doublespacing}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\begin{doublespacing}
+\chapter*{Acknowledgements}
+I want to thank ...
+
+\chapter{Background}
+\input{chapters/chapter1}
+
+\chapter{Materials and Methods}
+\input{chapters/chapter2}
+
+\chapter{Results}
+\input{chapters/chapter3}
+
+\input{tables}
+
+\chapter{Discussion}
+\input{chapters/chapter5}
+
+\chapter{Conclusion}
+\input{chapters/conclusion}
+
+\end{doublespacing}
+
+\bibliography{references}{}
+\bibliographystyle{apalike}
+
+\end{document}
