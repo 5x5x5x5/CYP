@@ -7,3 +7,5 @@
 .toc
 .tex~
 .dvi
+*.bbl
+*.blg
