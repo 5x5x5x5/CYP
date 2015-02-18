@@ -1,8 +1,99 @@
-Here's a scratch pad for all my results tables.
+
+\section{1A2 MOE Models}
+
+\begin{table}[!htbp]
+\begin{minipage}{.5\linewidth}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|c|}{1A2 Training Set Accuracy}   \\ \hline
+PC & Total          & Active          & Inactive  \\ \hline
+2  & 0.638          & 0.752           & 0.522     \\ \hline
+5  & 0.704          & 0.746           & 0.662     \\ \hline
+10 & 0.734          & 0.755           & 0.712     \\ \hline
+15 & 0.737          & 0.770           & 0.704     \\ \hline
+20 & 0.741          & 0.781           & 0.701     \\ \hline
+30 & 0.735          & 0.782           & 0.686     \\ \hline
+44 & 0.725          & 0.777           & 0.672     \\ \hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|c|}{1A2 Test Set Accuracy}     \\ \hline
+PC & Total          & Active          & Inactive \\ \hline
+2  & 0.632          & 0.758           & 0.517   \\ \hline
+5  & 0.705          & 0.773           & 0.643   \\ \hline
+10 & 0.746          & 0.749           & 0.743   \\ \hline
+15 & 0.752          & 0.775           & 0.731   \\ \hline
+20 & 0.748          & 0.779           & 0.721   \\ \hline
+30 & 0.739          & 0.783           & 0.698   \\ \hline
+44 & 0.720          & 0.773           & 0.672   \\ \hline
+\end{tabular}
+\end{minipage}
+\caption{1A2 MOE model results}
+\end{table}
+
+Cytochrome P450 isozyme 1A2 models were trained on 4820 actives and 4780 inactives in the training set, and validated against 529 actives and 580 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+
+\begin{figure}[!htbp]
+\includegraphics[width=1\textwidth]{../img/1a2_moe_model_accuracy.png}
+\caption{1A2 MOE Model Accuracy}
+\end{figure}
+
+A visual scan of figure shows that model accuracy is higher for predicting active compounds than inactive compounds, and total accuracy is somewhere in between. 20 pricipal components (PC20) appears to be an optimal number for capturing relevant variance while minimizing Type II errors. At 20PCs, the total accuracy on the test set is 0.748. Accuracy on Actives is 0.779 and accuracy on inactives is 0.721.
+\section{Comparison of Methods}
+
+\section{2C9 MOE Models}
+
+\begin{table}[!htbp]
+\begin{minipage}{.5\linewidth}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|c|}{2C9 Training Set Accuracy} \\ \hline
+PC & Total          & Active          & Inactive\\ \hline
+2  & 0.620          & 0.695           & 0.547   \\ \hline
+5  & 0.683          & 0.722           & 0.645   \\ \hline
+10 & 0.699          & 0.744           & 0.655   \\ \hline
+15 & 0.702          & 0.752           & 0.653   \\ \hline
+20 & 0.710          & 0.756           & 0.665   \\ \hline
+30 & 0.711          & 0.754           & 0.668   \\ \hline
+44 & 0.712          & 0.770           & 0.655   \\ \hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|c|}{2C9 Test Set Accuracy}     \\ \hline
+PC & Total          & Active          & Inactive\\ \hline
+2  & 0.609          & 0.702           & 0.510   \\ \hline
+5  & 0.675          & 0.713           & 0.634   \\ \hline
+10 & 0.682          & 0.730           & 0.632   \\ \hline
+15 & 0.686          & 0.739           & 0.630   \\ \hline
+20 & 0.685          & 0.731           & 0.636   \\ \hline
+30 & 0.690          & 0.730           & 0.646   \\ \hline
+44 & 0.688          & 0.750           & 0.621   \\ \hline
+\end{tabular}
+\end{minipage}
+\caption{2C9 MOE model results}
+\end{table}
+
+Cytochrome P450 isozyme 2C9 models were trained on 3266 actives and 3327 inactives in the training set, and validated against 855 actives and 794 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+
+\begin{figure}[!htbp]
+\includegraphics[width=1\textwidth]{../img/2c9_moe_model_accuracy.png}
+\caption{2C19 MOE Model Accuracy}
+\end{figure}
+
+A visual scan of figure shows that model accuracy is higher for predicting active compounds than inactive compounds, and total accuracy is somewhere in between. 20 pricipal components (PC20) appears to be an optimal number for capturing relevant variance while minimizing Type II errors. At 20PCs, the total accuracy on the test set is 0.685. Accuracy on Actives is 0.731 and accuracy on inactives is 0.636.
+
 
 \section{2C19 MOE models}
 
-\begin{table}[!h]
+\begin{table}[!htbp]
 \begin{minipage}{.5\linewidth}
 \centering
 \begin{tabular}{|l|l|l|l|}
@@ -40,7 +131,7 @@ PC & Total          & Active          & Inactive   \\ \hline
 Cytochrome P450 isozyme 2C19 models were trained on 4721 actives and 4741 inactives in the training set, and validated against 1193 actives and 1173 inactives in the test set. All models are considered good models when the  total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
 
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
 \includegraphics[width=1\textwidth]{../img/2c19_moe_model_accuracy.png}
 \caption{2C19 MOE Model Accuracy}
 \end{figure}
@@ -48,99 +139,9 @@ Cytochrome P450 isozyme 2C19 models were trained on 4721 actives and 4741 inacti
 A visual scan of figure shows that model accuracy is higher for predicting active compounds than inactive compounds, and total accuracy is somewhere in between. 20 pricipal components (PC20) appears to be an optimal number for capturing relevant variance while minimizing Type II errors. At 20PCs, the total accuracy on the test set is 0.698. Accuracy on Actives is 0.758 and accuracy on inactives is 0.638.
 
 
-\section{2C9 MOE Models}
-
-\begin{table}[!h]
-\begin{minipage}{.5\linewidth}
-\centering
-\begin{tabular}{|l|l|l|l|}
-\hline
-\multicolumn{4}{|c|}{2C9 Training Set Accuracy} \\ \hline
-PC & Total          & Active          & Inactive\\ \hline
-2  & 0.620          & 0.695           & 0.547   \\ \hline
-5  & 0.683          & 0.722           & 0.645   \\ \hline
-10 & 0.699          & 0.744           & 0.655   \\ \hline
-15 & 0.702          & 0.752           & 0.653   \\ \hline
-20 & 0.710          & 0.756           & 0.665   \\ \hline
-30 & 0.711          & 0.754           & 0.668   \\ \hline
-44 & 0.712          & 0.770           & 0.655   \\ \hline
-\end{tabular}
-\end{minipage}
-\begin{minipage}{.5\linewidth}
-\centering
-\begin{tabular}{|l|l|l|l|}
-\hline
-\multicolumn{4}{|c|}{2C9 Test Set Accuracy}     \\ \hline
-PC & Total          & Active          & Inactive\\ \hline
-2  & 0.609          & 0.702           & 0.510   \\ \hline
-5  & 0.675          & 0.713           & 0.634   \\ \hline
-10 & 0.682          & 0.730           & 0.632   \\ \hline
-15 & 0.686          & 0.739           & 0.630   \\ \hline
-20 & 0.685          & 0.731           & 0.636   \\ \hline
-30 & 0.690          & 0.730           & 0.646   \\ \hline
-44 & 0.688          & 0.750           & 0.621   \\ \hline
-\end{tabular}
-\end{minipage}
-\caption{2C9 MOE model results}
-\end{table}
-
-Cytochrome P450 isozyme 2C9 models were trained on 3266 actives and 3327 inactives in the training set, and validated against 855 actives and 794 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
-
-\begin{figure}[!h]
-\includegraphics[width=1\textwidth]{../img/2c9_moe_model_accuracy.png}
-\caption{2C19 MOE Model Accuracy}
-\end{figure}
-
-A visual scan of figure shows that model accuracy is higher for predicting active compounds than inactive compounds, and total accuracy is somewhere in between. 20 pricipal components (PC20) appears to be an optimal number for capturing relevant variance while minimizing Type II errors. At 20PCs, the total accuracy on the test set is 0.685. Accuracy on Actives is 0.731 and accuracy on inactives is 0.636.
-
-\section{1A2 MOE Models}
-
-\begin{table}[!h]
-\begin{minipage}{.5\linewidth}
-\centering
-\begin{tabular}{|l|l|l|l|}
-\hline
-\multicolumn{4}{|c|}{1A2 Training Set Accuracy}   \\ \hline
-PC & Total          & Active          & Inactive  \\ \hline
-2  & 0.638          & 0.752           & 0.522     \\ \hline
-5  & 0.704          & 0.746           & 0.662     \\ \hline
-10 & 0.734          & 0.755           & 0.712     \\ \hline
-15 & 0.737          & 0.770           & 0.704     \\ \hline
-20 & 0.741          & 0.781           & 0.701     \\ \hline
-30 & 0.735          & 0.782           & 0.686     \\ \hline
-44 & 0.725          & 0.777           & 0.672     \\ \hline
-\end{tabular}
-\end{minipage}
-\begin{minipage}{.5\linewidth}
-\centering
-\begin{tabular}{|l|l|l|l|}
-\hline
-\multicolumn{4}{|c|}{1A2 Test Set Accuracy}     \\ \hline
-PC & Total          & Active          & Inactive \\ \hline
-2  & 0.632          & 0.758           & 0.517   \\ \hline
-5  & 0.705          & 0.773           & 0.643   \\ \hline
-10 & 0.746          & 0.749           & 0.743   \\ \hline
-15 & 0.752          & 0.775           & 0.731   \\ \hline
-20 & 0.748          & 0.779           & 0.721   \\ \hline
-30 & 0.739          & 0.783           & 0.698   \\ \hline
-44 & 0.720          & 0.773           & 0.672   \\ \hline
-\end{tabular}
-\end{minipage}
-\caption{1A2 MOE model results}
-\end{table}
-
-Cytochrome P450 isozyme 1A2 models were trained on 4820 actives and 4780 inactives in the training set, and validated against 529 actives and 580 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
-
-\begin{figure}[!h]
-\includegraphics[width=1\textwidth]{../img/1a2_moe_model_accuracy.png}
-\caption{1A2 MOE Model Accuracy}
-\end{figure}
-
-A visual scan of figure shows that model accuracy is higher for predicting active compounds than inactive compounds, and total accuracy is somewhere in between. 20 pricipal components (PC20) appears to be an optimal number for capturing relevant variance while minimizing Type II errors. At 20PCs, the total accuracy on the test set is 0.748. Accuracy on Actives is 0.779 and accuracy on inactives is 0.721.
-
 \section{2D6 MOE Models}
 
-\begin{table}[!h]
+\begin{table}[!htbp]
 \begin{minipage}{.5\linewidth}
 \centering
 \begin{tabular}{|l|l|l|l|}
@@ -176,7 +177,7 @@ PC & Total          & Active          & Inactive \\ \hline
 
 Cytochrome P450 isozyme 2D6 models were trained on 2219 of actives and 2214 of inactives in the training set, and validated against 552 actives and 557 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
 \includegraphics[width=1\textwidth]{../img/2d6_moe_model_accuracy.png}
 \caption{2D6 MOE Model Accuracy}
 \end{figure}
@@ -186,7 +187,7 @@ A visual scan of figure shows that model accuracy is higher for predicting activ
 
 \section{3A4 MOE Models}
 
-\begin{table}[!h]
+\begin{table}[!htbp]
 \begin{minipage}{.5\linewidth}
 \centering
 \begin{tabular}{|l|l|l|l|}
@@ -222,14 +223,13 @@ PC & Total          & Active          & Inactive \\ \hline
 
 Cytochrome P450 isozyme 3A4 models were trained on 4234 of actives and 4193 of inactives in the training set, and validated against 1033 actives and 1074 inactives in the test set. All models are considered good models when the  total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
 \includegraphics[width=1\textwidth]{../img/3a4_moe_model_accuracy.png}
 \caption{3A4 MOE Model Accuracy}
 \end{figure}
 
 A visual scan of figure shows that model accuracy is higher for predicting active compounds than inactive compounds, and total accuracy is somewhere in between. 20 pricipal components (PC20) appears to be an optimal number for capturing relevant variance while minimizing Type II errors. At 20PCs, the total accuracy on the test set is 0.686. Accuracy on Actives is 0.736 and accuracy on inactives is 0.638.
 
-\section{Comparison of Methods}
 %%%
 %\begin{table}[!h]
 %\begin{tabular}{|l|l|l|l|l|l|}
@@ -246,9 +246,9 @@ A visual scan of figure shows that model accuracy is higher for predicting activ
 %\end{table}
 
 
-\subsection{1A2}
+\section{1A2 Classification Method Comparison}
 
-\begin{table}[h]
+\begin{table}[!htbp]
 \begin{tabular}{|l|l|l|}
 \hline
 \multicolumn{3}{|c|}{1A2 Classification Method Comparison} \\ \hline
@@ -261,9 +261,9 @@ SVD       & 0.800        & 0.804    \\ \hline
 \caption{Comparison of Classification Methods for 1A2}
 \end{table}
 
-\subsection{2C9}
+\section{2C9 Classification Method Comparison}
 
-\begin{table}[h]
+\begin{table}[!htbp]
 \begin{tabular}{|l|l|l|}
 \hline
 \multicolumn{3}{|c|}{2C9 Classification Method Comparison} \\ \hline
@@ -276,9 +276,9 @@ SVD       & 0.749        & 0.720    \\ \hline
 \caption{Comparison of Classification Methods for 2C9}
 \end{table}
 
-\subsection{2C19}
+\section{2C19 Classification Method Comparison}
 
-\begin{table}[h]
+\begin{table}[!htbp]
 \begin{tabular}{|l|l|l|}
 \hline
 \multicolumn{3}{|c|}{2C19 Classification Method Comparison} \\ \hline
@@ -291,9 +291,9 @@ SVD       & 0.767        & 0.756    \\ \hline
 \caption{Comparison of Classification Methods for 2C19}
 \end{table}
 
-\subsection{2D6}
+\section{2D6 Classification Method Comparison}
 
-\begin{table}[h]
+\begin{table}[!htbp]
 \begin{tabular}{|l|l|l|}
 \hline
 \multicolumn{3}{|c|}{2D6 Classification Method Comparison} \\ \hline
@@ -306,9 +306,9 @@ SVD       & 0.755        & 0.725    \\ \hline
 \caption{Comparison of Classification Methods for 2D6}
 \end{table}
 
-\subsection{3A4}
+\section{3A4 Classification Method Comparison}
 
-\begin{table}[h]
+\begin{table}[!htbp]
 \begin{tabular}{|l|l|l|}
 \hline
 \multicolumn{3}{|c|}{3A4 Classification Method Comparison} \\ \hline
@@ -335,13 +335,14 @@ SVD       & 0.755        & 0.714    \\ \hline
 %\caption{Comparison of Methods for Test Sets}
 %\end{table}
 
+\section{Overall Method Comparison}
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
 \includegraphics[width=1\textwidth]{../img/method_comparison_training_set.png}
 \caption{Inhibitor Classification Method Comparison on the Training Set}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
 \includegraphics[width=1\textwidth]{../img/method_comparison_test_set.png}
 \caption{Inhibitor Classification Method Comparison on the Test Set}
 \end{figure}

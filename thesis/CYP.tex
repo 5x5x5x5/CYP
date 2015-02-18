@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{float}
+\usepackage{indentfirst}
 \usepackage{multirow}
 
 \pagestyle{plain}
@@ -18,9 +19,11 @@
   }%
 }
 
+\pagenumbering{Roman}
+
 \author{D.Siegle}
 \title{Cytochrome P450 Inhibitor Classification with Statistical Learning}
-\date{}
+\date{February, 17 2015}
 
 \begin{document}
 
@@ -34,12 +37,18 @@
 \end{doublespacing}
 
 \tableofcontents
+%\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+%\cleardoublepage
+\addcontentsline{toc}{chapter{\listtablename}
 \listoftables
 
 \begin{doublespacing}
 \chapter*{Acknowledgements}
 I want to thank ...
+
+\pagenumbering{arabic}
 
 \chapter{Background}
 \input{chapters/chapter1}

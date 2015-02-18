@@ -25,7 +25,7 @@ Compounds were characterized by their Activity Score and regarded as inhibitors 
 
 The data from Pubchem Assay 1851 is available for download from the NIH website. The interface changes from time to time, but I downloaded two files which comprised the entire dataset for the experiment. The first file, a structures file, contained the structural information encoded in the simplified molecular-input line-entry system (SMILES) format for each tested compound with corresponding Structure ID (SID) and Compound ID (CID) as assigned by NCBI. Another file, also organized by SID and CID, contained all of the luminescent responses from the high-throughput screen and the fitted parameters that are summarized by the activity score. 
 
-\section{Data set preparation}
+\section{Data Set Preparation and Molecular Descriptor Generation }
 
 Both data files from Bioassy 1851 were downloaded as comma separated value (.csv) files and merged together based on the SID column using functions from Python's pandas library, which is made for handling, manipulating and reshaping structured data.
 
@@ -39,7 +39,7 @@ The preliminary steps of data preprocessing typically requires data cleaning as 
 \end{figure}
 
 
-\subsection{Molecular descriptor generation}
+\subsubsection{Molecular Descriptor Generation}
 First the merged file was loaded into a database in the Molecular Operating Environment. MOE functionality was used to obtain the washed configuration of compounds by removing the salts and finding an energy-minimized conformation. MOE was then used to calculate descriptors based on the molecular structures. The entire suite of MOE 2-D descriptors was selected for descriptor generation, resulting in 186 additional columns of nominal, ordinal and continuous vales appended to the database. The resulting master file was saved in .csv format.
 
 The dataset was then split by isozyme into 5 separate files that each contained only the SID, the Activity Score, and all 186 of the MOE 2-D descriptors using a script in the Python programming language.
@@ -85,7 +85,7 @@ In situations where the data does not have a Gaussian (normal) distribution, sim
 
 \end{description}
 
-\subsection{Methods of Correlation of Descriptors to Activity Data}
+\section{Modeling - Mapping Descriptors to Activity Data}
 
 \begin{figure}[h,t]
   \caption{Supervised Classification Model Training and Validation Workflow}
@@ -93,7 +93,7 @@ In situations where the data does not have a Gaussian (normal) distribution, sim
    \includegraphics[width=1\textwidth]{}
 \end{figure}
 
-\subsubsection{Binary QSAR in the Molecular Operating Environment}
+\subsection{Binary QSAR in the Molecular Operating Environment}
 PLS regression is a qunatitavtive method available in the Molecular Operating Environment that has shown poor predictive accuracy with this dataset as demonstrated by previous attempts in Dr. Zheng's lab.
 
 The Binary QSAR approach outlined by Labute \cite{Labute1999} and included in the MOE version, takes a Bayesian and probabilistic approach to classification of activity after reducing all the descriptors to their principal components.
@@ -107,17 +107,17 @@ MOE models were written to .fit files and the model report saved as a .txt file.
 \subsubsection{Modeling in Python}
 The Python programming language is a dynamically-typed, object-oriented interpreted language. Its primary strength lies in the ease with which it allows a programmer to rapidly prototype a project, although it also has a powerful and mature set of standard libraries that can facilitate large-scale production-level software engineering projects as well. Python has a very shallow learning curve and excellent online learning resources.
 
-\subsubsection{$\kappa$-Nearest Neighbor ($\kappa$NN}
+\subsection{$\kappa$-Nearest Neighbor ($\kappa$NN}
 The kNN algorithm predicts the class of a test set object based on the class membership of its $\kappa$ most similar training set objects. \cite{Lapins2013}
 
-\subsubsection{Random Forest (RF)}
+\subsection{Random Forest (RF)}
 Random Forest is a classifier that consists of multiple decision trees. A decision tree is made of nodes and branches. At each node the dataset is split based on the value of some attribute that is selected so that the instances of different classes are predominately moved to different branches. 
 
 Classification starts at the root node and is performed by passing the instances along the tree to leaf nodes. \cite{Lapins2013}
 
 To introduce diversity between the trees of a random forest, a small subset of all attributes is randomly selected to take decisions at each node of each tree. The classification decision is performed by considering results of all trees by majority vote. The optimal size of the forest and the number of attributes to consider at each node were found by performing five-fold cross-validation. \cite{Lapins2013}
 
-\subsubsection{Support Vector Machines (SVM)}
+\subsection{Support Vector Machines (SVM)}
 SVM is a machine learning technique for classification or regression that uses linear or non-linear kernel-functions to project the data into a high-dimensional feature space. \cite{Lapins2013}
 
 Correlation is performed in this hyperspace based on the structural risk minimization principle i.e., aiming to increase the generalization ability of a model. \cite{Lapins2013}
