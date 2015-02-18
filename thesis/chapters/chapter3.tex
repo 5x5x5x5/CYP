@@ -22,13 +22,13 @@ PCs  &       & 2c19  & 2c9   & 2d6   & 1a2   & 3a4   \\ \hline
 \caption{Results from MOE binary classification}
 \end{table}
 
-\subsubsection{Modeling in Python}
-\subsubsection{Toy Problem - $\kappa$NN on first 2 PCs}
-I don't know if I want to include this section. It is a gentle intro ending with a fairly easy to grasp visualization before the dimensionality explodes. So I'll probably include it.
+%\subsubsection{Modeling in Python}
+%\subsubsection{Toy Problem - $\kappa$NN on first 2 PCs}
+%I don't know if I want to include this section. It is a gentle intro ending with a fairly easy to grasp visualization before the dimensionality explodes. So I'll probably include it.
 
-After downloading the 2c19 dataset, the training data is loaded into memory. A script was written to perform a PCA on the training data, then select the first two principle components and construct a classification model using the $\kappa$-nearest neighbor algorithm. The major benefit of this exercise was the ease of visualization of results. Subsequently the two principle components used in model construction are plotted and overlayed with the model predictions.
+%After downloading the 2c19 dataset, the training data is loaded into memory. A script was written to perform a PCA on the training data, then select the first two principle components and construct a classification model using the $\kappa$-nearest neighbor algorithm. The major benefit of this exercise was the ease of visualization of results. Subsequently the two principle components used in model construction are plotted and overlayed with the model predictions.
 
-The steps in this process script are as follows; the training data is loaded into a dataframe and Activity Score is identified as the response variables. All 186 molecular descriptors are selected as the input variables and then individually scaled to a mean of $0$ and standard deviation of $1$. PCA is performed on the scaled and normed descriptors. The first two PCs are used to train a $\kappa$-NN model that treats any ActivityScore over 40 as an active. The $\kappa$-NN function automatically performs a five-fold cross-validation of the model and creates a model object, which can be used to evaluate similarly formated data, such as the test set.
+%The steps in this process script are as follows; the training data is loaded into a dataframe and Activity Score is identified as the response variables. All 186 molecular descriptors are selected as the input variables and then individually scaled to a mean of $0$ and standard deviation of $1$. PCA is performed on the scaled and normed descriptors. The first two PCs are used to train a $\kappa$-NN model that treats any ActivityScore over 40 as an active. The $\kappa$-NN function automatically performs a five-fold cross-validation of the model and creates a model object, which can be used to evaluate similarly formated data, such as the test set.
 
-Next the test set is loaded into a dataframe, the response variable identified, the descriptors scaled and normed, and subsequently evaluated by the model object. Accuracy in this case is calculated in the script, as well as a confusion matrix. These results are then plotted in the Ipython notebook with the principle components as axes, thpredicted values from the model are calculated for every point and overlayed with the model results.
+%Next the test set is loaded into a dataframe, the response variable identified, the descriptors scaled and normed, and subsequently evaluated by the model object. Accuracy in this case is calculated in the script, as well as a confusion matrix. These results are then plotted in the Ipython notebook with the principle components as axes, thpredicted values from the model are calculated for every point and overlayed with the model results.
 

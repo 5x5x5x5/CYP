@@ -35,7 +35,7 @@ PC & Total          & Active          & Inactive \\ \hline
 \caption{1A2 MOE model results}
 \end{table}
 
-Cytochrome P450 isozyme 1A2 models were trained on 4820 actives and 4780 inactives in the training set, and validated against 529 actives and 580 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+Cytochrome P450 isozyme 1A2 models were trained on 4820 actives and 4780 inactives in the training set, and validated against 529 actives and 580 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. The test set results represent compounds unseen by the model. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. 
 
 \begin{figure}[!htbp]
 \includegraphics[width=1\textwidth]{../img/1a2_moe_model_accuracy.png}
@@ -81,7 +81,7 @@ PC & Total          & Active          & Inactive\\ \hline
 \caption{2C9 MOE model results}
 \end{table}
 
-Cytochrome P450 isozyme 2C9 models were trained on 3266 actives and 3327 inactives in the training set, and validated against 855 actives and 794 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+Cytochrome P450 isozyme 2C9 models were trained on 3266 actives and 3327 inactives in the training set, and validated against 855 actives and 794 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. The test set results represent compounds unseen by the model. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely.
 
 \begin{figure}[!htbp]
 \includegraphics[width=1\textwidth]{../img/2c9_moe_model_accuracy.png}
@@ -128,7 +128,7 @@ PC & Total          & Active          & Inactive   \\ \hline
 %\caption{MOE model results 2C19 Test set}
 \end{table}
 
-Cytochrome P450 isozyme 2C19 models were trained on 4721 actives and 4741 inactives in the training set, and validated against 1193 actives and 1173 inactives in the test set. All models are considered good models when the  total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+Cytochrome P450 isozyme 2C19 models were trained on 4721 actives and 4741 inactives in the training set, and validated against 1193 actives and 1173 inactives in the test set. All models are considered good models when the  total accuracy is above 0.6.  The test set results represent compounds unseen by the model. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. 
 
 
 \begin{figure}[!htbp]
@@ -175,7 +175,7 @@ PC & Total          & Active          & Inactive \\ \hline
 \caption{2D6 MOE model results}
 \end{table}
 
-Cytochrome P450 isozyme 2D6 models were trained on 2219 of actives and 2214 of inactives in the training set, and validated against 552 actives and 557 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+Cytochrome P450 isozyme 2D6 models were trained on 2219 of actives and 2214 of inactives in the training set, and validated against 552 actives and 557 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. The test set results represent compounds unseen by the model. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely.
 
 \begin{figure}[!htbp]
 \includegraphics[width=1\textwidth]{../img/2d6_moe_model_accuracy.png}
@@ -221,7 +221,7 @@ PC & Total          & Active          & Inactive \\ \hline
 \caption{3A4 MOE model results}
 \end{table}
 
-Cytochrome P450 isozyme 3A4 models were trained on 4234 of actives and 4193 of inactives in the training set, and validated against 1033 actives and 1074 inactives in the test set. All models are considered good models when the  total accuracy is above 0.6. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely. The test set results represent compounds unseen by the model. 
+Cytochrome P450 isozyme 3A4 models were trained on 4234 of actives and 4193 of inactives in the training set, and validated against 1033 actives and 1074 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. The test set results represent compounds unseen by the model. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely.
 
 \begin{figure}[!htbp]
 \includegraphics[width=1\textwidth]{../img/3a4_moe_model_accuracy.png}
@@ -261,6 +261,8 @@ SVD       & 0.800        & 0.804    \\ \hline
 \caption{Comparison of Classification Methods for 1A2}
 \end{table}
 
+The comparison of model accuracy results on the 1A2 isozyme dataset show that Binary QSAR implemented in the Molecular Operating Environment gave an overall accuracy of 0.748 for the test set, while the methods implemented by Python's scikit-learn gave accuracies of 0.754 for k-nearest neighbor, 0.769 for random forests and 0.804 for support vector machines on the test set.
+
 \section{2C9 Classification Method Comparison}
 
 \begin{table}[!htbp]
@@ -275,6 +277,8 @@ SVD       & 0.749        & 0.720    \\ \hline
 \end{tabular}
 \caption{Comparison of Classification Methods for 2C9}
 \end{table}
+
+The comparison of model accuracy results on the 2C9 isozyme dataset show that Binary QSAR implemented in the Molecular Operating Environment gave an overall accuracy of 0.748 for the test set, while the methods implemented by Python's scikit-learn gave accuracies of 0.692 for k-nearest neighbor, 0.687 for random forests and 0.720 for support vector machines on the test set.
 
 \section{2C19 Classification Method Comparison}
 
@@ -291,6 +295,8 @@ SVD       & 0.767        & 0.756    \\ \hline
 \caption{Comparison of Classification Methods for 2C19}
 \end{table}
 
+The comparison of model accuracy results on the 2C19 isozyme dataset show that Binary QSAR implemented in the Molecular Operating Environment gave an overall accuracy of 0.698 for the test set, while the methods implemented by Python's scikit-learn gave accuracies of 0.720 for k-nearest neighbor, 0.721 for random forests and 0.756 for support vector machines on the test set.
+
 \section{2D6 Classification Method Comparison}
 
 \begin{table}[!htbp]
@@ -306,6 +312,9 @@ SVD       & 0.755        & 0.725    \\ \hline
 \caption{Comparison of Classification Methods for 2D6}
 \end{table}
 
+The comparison of model accuracy results on the 2D6 isozyme dataset show that Binary QSAR implemented in the Molecular Operating Environment gave an overall accuracy of 0.683 for the test set, while the methods implemented by Python's scikit-learn gave accuracies of 0.678 for k-nearest neighbor, 0.707 for random forests and 0.725 for support vector machines on the test set.
+
+
 \section{3A4 Classification Method Comparison}
 
 \begin{table}[!htbp]
@@ -320,6 +329,8 @@ SVD       & 0.755        & 0.714    \\ \hline
 \end{tabular}
 \caption{Comparison of Classification Methods for 3A4}
 \end{table}
+
+The comparison of model accuracy results on the 1A2 isozyme dataset show that Binary QSAR implemented in the Molecular Operating Environment gave an overall accuracy of 0.686 for the test set, while the methods implemented by Python's scikit-learn gave accuracies of 0.674 for k-nearest neighbor, 0.683 for random forests and 0.714 for support vector machines on the test set.
 
 %\begin{table}[!h]
 %\begin{tabular}{|l|l|l|l|l|l|}
@@ -342,12 +353,14 @@ SVD       & 0.755        & 0.714    \\ \hline
 \caption{Inhibitor Classification Method Comparison on the Training Set}
 \end{figure}
 
+Looking at the results for method comparison on the test set, it is clear that all methods performed similarly for each isozyme and well overall. It appears that the support vector machine classifier slightly outperforms all others in each case.
+
 \begin{figure}[!htbp]
 \includegraphics[width=1\textwidth]{../img/method_comparison_test_set.png}
 \caption{Inhibitor Classification Method Comparison on the Test Set}
 \end{figure}
 
-
+Looking at the results for method comparison on the test set, it is clear that all methods performed similarly for each isozyme and well overall. It appears that the support vector machine classifier slightly outperforms all others in each case.
 
 
 
