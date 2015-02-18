@@ -43,7 +43,6 @@ Cytochrome P450 isozyme 1A2 models were trained on 4820 actives and 4780 inactiv
 \end{figure}
 
 A visual scan of figure shows that model accuracy is higher for predicting active compounds than inactive compounds, and total accuracy is somewhere in between. 20 pricipal components (PC20) appears to be an optimal number for capturing relevant variance while minimizing Type II errors. At 20PCs, the total accuracy on the test set is 0.748. Accuracy on Actives is 0.779 and accuracy on inactives is 0.721.
-\section{Comparison of Methods}
 
 \section{2C9 MOE Models}
 
@@ -223,7 +222,7 @@ PC & Total          & Active          & Inactive \\ \hline
 
 Cytochrome P450 isozyme 3A4 models were trained on 4234 of actives and 4193 of inactives in the training set, and validated against 1033 actives and 1074 inactives in the test set. All models are considered good models when the total accuracy is above 0.6. The test set results represent compounds unseen by the model. Validating these models against the test set does not produce wildly divergent accuracy scores, indicating that overfitting is unlikely.
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \includegraphics[width=1\textwidth]{../img/3a4_moe_model_accuracy.png}
 \caption{3A4 MOE Model Accuracy}
 \end{figure}
@@ -248,7 +247,7 @@ A visual scan of figure shows that model accuracy is higher for predicting activ
 
 \section{1A2 Classification Method Comparison}
 
-\begin{table}[!htbp]
+\begin{table}[H]
 \begin{tabular}{|l|l|l|}
 \hline
 \multicolumn{3}{|c|}{1A2 Classification Method Comparison} \\ \hline
@@ -265,7 +264,7 @@ The comparison of model accuracy results on the 1A2 isozyme dataset show that Bi
 
 \section{2C9 Classification Method Comparison}
 
-\begin{table}[!htbp]
+\begin{table}[H]
 \begin{tabular}{|l|l|l|}
 \hline
 \multicolumn{3}{|c|}{2C9 Classification Method Comparison} \\ \hline
@@ -348,14 +347,14 @@ The comparison of model accuracy results on the 1A2 isozyme dataset show that Bi
 
 \section{Overall Method Comparison}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \includegraphics[width=1\textwidth]{../img/method_comparison_training_set.png}
 \caption{Inhibitor Classification Method Comparison on the Training Set}
 \end{figure}
 
 Looking at the results for method comparison on the test set, it is clear that all methods performed similarly for each isozyme and well overall. It appears that the support vector machine classifier slightly outperforms all others in each case.
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \includegraphics[width=1\textwidth]{../img/method_comparison_test_set.png}
 \caption{Inhibitor Classification Method Comparison on the Test Set}
 \end{figure}
