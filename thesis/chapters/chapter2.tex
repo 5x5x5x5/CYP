@@ -36,7 +36,7 @@ The preliminary steps of data preprocessing typically requires data cleaning as 
 \begin{figure}[h,t]
   \caption{Data download and preparation}
   \centering
-   \includegraphics[width=1\textwidth]{}
+   \includegraphics[width=1\textwidth]{../img/Dataset_prep.png}
 \end{figure}
 
 
@@ -50,7 +50,7 @@ For each isozyme, the number of active inhibitors was far outnumbered by the num
 \begin{figure}[h,t]
   \caption{Isozyme data set preparation}
   \centering
-   \includegraphics[width=1\textwidth]{}
+   \includegraphics[width=1\textwidth]{../img/Isozyme_Data_Prep.png}
 \end{figure}
 
 Next the script randomly shuffled the balanced datasets and split them into a training set and a test set. The training set held 80\% of the original values and the test set held 20\% of the original values. The split was not based on activity score. The ratio of active/inactive in each split was inspected to check if they were still acceptably balanced.
@@ -74,9 +74,9 @@ In situations where the data does not have a Gaussian (normal) distribution, sim
 At this point a complete dataset is assembled for each isozyme that is balanced for the number of active and inactive inhibitors, and that dataset has been further subdivided into a traing set and a test set. The following section describes the different methods of feature selection, normalization and classification algorithms used in this study.
 
 \begin{figure}[h,t]
-  \caption{Supervised Classification Model Training and Validation Workflow}
+  \caption{Supervised Classification Model Training and Validation}
   \centering
-   \includegraphics[width=1\textwidth]{}
+   \includegraphics[width=1\textwidth]{../img/Model_validation.png}
 \end{figure}
 
 \subsection{Binary QSAR in the Molecular Operating Environment}
@@ -168,12 +168,6 @@ The true negative rate is also know as the Specificity of a classification, and 
 
 %An increased sensitivity is always accompanied by decrease specificity. A ROC curve is plotted as $sensitivity$ versus $1-specificity$, at varied discrimination cut-offs. An area under the ROC curve (AUROC) close to 1 means that the classifier can perfectly separate the two classes, whereas an area 0.5 indicated that the classifier performs no better than random guessing.\cite{Lapins2013}
 
-
-\begin{figure}[h,t]
-  \caption{General Data Analysis Workflow}
-  \centering
-   \includegraphics[width=1\textwidth]{}
-\end{figure}
 
 \subsubsection{Binary QSAR after PLS of descriptors}
 The test sets were loaded and the washed structures were appended to the .csv files. All models were evaluated using the menu driven workflow in MOE and the classification probabilities were appended to the database file and saved as a .csv.  
