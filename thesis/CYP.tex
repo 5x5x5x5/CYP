@@ -1,15 +1,15 @@
 \documentclass[12pt]{report}
-%\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{float}
 \usepackage{indentfirst}
 \usepackage{multirow}
-
-\pagestyle{plain}
-%\linespread{2}
+\usepackage[top=1in, bottom=1in, left=1.5in, right=1in]{geometry}
+\usepackage{sectsty}
+\chapterfont{\centering}
 \usepackage{setspace}
-%\doublespaceing
+\usepackage{subfig}
+\captionsetup{belowskip=12pt,aboveskip=4pt}
 
 \newcommand\MyBox[2]{
   \fbox{\lower0.75cm
@@ -19,39 +19,37 @@
   }%
 }
 
-\pagenumbering{Roman}
+\pagestyle{plain}
+\pagenumbering{roman}
 
 \author{D.Siegle}
 \title{Cytochrome P450 Inhibitor Classification with Statistical Learning}
-\date{February, 17 2015}
+\date{March, 25 2015}
+
 
 \begin{document}
 
-% generate the title
-\maketitle
+\input{titlepage}
 
-\begin{doublespacing}
 \chapter*{Abstract}
-% Self reference and then abstract goes here.
 \input{chapters/abstract}
-\end{doublespacing}
 
 \tableofcontents
-%\cleardoublepage
-\addcontentsline{toc}{chapter}{\listfigurename}
-\listoffigures
-%\cleardoublepage
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
 
 \begin{doublespacing}
-\chapter*{Acknowledgements}
-I want to thank ...
 
-\pagenumbering{arabic}
+\chapter*{Acknowledgements}
+\input{chapters/acknowledge}
+
 
 \chapter{Background}
+\pagenumbering{arabic}
 \input{chapters/chapter1}
+
 
 \chapter{Materials and Methods}
 \input{chapters/chapter2}
@@ -59,7 +57,7 @@ I want to thank ...
 \chapter{Results}
 \input{chapters/chapter3}
 
-\input{tables}
+\input{chapters/tables}
 
 \chapter{Discussion}
 \input{chapters/chapter5}
