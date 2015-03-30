@@ -19,7 +19,10 @@
   }%
 }
 
-\pagestyle{plain}
+%\usepackage{fancyhdr}
+%\fancypagestyle{plain}{\fancyhead
+
+\pagestyle{myheadings}
 \pagenumbering{roman}
 
 \author{D.Siegle}
@@ -33,6 +36,7 @@
 
 \chapter*{Abstract}
 \input{chapters/abstract}
+\addcontentsline{toc}{chapter}{Abstract}
 
 \tableofcontents
 \addcontentsline{toc}{chapter}{\listtablename}
@@ -44,7 +48,7 @@
 
 \chapter*{Acknowledgements}
 \input{chapters/acknowledge}
-
+\addcontentsline{toc}{chapter}{Acknowledgements}
 
 \chapter{Background}
 \pagenumbering{arabic}
@@ -55,6 +59,7 @@
 \input{chapters/chapter2}
 
 \chapter{Results}
+\thispagestyle{empty}
 \input{chapters/chapter3}
 
 \input{chapters/tables}
@@ -66,6 +71,9 @@
 \input{chapters/conclusion}
 
 \end{doublespacing}
+
+\part*{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
 
 \bibliography{references}{}
 \bibliographystyle{apalike}
