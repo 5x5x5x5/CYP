@@ -5,11 +5,18 @@
 \usepackage{indentfirst}
 \usepackage{multirow}
 \usepackage[top=1in, bottom=1in, left=1.5in, right=1in]{geometry}
-\usepackage{sectsty}
-\chapterfont{\centering}
 \usepackage{setspace}
 \usepackage{subfig}
 \captionsetup{belowskip=12pt,aboveskip=4pt}
+
+\usepackage{titlesec}
+%\renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}[display]
+ {\normalfont\Large\filcenter\bfseries}
+ {\LARGE\MakeUppercase{\chaptertitlename} \thechapter}
+ {2pc}
+ {\huge} 
+\titlespacing*{\chapter}{0pt}{-50pt}{60pt}
 
 \newcommand\MyBox[2]{
   \fbox{\lower0.75cm
@@ -72,7 +79,8 @@
 
 \end{doublespacing}
 
-\part*{Bibliography}
+\part*{BIBLIOGRAPHY}
+\setcounter{page}{1}
 \addcontentsline{toc}{chapter}{Bibliography}
 
 \bibliography{references}{}
