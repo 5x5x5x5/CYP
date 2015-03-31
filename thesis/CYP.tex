@@ -10,13 +10,12 @@
 \captionsetup{belowskip=12pt,aboveskip=4pt}
 
 \usepackage{titlesec}
-%\renewcommand{\thechapter}{\Roman{chapter}}
 \titleformat{\chapter}[display]
- {\normalfont\Large\filcenter\bfseries}
+ {\normalfont\large\filcenter\bfseries}
  {\LARGE\MakeUppercase{\chaptertitlename} \thechapter}
  {2pc}
- {\huge} 
-\titlespacing*{\chapter}{0pt}{-50pt}{60pt}
+ {\Large} 
+\titlespacing*{\chapter}{0pt}{50pt}{60pt}
 
 \newcommand\MyBox[2]{
   \fbox{\lower0.75cm
@@ -26,24 +25,50 @@
   }%
 }
 
-%\usepackage{fancyhdr}
-%\fancypagestyle{plain}{\fancyhead
+
+
+\makeatletter
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}%   % Original »plain« replaced by »emptyx
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+\makeatother
+
 
 \pagestyle{myheadings}
-\pagenumbering{roman}
 
 \author{D.Siegle}
 \title{Cytochrome P450 Inhibitor Classification with Statistical Learning}
-\date{March, 25 2015}
 
 
 \begin{document}
 
 \input{titlepage}
 
+\begin{doublespacing}
+
 \chapter*{Abstract}
+\pagenumbering{gobble}
 \input{chapters/abstract}
-\addcontentsline{toc}{chapter}{Abstract}
+
+\chapter*{Acknowledgements}
+\pagenumbering{roman}
+\setcounter{page}{2}
+\input{chapters/acknowledge}
+%\addcontentsline{toc}{chapter}{Acknowledgements}
+
+\end{doublespacing}
 
 \tableofcontents
 \addcontentsline{toc}{chapter}{\listtablename}
@@ -52,10 +77,6 @@
 \listoffigures
 
 \begin{doublespacing}
-
-\chapter*{Acknowledgements}
-\input{chapters/acknowledge}
-\addcontentsline{toc}{chapter}{Acknowledgements}
 
 \chapter{Background}
 \pagenumbering{arabic}
@@ -80,7 +101,6 @@
 \end{doublespacing}
 
 \part*{BIBLIOGRAPHY}
-\setcounter{page}{1}
 \addcontentsline{toc}{chapter}{Bibliography}
 
 \bibliography{references}{}
